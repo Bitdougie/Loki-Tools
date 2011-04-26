@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Loki_Tools' target in the 'Loki_Tools' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
