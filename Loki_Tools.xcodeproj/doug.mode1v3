@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -273,7 +271,7 @@
 								<string>91A7259D134AD09900AF74BA</string>
 								<string>91A7259E134AD0C700AF74BA</string>
 								<string>91A7259B134ACED000AF74BA</string>
-								<string>91A72599134ACEA900AF74BA</string>
+								<string>91A7259A134ACEBB00AF74BA</string>
 								<string>91A72597134ACE7200AF74BA</string>
 								<string>915DAD0C134C289B00FED0C5</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
@@ -283,9 +281,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>6</integer>
-									<integer>1</integer>
+									<integer>19</integer>
+									<integer>16</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -320,12 +317,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LoginViewController.h</string>
+								<string>Loki_ToolsAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -333,42 +332,44 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>LoginViewController.h</string>
+										<string>Loki_ToolsAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9156113B1367638E00F0D316</string>
+										<string>915611AE1367929300F0D316</string>
 										<key>history</key>
 										<array>
 											<string>91A33C281330AB2700B8EC62</string>
 											<string>9130E011134A93EB005AF25F</string>
 											<string>91A725D9134C281500AF74BA</string>
 											<string>915DAD25134C2E1300FED0C5</string>
-											<string>91AD41FD1352A19E0003FF41</string>
-											<string>91AD42001352A19E0003FF41</string>
-											<string>91C07FA213581581007B27F0</string>
-											<string>91C07FA313581581007B27F0</string>
-											<string>91C00542135D076400F3EC2D</string>
-											<string>91C00543135D076400F3EC2D</string>
-											<string>91C0054B135D076400F3EC2D</string>
-											<string>91C0054C135D076400F3EC2D</string>
-											<string>91C00597135D2D8600F3EC2D</string>
-											<string>91C00598135D2D8600F3EC2D</string>
-											<string>91C005C5135D313900F3EC2D</string>
-											<string>91C005C6135D313900F3EC2D</string>
-											<string>91C005DB135D3BA300F3EC2D</string>
-											<string>91C005DC135D3BA300F3EC2D</string>
-											<string>91555B87135D695200807DDA</string>
-											<string>91555B88135D695200807DDA</string>
-											<string>91555B89135D695200807DDA</string>
-											<string>91CF3E2F135F0FAA003E3B08</string>
-											<string>913188C3136624DD00D4C18A</string>
-											<string>913188C4136624DD00D4C18A</string>
-											<string>913188C5136624DD00D4C18A</string>
-											<string>913188C6136624DD00D4C18A</string>
 											<string>915611381367638E00F0D316</string>
-											<string>915611391367638E00F0D316</string>
-											<string>9156113A1367638E00F0D316</string>
+											<string>91561162136785AA00F0D316</string>
+											<string>91561163136785AA00F0D316</string>
+											<string>91561164136785AA00F0D316</string>
+											<string>91561165136785AA00F0D316</string>
+											<string>91561166136785AA00F0D316</string>
+											<string>91561167136785AA00F0D316</string>
+											<string>91561168136785AA00F0D316</string>
+											<string>91561169136785AA00F0D316</string>
+											<string>9156116A136785AA00F0D316</string>
+											<string>9156116B136785AA00F0D316</string>
+											<string>9156116C136785AA00F0D316</string>
+											<string>9156116D136785AA00F0D316</string>
+											<string>9156116E136785AA00F0D316</string>
+											<string>9156116F136785AA00F0D316</string>
+											<string>91561170136785AA00F0D316</string>
+											<string>91561171136785AA00F0D316</string>
+											<string>91561172136785AA00F0D316</string>
+											<string>91561173136785AA00F0D316</string>
+											<string>91561175136785AA00F0D316</string>
+											<string>9156119C1367916700F0D316</string>
+											<string>9156119D1367916700F0D316</string>
+											<string>9156119E1367916700F0D316</string>
+											<string>9156119F1367916700F0D316</string>
+											<string>915611A01367916700F0D316</string>
+											<string>915611A11367916700F0D316</string>
+											<string>915611A21367916700F0D316</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -566,6 +567,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>9156118F13678B5A00F0D316</string>
+		<string>9156119013678B5A00F0D316</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>91CF48171304E1C40074F92F</string>
 		<string>/Users/doug/Loki_Tools/Loki_Tools.xcodeproj</string>
@@ -592,7 +596,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>User.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -609,6 +613,8 @@
 							<string>358pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -917,7 +923,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1422, 788}}</string>
 								<key>RubberWindowFrame</key>
-								<string>91 182 1422 829 0 0 1680 1028 </string>
+								<string>204 175 1422 829 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -940,13 +946,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>91555B75135D3BED00807DDA</string>
+				<string>9156118D13678B5A00F0D316</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>91 182 1422 829 0 0 1680 1028 </string>
+			<string>204 175 1422 829 0 0 1680 1028 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

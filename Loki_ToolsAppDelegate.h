@@ -42,6 +42,7 @@
 	IBOutlet NSMenuItem *loginMenu;
 	IBOutlet NSMenuItem *searchMenu;
 	IBOutlet NSMenuItem *maintenaceMenu;
+	IBOutlet NSMenu *mainMenu;
 	
 }
 

@@ -12,6 +12,8 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		9156115313676F6300F0D316 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9156115213676F6300F0D316 /* LICENSE */; };
+		91561157136770BE00F0D316 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 91561156136770BE00F0D316 /* README */; };
 		915DAD0E134C28E800FED0C5 /* MaintenaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915DAD0D134C28E800FED0C5 /* MaintenaceViewController.xib */; };
 		915DAD12134C2A8000FED0C5 /* MaintenaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915DAD11134C2A8000FED0C5 /* MaintenaceViewController.m */; };
 		91A33C10132EFA9800B8EC62 /* SearchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A33C0F132EFA9800B8EC62 /* SearchNode.m */; };
@@ -43,6 +45,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Loki_Tools-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Loki_Tools-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Loki_Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loki_Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9156115213676F6300F0D316 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		91561156136770BE00F0D316 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		915DAD0D134C28E800FED0C5 /* MaintenaceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaintenaceViewController.xib; sourceTree = "<group>"; };
 		915DAD10134C2A8000FED0C5 /* MaintenaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaintenaceViewController.h; sourceTree = "<group>"; };
 		915DAD11134C2A8000FED0C5 /* MaintenaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaintenaceViewController.m; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		29B97314FDCFA39411CA2CEA /* Loki_Tools */ = {
 			isa = PBXGroup;
 			children = (
+				91561156136770BE00F0D316 /* README */,
 				91AD41E813527CDA0003FF41 /* Login */,
 				91AD41C61352610A0003FF41 /* Error Handling */,
 				91A7259D134AD09900AF74BA /* Main Application */,
@@ -136,6 +141,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				9156115213676F6300F0D316 /* LICENSE */,
 			);
 			name = Loki_Tools;
 			sourceTree = "<group>";
@@ -332,6 +338,8 @@
 				91AD41CC135261F30003FF41 /* ErrorMessageViewController.xib in Resources */,
 				91AD41EB13527D710003FF41 /* LoginViewController.xib in Resources */,
 				91C07F65135797B6007B27F0 /* ChangePasswordViewController.xib in Resources */,
+				9156115313676F6300F0D316 /* LICENSE in Resources */,
+				91561157136770BE00F0D316 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

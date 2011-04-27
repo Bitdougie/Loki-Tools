@@ -23,7 +23,6 @@
  Loki Tools  Copyright (C) 2011  Douglas Mason
  This program comes with ABSOLUTELY NO WARRANTY;
  */
-
 #import <Cocoa/Cocoa.h>
 
 

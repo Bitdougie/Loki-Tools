@@ -36,6 +36,7 @@
 	maintenaceView = [[MaintenaceViewController alloc] init];
 	loginView = [LoginViewController alloc];
 	[loginView initWithUser:userLogin];
+	[self menuAuthority];
 }
 
 -(IBAction) openSearch: (id) sender
@@ -57,11 +58,14 @@
 {
 	//sets which menus can be used
 	if ([userLogin validLogin]) {
-		
+		[loginMenu setEnabled:YES];
+		[searchMenu setEnabled:YES];
+		[maintenaceMenu setEnabled:YES];
 	}
 	else {
-	// disable everyting hmmm what a job
-		[loginMenu setAction:@selector(openLogin:)];
+		[loginMenu setEnabled:YES];
+		[searchMenu setEnabled:NO];
+		[maintenaceMenu setEnabled:NO];
 	}
 
 }
