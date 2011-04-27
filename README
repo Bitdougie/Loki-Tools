@@ -1,6 +1,6 @@
 /*
- Loki Tools a Search engine, data preperation tool that does data mining
- and retail analysis.
+ Loki Tools is a Search engine and data preperation tool for electronic data
+ interchange that does data mining and retail analysis.
  Copyright (C) 2011  Douglas Mason
  
  This program is free software: you can redistribute it and/or modify
@@ -20,11 +20,11 @@
  This program comes with ABSOLUTELY NO WARRANTY;
  */
  
- Welcome to Loki Tools, right now this project is still under construction
- but with hope and time we hope to have something of some use to people.
+ Welcome to Loki Tools, right now this project is still under construction,
+ but with time we hope to have something of some use to people.
  
- Right now this is getting developed for OSX but there will be a version
- for windows and linux that will be released once this proof of concept works.
+ Right now this is getting developed for OSX, but there will be a version
+ for windows and linux, that will be released once this proof of concept works.
  
  ***************
  The following problems are the aims of this project to solve
@@ -33,27 +33,28 @@
  ** The problem **
  
  ** PROBLEM 1
- In tool/spare parts retail stores the potential supplible items and the items kept
+ In tool/spare parts retail stores, the potential supplible items and the items kept
  in stock are vastly different, a store maybe holding 20,000 different
- types of items in stock and some 1.2 million items suppliable from 200+
- suppliers which 20 will be your core suppliers for most items. To allow
+ types of items in stock with some 1.2 million items suppliable from 200+
+ suppliers, which 20 will be your core suppliers for most items. To allow
  quick finding and pricing of items a searchable library of all suppliers
  is required. (right now I have 200+ price books which are out of date and
- have no rational index PLEASE HELP ME!!! :-P)
+ have no rational index. PLEASE HELP ME!!! :-P)
  
  ** PROBLEM 2
- Promotions for tool/spare parts stores often have some 200-400 items and run for 1-3 months
- this process needs to be automated in setup in the stores accounting
- system to minisise costs and new items must be added to the accounting
- system when a new item goes on promotion.
+ Promotions for tool/spare parts stores often have some 200-400 items and run 
+ for 1-3 months the setup of such promotions needs to be automated to setup the
+ stores accounting system to minisise costs and free up time. New items must
+ be added to the accounting system when a new item goes on promotion.
  
  ** PROBLEM 3
  Stock pricing for tool/spare parts stores is important as spare parts can sit in stock
- for months/years before being required so to regular price updates are
- needed to keep pace with material,frieght and inflation.
+ for months/years before being required, so regular price updates are
+ needed to keep pace with material,frieght and inflation cost ajustments.
  
  ** PROBLEM 4
  Stock levels for tool/spare parts stores is difficult with so many different stock lines
- with low levels of stock and the emergency demand for parts during a break down
+ with low levels of stock and the emergency demand for parts during a break down,
  so statistical modelling and automation should be used to set stock levels
- to the investment capacity of the business.
+ to the investment capacity of the business, maximising profit and minimising
+ costs such as frieght.
