@@ -27,15 +27,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.//
 #import "User.h"
 #import "DatabaseSetupConnections.h"
 
+@class Loki_ToolsAppDelegate;
 
 @interface LoginViewController : NSObject {
 	IBOutlet NSWindow *loginWindow;
 	IBOutlet NSTextField *user;
 	IBOutlet NSSecureTextField *password;
 	User *userLogin;
+	Loki_ToolsAppDelegate *mainProgram;
 }
 
--(LoginViewController *)initWithUser:(User *)userObject;
+-(LoginViewController *)initWithUser:(User *)userObject andMainProgram:(Loki_ToolsAppDelegate *) mainAppObject;
 
 -(void) openLogin;
 

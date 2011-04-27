@@ -30,13 +30,15 @@ This program comes with ABSOLUTELY NO WARRANTY;
 
 @implementation LoginViewController
 
--(LoginViewController *)initWithUser: (User *) userObject
+-(LoginViewController *)initWithUser: (User *) userObject andMainProgram: (Loki_ToolsAppDelegate *) mainAppObject
 {
 	self = [super init];
 	
 	if(self){
 		userLogin = userObject;
+		mainProgram = mainAppObject;
 		[userLogin retain];
+		[mainProgram retain];
 	}
 	
 	return self;
@@ -79,6 +81,7 @@ This program comes with ABSOLUTELY NO WARRANTY;
 -(void)dealloc
 {
 	[userLogin autorelease];
+	[mainProgram autorelease];
 	[super dealloc];
 }
 

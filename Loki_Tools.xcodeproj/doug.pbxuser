@@ -10,15 +10,15 @@
 	256AC3D80F4B6AC300CF3369 /* Loki_ToolsAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1352, 728}}";
-			sepNavSelRange = "{1414, 0}";
+			sepNavSelRange = "{1536, 0}";
 			sepNavVisRange = "{670, 893}";
 		};
 	};
 	256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1352, 1014}}";
-			sepNavSelRange = "{1549, 0}";
-			sepNavVisRange = "{1146, 724}";
+			sepNavIntBoundsRect = "{{0, 0}, {1352, 1027}}";
+			sepNavSelRange = "{1355, 0}";
+			sepNavVisRange = "{810, 788}";
 		};
 	};
 	256AC3F00F4B6AF500CF3369 /* Loki_Tools_Prefix.pch */ = {
@@ -172,6 +172,21 @@
 			915611A81367920B00F0D316 /* PBXTextBookmark */ = 915611A81367920B00F0D316 /* PBXTextBookmark */;
 			915611A91367925E00F0D316 /* PBXTextBookmark */ = 915611A91367925E00F0D316 /* PBXTextBookmark */;
 			915611AE1367929300F0D316 /* PBXTextBookmark */ = 915611AE1367929300F0D316 /* PBXTextBookmark */;
+			915611C11367B59F00F0D316 /* PBXTextBookmark */ = 915611C11367B59F00F0D316 /* PBXTextBookmark */;
+			915611C21367B59F00F0D316 /* PBXTextBookmark */ = 915611C21367B59F00F0D316 /* PBXTextBookmark */;
+			915611C31367B59F00F0D316 /* PBXTextBookmark */ = 915611C31367B59F00F0D316 /* PBXTextBookmark */;
+			915611C41367B59F00F0D316 /* XCBuildMessageTextBookmark */ = 915611C41367B59F00F0D316 /* XCBuildMessageTextBookmark */;
+			915611C51367B59F00F0D316 /* PBXTextBookmark */ = 915611C51367B59F00F0D316 /* PBXTextBookmark */;
+			915611C61367B5E400F0D316 /* PBXTextBookmark */ = 915611C61367B5E400F0D316 /* PBXTextBookmark */;
+			915611C71367B5E400F0D316 /* PBXTextBookmark */ = 915611C71367B5E400F0D316 /* PBXTextBookmark */;
+			915611C81367B5E400F0D316 /* XCBuildMessageTextBookmark */ = 915611C81367B5E400F0D316 /* XCBuildMessageTextBookmark */;
+			915611C91367B5E400F0D316 /* PBXTextBookmark */ = 915611C91367B5E400F0D316 /* PBXTextBookmark */;
+			915611CE1367B5FA00F0D316 /* PBXTextBookmark */ = 915611CE1367B5FA00F0D316 /* PBXTextBookmark */;
+			915611D91367C9F200F0D316 /* PBXTextBookmark */ = 915611D91367C9F200F0D316 /* PBXTextBookmark */;
+			915611DA1367C9F200F0D316 /* PBXTextBookmark */ = 915611DA1367C9F200F0D316 /* PBXTextBookmark */;
+			915611DB1367C9F200F0D316 /* PBXTextBookmark */ = 915611DB1367C9F200F0D316 /* PBXTextBookmark */;
+			915611DC1367C9F200F0D316 /* PBXTextBookmark */ = 915611DC1367C9F200F0D316 /* PBXTextBookmark */;
+			915611E11367D3B400F0D316 /* PBXTextBookmark */ = 915611E11367D3B400F0D316 /* PBXTextBookmark */;
 			915DAD25134C2E1300FED0C5 = 915DAD25134C2E1300FED0C5 /* PBXTextBookmark */;
 			91A33C281330AB2700B8EC62 = 91A33C281330AB2700B8EC62 /* PBXTextBookmark */;
 			91A725D9134C281500AF74BA = 91A725D9134C281500AF74BA /* PBXTextBookmark */;
@@ -224,7 +239,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 45";
 		rLen = 0;
-		rLoc = 1863;
+		rLoc = 1861;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 0;
@@ -361,7 +376,7 @@
 		fRef = 91AD41EC13527D9F0003FF41 /* LoginViewController.h */;
 		name = "LoginViewController.h: 13";
 		rLen = 0;
-		rLoc = 970;
+		rLoc = 1000;
 		rType = 0;
 		vrLen = 516;
 		vrLoc = 0;
@@ -371,7 +386,7 @@
 		fRef = 91AD41EC13527D9F0003FF41 /* LoginViewController.h */;
 		name = "LoginViewController.h: 13";
 		rLen = 0;
-		rLoc = 970;
+		rLoc = 1000;
 		rType = 0;
 		vrLen = 516;
 		vrLoc = 0;
@@ -656,7 +671,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 52";
 		rLen = 0;
-		rLoc = 1549;
+		rLoc = 1547;
 		rType = 0;
 		vrLen = 511;
 		vrLoc = 1337;
@@ -705,7 +720,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 38";
 		rLen = 0;
-		rLoc = 1357;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 840;
 		vrLoc = 737;
@@ -715,7 +730,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 42";
 		rLen = 0;
-		rLoc = 1398;
+		rLoc = 1396;
 		rType = 0;
 		vrLen = 510;
 		vrLoc = 1338;
@@ -735,7 +750,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 61";
 		rLen = 0;
-		rLoc = 1696;
+		rLoc = 1694;
 		rType = 0;
 		vrLen = 771;
 		vrLoc = 988;
@@ -745,7 +760,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 67";
 		rLen = 0;
-		rLoc = 1863;
+		rLoc = 1861;
 		rType = 0;
 		vrLen = 565;
 		vrLoc = 1376;
@@ -755,7 +770,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 62";
 		rLen = 0;
-		rLoc = 1748;
+		rLoc = 1746;
 		rType = 0;
 		vrLen = 560;
 		vrLoc = 1376;
@@ -785,7 +800,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 39";
 		rLen = 0;
-		rLoc = 1342;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 987;
@@ -835,7 +850,7 @@
 		fRef = 91AD41ED13527D9F0003FF41 /* LoginViewController.m */;
 		name = "LoginViewController.m: 65";
 		rLen = 0;
-		rLoc = 1553;
+		rLoc = 1664;
 		rType = 0;
 		vrLen = 654;
 		vrLoc = 1084;
@@ -865,7 +880,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 1357;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 948;
@@ -875,7 +890,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 62";
 		rLen = 0;
-		rLoc = 1692;
+		rLoc = 1690;
 		rType = 0;
 		vrLen = 824;
 		vrLoc = 810;
@@ -885,7 +900,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 39";
 		rLen = 0;
-		rLoc = 1357;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 949;
@@ -905,7 +920,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 39";
 		rLen = 0;
-		rLoc = 1357;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 724;
 		vrLoc = 1146;
@@ -915,10 +930,158 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
 		name = "Loki_ToolsAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 1549;
+		rLoc = 1547;
 		rType = 0;
 		vrLen = 724;
 		vrLoc = 1146;
+	};
+	915611C11367B59F00F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* Loki_ToolsAppDelegate.h */;
+		name = "Loki_ToolsAppDelegate.h: 53";
+		rLen = 0;
+		rLoc = 1536;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 670;
+	};
+	915611C21367B59F00F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
+		name = "Loki_ToolsAppDelegate.m: 19";
+		rLen = 0;
+		rLoc = 669;
+		rType = 0;
+		vrLen = 533;
+		vrLoc = 1448;
+	};
+	915611C31367B59F00F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 91AD41ED13527D9F0003FF41 /* LoginViewController.m */;
+		name = "LoginViewController.m: 33";
+		rLen = 0;
+		rLoc = 1024;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 418;
+	};
+	915611C41367B59F00F0D316 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected specifier-qualifier-list before 'Loki_ToolsAppDelegate'";
+		fRef = 91AD41EC13527D9F0003FF41 /* LoginViewController.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 36;
+		rType = 1;
+	};
+	915611C51367B59F00F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 91AD41EC13527D9F0003FF41 /* LoginViewController.h */;
+		name = "LoginViewController.h: 33";
+		rLen = 0;
+		rLoc = 1077;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 313;
+	};
+	915611C61367B5E400F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 91AD424D1352B76D0003FF41 /* User.h */;
+		name = "User.h: 25";
+		rLen = 0;
+		rLoc = 894;
+		rType = 0;
+		vrLen = 772;
+		vrLoc = 411;
+	};
+	915611C71367B5E400F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 91AD41EC13527D9F0003FF41 /* LoginViewController.h */;
+		name = "LoginViewController.h: 37";
+		rLen = 0;
+		rLoc = 1164;
+		rType = 0;
+		vrLen = 735;
+		vrLoc = 605;
+	};
+	915611C81367B5E400F0D316 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Compile /Users/doug/Loki_Tools/Loki_ToolsAppDelegate.m";
+		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 4;
+		rType = 1;
+	};
+	915611C91367B5E400F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
+		name = "Loki_ToolsAppDelegate.m: 5";
+		rLen = 0;
+		rLoc = 49;
+		rType = 0;
+		vrLen = 913;
+		vrLoc = 0;
+	};
+	915611CE1367B5FA00F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 91AD41EC13527D9F0003FF41 /* LoginViewController.h */;
+		name = "LoginViewController.h: 29";
+		rLen = 0;
+		rLoc = 969;
+		rType = 0;
+		vrLen = 1058;
+		vrLoc = 313;
+	};
+	915611D91367C9F200F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */;
+		name = "Loki_ToolsAppDelegate.m: 38";
+		rLen = 0;
+		rLoc = 1355;
+		rType = 0;
+		vrLen = 788;
+		vrLoc = 810;
+	};
+	915611DA1367C9F200F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 91AD41ED13527D9F0003FF41 /* LoginViewController.m */;
+		name = "LoginViewController.m: 70";
+		rLen = 0;
+		rLoc = 1762;
+		rType = 0;
+		vrLen = 712;
+		vrLoc = 720;
+	};
+	915611DB1367C9F200F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 91AD41EC13527D9F0003FF41 /* LoginViewController.h */;
+		name = "LoginViewController.h: 28";
+		rLen = 0;
+		rLoc = 968;
+		rType = 0;
+		vrLen = 1062;
+		vrLoc = 313;
+	};
+	915611DC1367C9F200F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 91AD41EC13527D9F0003FF41 /* LoginViewController.h */;
+		name = "LoginViewController.h: 28";
+		rLen = 0;
+		rLoc = 968;
+		rType = 0;
+		vrLen = 1062;
+		vrLoc = 313;
+	};
+	915611E11367D3B400F0D316 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 91AD41EC13527D9F0003FF41 /* LoginViewController.h */;
+		name = "LoginViewController.h: 22";
+		rLen = 0;
+		rLoc = 837;
+		rType = 0;
+		vrLen = 996;
+		vrLoc = 379;
 	};
 	915DAD10134C2A8000FED0C5 /* MaintenaceViewController.h */ = {
 		uiCtxt = {
@@ -1008,16 +1171,16 @@
 	};
 	91AD41EC13527D9F0003FF41 /* LoginViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1352, 585}}";
-			sepNavSelRange = "{401, 0}";
-			sepNavVisRange = "{244, 1009}";
+			sepNavIntBoundsRect = "{{0, 0}, {1352, 611}}";
+			sepNavSelRange = "{837, 0}";
+			sepNavVisRange = "{379, 996}";
 		};
 	};
 	91AD41ED13527D9F0003FF41 /* LoginViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1352, 1118}}";
-			sepNavSelRange = "{1553, 0}";
-			sepNavVisRange = "{1084, 654}";
+			sepNavIntBoundsRect = "{{0, 0}, {1352, 1092}}";
+			sepNavSelRange = "{1762, 0}";
+			sepNavVisRange = "{720, 712}";
 			sepNavWindowFrame = "{{15, 83}, {1646, 940}}";
 		};
 	};
@@ -1043,7 +1206,7 @@
 	};
 	91AD424D1352B76D0003FF41 /* User.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {870, 689}}";
+			sepNavIntBoundsRect = "{{0, 0}, {870, 715}}";
 			sepNavSelRange = "{894, 0}";
 			sepNavVisRange = "{411, 772}";
 		};
@@ -1141,7 +1304,7 @@
 		fRef = 91AD41EC13527D9F0003FF41 /* LoginViewController.h */;
 		name = "LoginViewController.h: 13";
 		rLen = 0;
-		rLoc = 970;
+		rLoc = 1000;
 		rType = 0;
 		vrLen = 516;
 		vrLoc = 0;
@@ -1151,7 +1314,7 @@
 		fRef = 91AD41ED13527D9F0003FF41 /* LoginViewController.m */;
 		name = "LoginViewController.m: 60";
 		rLen = 0;
-		rLoc = 1797;
+		rLoc = 1908;
 		rType = 0;
 		vrLen = 714;
 		vrLoc = 286;

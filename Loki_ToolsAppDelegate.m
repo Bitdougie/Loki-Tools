@@ -35,8 +35,7 @@
 	searchView = [[SearchViewController alloc] init];
 	maintenaceView = [[MaintenaceViewController alloc] init];
 	loginView = [LoginViewController alloc];
-	[loginView initWithUser:userLogin];
-	[self menuAuthority];
+	[loginView initWithUser:userLogin andMainProgram: self];
 }
 
 -(IBAction) openSearch: (id) sender
