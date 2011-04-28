@@ -35,6 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.//
 	IBOutlet NSSecureTextField *password;
 	User *userLogin;
 	Loki_ToolsAppDelegate *mainProgram;
+	BOOL nibLoaded;
 }
 
 -(LoginViewController *)initWithUser:(User *)userObject andMainProgram:(Loki_ToolsAppDelegate *) mainAppObject;

@@ -47,11 +47,16 @@
 		//change passwords if both inputs are the same
 	
 		DatabaseSetupConnections *connection;
-	
+		connection = [DatabaseSetupConnections alloc]; 
 		[connection initWithUser:userLogin];
-	
-		[connection release];
 		
+		if ([connection connectDatabase]) {
+			
+		};
+		
+		[connection disconnectDatabase];
+		
+		[connection release];
 	}
 	else {
 		

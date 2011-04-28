@@ -25,8 +25,8 @@ This program comes with ABSOLUTELY NO WARRANTY;
 */
 
 #import "LoginViewController.h"
-
-
+#import "ErrorMessageViewController.h"
+#import "Loki_ToolsAppDelegate.h"
 
 @implementation LoginViewController
 
@@ -51,7 +51,21 @@ This program comes with ABSOLUTELY NO WARRANTY;
 		[loginWindow orderFront:@"[LoginViewController openLogin]"];
 	}
 	else {
-		[NSBundle loadNibNamed:@"LoginViewController" owner: self];
+		if (nibLoaded) {
+			[loginWindow setIsVisible:TRUE];
+		}
+		else {
+			if (![NSBundle loadNibNamed:@"LoginViewController" owner: self]) {
+				ErrorMessageViewController *error;
+				error = [[ErrorMessageViewController alloc]init];
+				[error openErrorMessage:@"Login:openLogin" withMessage:@"Could not load LoginViewController.xib"];
+				[error setErrorNo:1];
+			}
+			else {
+				nibLoaded = TRUE;
+			}
+		}
+
 	}
 }
 
@@ -76,6 +90,7 @@ This program comes with ABSOLUTELY NO WARRANTY;
 
 	[connection disconnectDatabase];
 	[connection release];
+	
 	[mainProgram menuAuthority];
 }
 
