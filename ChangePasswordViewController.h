@@ -20,20 +20,22 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.//
  
- Loki Tools  Copyright (C) 2011  Douglas Mason
- This program comes with ABSOLUTELY NO WARRANTY;
  */
 
 
 #import <Cocoa/Cocoa.h>
+#import "User.h"
 
 
 @interface ChangePasswordViewController : NSObject {
 	IBOutlet NSSecureTextField *currentPassword;
 	IBOutlet NSSecureTextField *newPassword;
 	IBOutlet NSSecureTextField *retypedNewPassword;
+	User *userLogin;
 }
 
+-(ChangePasswordViewController *)initWithUser:(User *)userObject;
 
+-(void)changePassword;
 
 @end

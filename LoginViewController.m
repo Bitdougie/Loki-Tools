@@ -76,6 +76,7 @@ This program comes with ABSOLUTELY NO WARRANTY;
 
 	[connection disconnectDatabase];
 	[connection release];
+	[mainProgram menuAuthority];
 }
 
 -(void)dealloc

@@ -19,15 +19,50 @@
  
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.//
- 
- Loki Tools  Copyright (C) 2011  Douglas Mason
- This program comes with ABSOLUTELY NO WARRANTY;
  */
 
 
 #import "ChangePasswordViewController.h"
+#import "DatabaseSetupConnections.h"
 
 
 @implementation ChangePasswordViewController
+
+-(ChangePasswordViewController *)initWithUser:(User *) userObject
+{
+	self = [super init];
+	
+	if (self) {
+		userLogin = userObject;
+		[userLogin retain];
+	}
+	return self;
+}
+
+-(void)changePassword
+{
+	//compare strings first
+	if (NSOrderedSame == [[newPassword stringValue] compare:[retypedNewPassword stringValue]]) {
+	
+		//change passwords if both inputs are the same
+	
+		DatabaseSetupConnections *connection;
+	
+		[connection initWithUser:userLogin];
+	
+		[connection release];
+		
+	}
+	else {
+		
+	}
+
+}
+
+-(void)dealloc
+{
+	[userLogin autorelease];
+	[super dealloc];
+}
 
 @end
