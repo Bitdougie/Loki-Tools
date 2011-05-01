@@ -24,6 +24,7 @@
 
 #import "ChangePasswordViewController.h"
 #import "DatabaseSetupConnections.h"
+#import "ErrorMessageViewController.h"
 
 
 @implementation ChangePasswordViewController
@@ -51,9 +52,16 @@
 		[connection initWithUser:userLogin];
 		
 		if ([connection connectDatabase]) {
-			
+			// connection error handler
+			ErrorMessageViewController *error;
+			error = [[ErrorMessageViewController alloc]init];
+			[error openErrorMessage:@"ChangePasswordViewController:changePassword" withMessage:@"Failed to connect to database"];
+			[error setErrorNo:0];
+			[connection release];
+			[error autorelease];
+			return;
 		};
-		
+
 		[connection disconnectDatabase];
 		
 		[connection release];

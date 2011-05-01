@@ -152,6 +152,28 @@
 	mysql_library_end();
 }
 
+-(NSString *) escapedSQLQuery: (NSString *) rawQuery
+{
+	char *rawCharQuery;
+	char *charSQLEscapedString;
+	unsigned int ESLength;
+	NSString *sQLEscapedString;
+	
+	rawCharQuery = (char*)xmalloc(sizeof([rawQuery UTF8String]));
+	ESLength = (2 * [rawQuery length] +1);
+	charSQLEscapedString = (char*)xmalloc(sizeof(char [ESLength]));
+	
+	(void)strcpy(charSQLEscapedString,[rawQuery UTF8String]);
+	
+	mysql_real_escape_string(conn, charSQLEscapedString, rawCharQuery, [rawQuery length]);
+	
+	sQLEscapedString =[[NSString alloc] initWithUTF8String: charSQLEscapedString];
+	
+	[sQLEscapedString autorelease];
+	
+	return sQLEscapedString;
+}
+
 -(void)dealloc
 {
 	[userLogin autorelease];

@@ -46,4 +46,6 @@ char * stringConvert(NSString *);
 -(int)connectDatabase;
 -(void)disconnectDatabase;
 
+-(NSString *) escapedSQLQuery: (NSString *) rawQuery;
+
 @end

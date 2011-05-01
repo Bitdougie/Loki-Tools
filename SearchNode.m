@@ -53,7 +53,7 @@
 	[children release];	
 	[super dealloc];
 }
-
+/*
 -(NSString *)displayName
 {
 }
@@ -73,5 +73,5 @@
 -(NSColor *)labelColour
 {
 }
-
+*/
 @end

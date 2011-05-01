@@ -64,7 +64,7 @@
 	
 	NSBrowserCell* cellTest; 
 	
-	NSMatrix* databaseCol;
+	//NSMatrix* databaseCol;
 	
 	//databaseCol = [productBrowser matrixInColumn:0];
 	
