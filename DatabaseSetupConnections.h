@@ -41,6 +41,8 @@ char * stringConvert(NSString *);
 	MYSQL *conn; //pointer to a connection handler
 }
 
+@property(nonatomic)MYSQL *conn;
+
 -(DatabaseSetupConnections *) initWithUser: (User *) userObject;
 
 -(int)connectDatabase;

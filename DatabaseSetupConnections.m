@@ -30,6 +30,8 @@
 
 @implementation DatabaseSetupConnections
 
+@synthesize conn;
+
 -(DatabaseSetupConnections *) initWithUser: (User *) userObject
 {
 	self = [super init];

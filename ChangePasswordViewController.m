@@ -42,6 +42,13 @@
 
 -(void)changePassword
 {
+	NSString *errorMessage;
+	NSString *escapedpassword;
+	NSMutableString *sQLPasswordQuery;
+	char *charSQLPasswordQuery;
+	
+	sQLPasswordQuery = [[NSMutableString alloc]init];
+	
 	//compare strings first
 	if (NSOrderedSame == [[newPassword stringValue] compare:[retypedNewPassword stringValue]]) {
 	
@@ -61,9 +68,48 @@
 			[error autorelease];
 			return;
 		};
-
+		
+		escapedpassword = [connection escapedSQLQuery:[newPassword stringValue]];		
+		[escapedpassword retain];
+		
+		//Build query
+		
+		[sQLPasswordQuery setString:@"SET PASSWORD FOR '"];
+		[sQLPasswordQuery appendString:[userLogin userName]];
+		[sQLPasswordQuery appendString:@"'@'"];
+		
+		if ([userLogin hostName] == NULL) {
+			[sQLPasswordQuery appendString:@"localhost"];
+		}
+		else {
+			[sQLPasswordQuery appendString:[userLogin hostName]];
+		}
+		
+		[sQLPasswordQuery appendString:@"' IDENTIFIED BY '"];
+		[sQLPasswordQuery appendString:escapedpassword];
+		[sQLPasswordQuery appendString:@"';"];
+		
+		charSQLPasswordQuery = (char*)xmalloc(sizeof([sQLPasswordQuery length]));
+		
+		(void)strcpy(charSQLPasswordQuery,[sQLPasswordQuery UTF8String]);
+		
+		if (mysql_query([connection conn], charSQLPasswordQuery) != 0) {
+			//error report
+			ErrorMessageViewController *errorPassword;
+			errorMessage = [[NSString alloc]initWithUTF8String: mysql_error([connection conn])];
+			errorPassword = [[ErrorMessageViewController alloc]init];
+			
+			[errorPassword openErrorMessage:@"ChangePasswordViewController:changePassword" withMessage: errorMessage];
+			[errorPassword setErrorNo:0];
+			
+			[escapedpassword autorelease];
+			[connection release];
+			return;
+		}
+		
 		[connection disconnectDatabase];
 		
+		[escapedpassword autorelease];
 		[connection release];
 	}
 	else {

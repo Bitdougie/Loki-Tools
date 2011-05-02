@@ -24,8 +24,10 @@
 
 
 #import <Cocoa/Cocoa.h>
+#import <my_global.h>
+#import <my_sys.h>
+#import <mysql.h>
 #import "User.h"
-
 
 @interface ChangePasswordViewController : NSObject {
 	IBOutlet NSSecureTextField *currentPassword;
