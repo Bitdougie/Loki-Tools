@@ -36,11 +36,37 @@
 	if (self) {
 		userLogin = userObject;
 		[userLogin retain];
+		nibLoaded = FALSE;
 	}
 	return self;
 }
 
--(void)changePassword
+-(void)openChangePassword
+{
+	if([changePasswordWindow isVisible])
+	{
+		[changePasswordWindow orderFront:@"[ChangePasswordViewController openChangePassword]"];
+	}
+	else {
+		if (nibLoaded) {
+			[changePasswordWindow setIsVisible:TRUE];
+		}
+		else {
+			if (![NSBundle loadNibNamed:@"ChangePasswordViewController" owner: self]) {
+				ErrorMessageViewController *error;
+				error = [[ErrorMessageViewController alloc]init];
+				[error openErrorMessage:@"ChangePassword:openChangePassword" withMessage:@"Could not load ChangePasswordViewController.xib"];
+				[error setErrorNo:1];
+			}
+			else {
+				nibLoaded = TRUE;
+			}
+		}
+		
+	}
+}
+
+-(IBAction)changePassword: (id) sender
 {
 	NSString *errorMessage;
 	NSString *escapedpassword;
@@ -108,12 +134,16 @@
 		}
 		
 		[connection disconnectDatabase];
+		[changePasswordWindow setIsVisible:FALSE];
 		
 		[escapedpassword autorelease];
 		[connection release];
 	}
 	else {
-		
+		ErrorMessageViewController *errorDifferentPassword;
+		[errorDifferentPassword openErrorMessage:@"ChangepasswordViewController:changePassword" withMessage: @"New password not typed the same"];
+		[errorDifferentPassword setErrorNo:0];		
+		[errorDifferentPassword autorelease];
 	}
 
 }

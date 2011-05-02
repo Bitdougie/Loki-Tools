@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="2"/>
+			<integer value="1"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -88,7 +88,7 @@
 											<object class="NSButton" id="99233174">
 												<reference key="NSNextResponder" ref="254305288"/>
 												<int key="NSvFlags">268</int>
-												<string key="NSFrame">{{136, 194}, {140, 32}}</string>
+												<string key="NSFrame">{{135, 194}, {140, 32}}</string>
 												<reference key="NSSuperview" ref="254305288"/>
 												<bool key="NSEnabled">YES</bool>
 												<object class="NSButtonCell" key="NSCell" id="1000552983">
@@ -166,6 +166,14 @@
 						<reference key="destination" ref="1005"/>
 					</object>
 					<int key="connectionID">8</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">changePassword:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="99233174"/>
+					</object>
+					<int key="connectionID">21</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -246,8 +254,8 @@
 						<reference key="object" ref="254305288"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="99233174"/>
 							<reference ref="1066358873"/>
+							<reference ref="99233174"/>
 						</object>
 						<reference key="parent" ref="662113139"/>
 					</object>
@@ -343,7 +351,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">21</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -351,6 +359,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">MaintenaceViewController</string>
 					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">changePassword:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">changePassword:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">changePassword:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">maintenaceWindow</string>
 						<string key="NS.object.0">NSWindow</string>

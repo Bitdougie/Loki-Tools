@@ -30,14 +30,16 @@
 #import "User.h"
 
 @interface ChangePasswordViewController : NSObject {
-	IBOutlet NSSecureTextField *currentPassword;
 	IBOutlet NSSecureTextField *newPassword;
 	IBOutlet NSSecureTextField *retypedNewPassword;
+	IBOutlet NSWindow *changePasswordWindow;
 	User *userLogin;
+	BOOL nibLoaded;
 }
 
 -(ChangePasswordViewController *)initWithUser:(User *)userObject;
 
--(void)changePassword;
+-(void)openChangePassword;
+-(IBAction)changePassword: (id) sender;
 
 @end

@@ -32,6 +32,17 @@
 
 @synthesize maintenaceWindow;
 
+-(MaintenaceViewController *)init
+{
+	self = [super init];
+	
+	if (self) {
+		changePasswordViewController = [[ChangePasswordViewController alloc]init];
+	}
+	
+	return self;
+}
+
 -(void) openMaintenace
 {
 	
@@ -45,9 +56,15 @@
 	
 }
 
--(IBAction) changePassword
+-(IBAction) changePassword: (id) sender
 {
-		
+	[changePasswordViewController openChangePassword];	
+}
+
+-(void)dealloc
+{
+	[changePasswordViewController autorelease];
+	[super dealloc];
 }
 
 @end
