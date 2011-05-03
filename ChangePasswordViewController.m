@@ -48,19 +48,11 @@
 		[changePasswordWindow orderFront:@"[ChangePasswordViewController openChangePassword]"];
 	}
 	else {
-		if (nibLoaded) {
-			[changePasswordWindow setIsVisible:TRUE];
-		}
-		else {
-			if (![NSBundle loadNibNamed:@"ChangePasswordViewController" owner: self]) {
-				ErrorMessageViewController *error;
-				error = [[ErrorMessageViewController alloc]init];
-				[error openErrorMessage:@"ChangePassword:openChangePassword" withMessage:@"Could not load ChangePasswordViewController.xib"];
-				[error setErrorNo:1];
-			}
-			else {
-				nibLoaded = TRUE;
-			}
+		if (![NSBundle loadNibNamed:@"ChangePasswordViewController" owner: self]) {
+			ErrorMessageViewController *error;
+			error = [[ErrorMessageViewController alloc]init];
+			[error openErrorMessage:@"ChangePassword:openChangePassword" withMessage:@"Could not load ChangePasswordViewController.xib"];
+			[error setErrorNo:1];
 		}
 		
 	}
@@ -68,13 +60,17 @@
 
 -(IBAction)changePassword: (id) sender
 {
+	NSLog(@"executing change password \n");
 	NSString *errorMessage;
 	NSString *escapedpassword;
 	NSMutableString *sQLPasswordQuery;
 	char *charSQLPasswordQuery;
 	
 	sQLPasswordQuery = [[NSMutableString alloc]init];
-	
+	NSLog(@"flag 1 \n");
+	NSLog(@" %s \n",[newPassword stringValue]);
+	NSLog(@" %s \n",[retypedNewPassword stringValue]);
+	NSLog(@"flag 2 \n");
 	//compare strings first
 	if (NSOrderedSame == [[newPassword stringValue] compare:[retypedNewPassword stringValue]]) {
 	
@@ -83,6 +79,8 @@
 		DatabaseSetupConnections *connection;
 		connection = [DatabaseSetupConnections alloc]; 
 		[connection initWithUser:userLogin];
+		
+		NSLog(@"flag 3\n");
 		
 		if ([connection connectDatabase]) {
 			// connection error handler
@@ -95,14 +93,18 @@
 			return;
 		};
 		
+		NSLog(@"flag 4 \n");
 		escapedpassword = [connection escapedSQLQuery:[newPassword stringValue]];		
 		[escapedpassword retain];
 		
 		//Build query
 		
 		[sQLPasswordQuery setString:@"SET PASSWORD FOR '"];
+		NSLog(@"4.0.1 \n");
 		[sQLPasswordQuery appendString:[userLogin userName]];
+		NSLog(@"4.0.2 \n");
 		[sQLPasswordQuery appendString:@"'@'"];
+		NSLog(@"flag 4.1 \n");
 		
 		if ([userLogin hostName] == NULL) {
 			[sQLPasswordQuery appendString:@"localhost"];
@@ -111,14 +113,21 @@
 			[sQLPasswordQuery appendString:[userLogin hostName]];
 		}
 		
-		[sQLPasswordQuery appendString:@"' IDENTIFIED BY '"];
-		[sQLPasswordQuery appendString:escapedpassword];
-		[sQLPasswordQuery appendString:@"';"];
+		NSLog(@"flag 5 \n");
 		
+		[sQLPasswordQuery appendString:@"' = PASSWORD('"];
+		
+		NSLog(@"flag 5.1 \n");
+		[sQLPasswordQuery appendString:escapedpassword];
+		NSLog(@"flag 5.2 \n");
+		[sQLPasswordQuery appendString:@"');"];
+		
+		NSLog(@"flag 5.3\n");
 		charSQLPasswordQuery = (char*)xmalloc(sizeof([sQLPasswordQuery length]));
 		
 		(void)strcpy(charSQLPasswordQuery,[sQLPasswordQuery UTF8String]);
 		
+		NSLog(@"flag 6 \n");
 		if (mysql_query([connection conn], charSQLPasswordQuery) != 0) {
 			//error report
 			ErrorMessageViewController *errorPassword;
@@ -131,21 +140,24 @@
 			[escapedpassword autorelease];
 			[connection release];
 			return;
-		}
+		 }
 		
 		[connection disconnectDatabase];
 		[changePasswordWindow setIsVisible:FALSE];
 		
+		NSLog(@"flag 7 \n");
 		[escapedpassword autorelease];
 		[connection release];
 	}
 	else {
 		ErrorMessageViewController *errorDifferentPassword;
 		[errorDifferentPassword openErrorMessage:@"ChangepasswordViewController:changePassword" withMessage: @"New password not typed the same"];
-		[errorDifferentPassword setErrorNo:0];		
+		[errorDifferentPassword setErrorNo:0];
+		NSLog(@"flag 8 \n");
 		[errorDifferentPassword autorelease];
 	}
-
+	
+	NSLog(@"flag 9");
 }
 
 -(void)dealloc

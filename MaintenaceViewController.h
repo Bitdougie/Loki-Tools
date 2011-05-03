@@ -27,13 +27,17 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ChangePasswordViewController.h"
+#import "User.h"
 
 @interface MaintenaceViewController : NSObject {
 	IBOutlet NSWindow *maintenaceWindow;
 	ChangePasswordViewController *changePasswordViewController;
+	User *userLogin;
 }
 
 @property(nonatomic, retain)NSWindow *maintenaceWindow;
+
+-(MaintenaceViewController *)initWithUser:(User *)userObject;
 
 -(void) openMaintenace;
 

@@ -32,12 +32,15 @@
 
 @synthesize maintenaceWindow;
 
--(MaintenaceViewController *)init
+-(MaintenaceViewController *)initWithUser:(User *) userObject
 {
 	self = [super init];
 	
 	if (self) {
-		changePasswordViewController = [[ChangePasswordViewController alloc]init];
+		userLogin = userObject;
+		[userLogin retain];
+		changePasswordViewController = [ChangePasswordViewController alloc];
+		[changePasswordViewController initWithUser:userLogin];
 	}
 	
 	return self;
@@ -64,6 +67,7 @@
 -(void)dealloc
 {
 	[changePasswordViewController autorelease];
+	[userLogin autorelease];
 	[super dealloc];
 }
 

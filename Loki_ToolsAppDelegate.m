@@ -33,7 +33,8 @@
 	// Insert code here to initialize your application 
 	userLogin = [[User alloc]init];
 	searchView = [[SearchViewController alloc] init];
-	maintenaceView = [[MaintenaceViewController alloc] init];
+	maintenaceView = [MaintenaceViewController alloc];
+	[maintenaceView initWithUser:userLogin];
 	loginView = [LoginViewController alloc];
 	[loginView initWithUser:userLogin andMainProgram: self];
 	[self menuAuthority];
