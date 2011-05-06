@@ -33,16 +33,14 @@
 -(void) openErrorMessage: (id) sender withMessage: (NSString *) message
 {
 	[message retain];
-	if([errorMessageWindow isVisible])
-	{
-		[errorMessageWindow orderFront:@"[ErrorMessageViewController openErrorMessage]"];
+	
+	if(![NSBundle loadNibNamed:@"ErrorMessageViewController" owner: self]){
+		NSLog(@"Could not load ErrorMessageViewController.xib \n");
+	}
+	else{
 		[errorMessage setStringValue: message];
 	}
-	else {
-		[NSBundle loadNibNamed:@"ErrorMessageViewController" owner: self];
-		[errorMessage setStringValue: message];
-	}
-	[message autorelease];
+	[message release];
 }
 
 -(IBAction)procedureOnClose: (id) sender

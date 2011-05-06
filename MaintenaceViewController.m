@@ -26,6 +26,7 @@
 
 
 #import "MaintenaceViewController.h"
+#import "ErrorMessageViewController.h"
 
 
 @implementation MaintenaceViewController
@@ -48,26 +49,23 @@
 
 -(void) openMaintenace
 {
-	
-	if([maintenaceWindow isVisible])
-	{
-		[maintenaceWindow orderFront:@"[MaintenaceViewController openMaintence]"];
-	}
-	else {
-		[NSBundle loadNibNamed:@"MaintenaceViewController" owner: self];
-	}
-	
+	if (![NSBundle loadNibNamed:@"MaintenaceViewController" owner: self]) {
+		ErrorMessageViewController *error;
+		error = [[ErrorMessageViewController alloc]init];
+		[error openErrorMessage:@"[MaintenaceViewController openMaintence]" withMessage:@"Could not load MaintenaceViewController.xib"];
+		[error setErrorNo:1];
+	}	
 }
 
 -(IBAction) changePassword: (id) sender
 {
-	[changePasswordViewController openChangePassword];	
+	[changePasswordViewController openChangePassword];
 }
 
 -(void)dealloc
 {
-	[changePasswordViewController autorelease];
-	[userLogin autorelease];
+	[changePasswordViewController release];
+	[userLogin release];
 	[super dealloc];
 }
 

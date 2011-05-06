@@ -26,6 +26,7 @@
 
 
 #import "Loki_ToolsAppDelegate.h"
+#import "ErrorMessageViewController.h"
 
 @implementation Loki_ToolsAppDelegate
 
@@ -42,12 +43,17 @@
 
 -(IBAction) openSearch: (id) sender
 {
-	[searchView openSearchWindow];
+	//[searchView openSearchWindow];
 }
 
 -(IBAction) openMaintenace: (id) sender
 {
-	[maintenaceView openMaintenace];
+	if (![NSBundle loadNibNamed:@"MaintenaceViewController" owner: maintenaceView]) {
+		ErrorMessageViewController *error;
+		error = [[ErrorMessageViewController alloc]init];
+		[error openErrorMessage:@"[Loki_ToolsAppDelegate openMaintence]" withMessage:@"Could not load MaintenaceViewController.xib"];
+		[error setErrorNo:1];
+	}	
 }
 
 -(IBAction) openLogin: (id) sender
@@ -73,6 +79,7 @@
 
 -(void) dealloc
 {
+	[userLogin release];
 	[searchView release];
 	[maintenaceView release];
 	[super dealloc];

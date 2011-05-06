@@ -46,27 +46,13 @@ This program comes with ABSOLUTELY NO WARRANTY;
 
 -(void)openLogin
 {
-	if([loginWindow isVisible])
-	{
-		[loginWindow orderFront:@"[LoginViewController openLogin]"];
+	if (![NSBundle loadNibNamed:@"LoginViewController" owner: self]) {
+		ErrorMessageViewController *error;
+		error = [[ErrorMessageViewController alloc]init];
+		[error openErrorMessage:@"Login:openLogin" withMessage:@"Could not load LoginViewController.xib"];
+		[error setErrorNo:1];
 	}
-	else {
-		if (nibLoaded) {
-			[loginWindow setIsVisible:TRUE];
-		}
-		else {
-			if (![NSBundle loadNibNamed:@"LoginViewController" owner: self]) {
-				ErrorMessageViewController *error;
-				error = [[ErrorMessageViewController alloc]init];
-				[error openErrorMessage:@"Login:openLogin" withMessage:@"Could not load LoginViewController.xib"];
-				[error setErrorNo:1];
-			}
-			else {
-				nibLoaded = TRUE;
-			}
-		}
 
-	}
 }
 
 -(IBAction)login: (id) sender;
@@ -82,7 +68,7 @@ This program comes with ABSOLUTELY NO WARRANTY;
 	
 	if(![connection connectDatabase]){
 		[userLogin setValidLogin:TRUE];
-		[loginWindow setIsVisible:FALSE];
+		[loginWindow close];
 	}
 	else {
 		[userLogin setValidLogin:FALSE];

@@ -28,18 +28,25 @@
 #import <my_sys.h>
 #import <mysql.h>
 #import "User.h"
+#import "ErrorMessageViewController.h"
 
 @interface ChangePasswordViewController : NSObject {
 	IBOutlet NSSecureTextField *newPassword;
 	IBOutlet NSSecureTextField *retypedNewPassword;
 	IBOutlet NSWindow *changePasswordWindow;
+	ErrorMessageViewController *error;
 	User *userLogin;
 	BOOL nibLoaded;
 }
 
+@property(nonatomic,assign)IBOutlet NSSecureTextField *newPassword;
+@property(nonatomic,assign)IBOutlet NSSecureTextField *retypedNewPassword;
+@property(nonatomic,assign)IBOutlet NSWindow *changePasswordWindow;
+
 -(ChangePasswordViewController *)initWithUser:(User *)userObject;
 
 -(void)openChangePassword;
+
 -(IBAction)changePassword: (id) sender;
 
 @end

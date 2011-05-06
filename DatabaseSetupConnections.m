@@ -156,29 +156,37 @@
 
 -(NSString *) escapedSQLQuery: (NSString *) rawQuery
 {
+	[rawQuery retain];
 	char *rawCharQuery;
 	char *charSQLEscapedString;
 	unsigned int ESLength;
 	NSString *sQLEscapedString;
+	NSString *query;
 	
-	rawCharQuery = (char*)xmalloc(sizeof([rawQuery UTF8String]));
-	ESLength = (2 * [rawQuery length] +1);
+	query = [[NSString alloc] initWithString:rawQuery];
+	[rawQuery release];
+	
+	rawCharQuery = (char*)xmalloc(sizeof([query length]));
+	ESLength = (2*[query length] +1);
 	charSQLEscapedString = (char*)xmalloc(sizeof(char [ESLength]));
 	
-	(void)strcpy(charSQLEscapedString,[rawQuery UTF8String]);
+	(void)strcpy(rawCharQuery,[query UTF8String]);
 	
-	mysql_real_escape_string(conn, charSQLEscapedString, rawCharQuery, [rawQuery length]);
+	mysql_real_escape_string(conn, charSQLEscapedString, rawCharQuery, [query length]);
 	
 	sQLEscapedString =[[NSString alloc] initWithUTF8String: charSQLEscapedString];
 	
-	[sQLEscapedString autorelease];
+	free(rawCharQuery);
+	free(charSQLEscapedString);
+	[query release];
 	
+	[sQLEscapedString autorelease];
 	return sQLEscapedString;
 }
 
 -(void)dealloc
 {
-	[userLogin autorelease];
+	[userLogin release];
 	[super dealloc];
 }
 
