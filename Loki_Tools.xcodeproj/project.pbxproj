@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */; };
+		41328AC91373B5480091EA22 /* ConstructDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41328AC81373B5480091EA22 /* ConstructDatabaseViewController.xib */; };
+		41328ACC1373B56A0091EA22 /* ConstructDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41328ACB1373B56A0091EA22 /* ConstructDatabaseViewController.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -43,6 +45,9 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		41328AC81373B5480091EA22 /* ConstructDatabaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConstructDatabaseViewController.xib; sourceTree = "<group>"; };
+		41328ACA1373B56A0091EA22 /* ConstructDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstructDatabaseViewController.h; sourceTree = "<group>"; };
+		41328ACB1373B56A0091EA22 /* ConstructDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstructDatabaseViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Loki_Tools-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Loki_Tools-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Loki_Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loki_Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9156115213676F6300F0D316 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -182,6 +187,9 @@
 				91C07F64135797B6007B27F0 /* ChangePasswordViewController.xib */,
 				91C07F66135798AB007B27F0 /* ChangePasswordViewController.h */,
 				91C07F67135798AB007B27F0 /* ChangePasswordViewController.m */,
+				41328AC81373B5480091EA22 /* ConstructDatabaseViewController.xib */,
+				41328ACA1373B56A0091EA22 /* ConstructDatabaseViewController.h */,
+				41328ACB1373B56A0091EA22 /* ConstructDatabaseViewController.m */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -347,6 +355,7 @@
 				91C07F65135797B6007B27F0 /* ChangePasswordViewController.xib in Resources */,
 				9156115313676F6300F0D316 /* LICENSE in Resources */,
 				91561157136770BE00F0D316 /* README in Resources */,
+				41328AC91373B5480091EA22 /* ConstructDatabaseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +379,7 @@
 				91AD41EE13527D9F0003FF41 /* LoginViewController.m in Sources */,
 				91AD424F1352B76D0003FF41 /* User.m in Sources */,
 				91C07F68135798AB007B27F0 /* ChangePasswordViewController.m in Sources */,
+				41328ACC1373B56A0091EA22 /* ConstructDatabaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

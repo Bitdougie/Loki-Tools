@@ -42,6 +42,8 @@
 		[userLogin retain];
 		changePasswordViewController = [ChangePasswordViewController alloc];
 		[changePasswordViewController initWithUser:userLogin];
+		constructDatabaseViewController = [ConstructDatabaseViewController alloc];
+		[constructDatabaseViewController initWithUser:userLogin];
 	}
 	
 	return self;
@@ -62,8 +64,14 @@
 	[changePasswordViewController openChangePassword];
 }
 
+-(IBAction) constructDatabase: (id) sender
+{
+	[constructDatabaseViewController openConstructDatabase];
+}
+
 -(void)dealloc
 {
+	[constructDatabaseViewController release];
 	[changePasswordViewController release];
 	[userLogin release];
 	[super dealloc];

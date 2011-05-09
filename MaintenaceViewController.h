@@ -28,11 +28,13 @@
 #import <Cocoa/Cocoa.h>
 #import "ChangePasswordViewController.h"
 #import "User.h"
+#import "ConstructDatabaseViewController.h"
 
 @interface MaintenaceViewController : NSObject {
 	IBOutlet NSWindow *maintenaceWindow;
 	ChangePasswordViewController *changePasswordViewController;
 	User *userLogin;
+	ConstructDatabaseViewController *constructDatabaseViewController;
 }
 
 @property(nonatomic, retain)NSWindow *maintenaceWindow;
@@ -42,6 +44,6 @@
 -(void) openMaintenace;
 
 -(IBAction) changePassword: (id) sender;
-
+-(IBAction) constructDatabase: (id) sender;
 
 @end
