@@ -1,7 +1,6 @@
 //
-//  ConstructDatabaseViewController.h
+//  BrowserList.h
 //  Loki_Tools
-//
 /*
  Loki Tools a Search engine, data preperation tool that does data mining
  and retail analysis.
@@ -22,24 +21,22 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <my_global.h>
-#import <my_sys.h>
-#import <mysql.h>
-#import "User.h"
-#import "ErrorMessageViewController.h"
 
 
-@interface ConstructDatabaseViewController : NSObject {
-	IBOutlet NSTextField *newDataBaseName;
-	IBOutlet NSWindow *window;
-	User *userLogin;
-	ErrorMessageViewController *error;
+@interface BrowserList : NSObject {
+@private
+	NSString *displayName;
+	NSMutableArray *children;
 }
 
--(ConstructDatabaseViewController *)initWithUser: (User *) userObject;
+@property(nonatomic,copy)NSString *displayName;
+@property(nonatomic,copy)NSMutableArray *children;
 
--(void)openConstructDatabase;
-
--(IBAction)constructDatabase: (id) sender;
+-(BrowserList *)initWithChildren: (NSMutableArray *) browserListArray andRootDisplayName:(NSString *) rootName;
+-(BrowserList *)initWithDisplayName: (NSString *) rootName;
+-(void)addChild:(BrowserList *) browserChild;
+-(void)removeAllChildren;
+-(int)numberOfChildren;
+-(BrowserList *)childAtIndex:(NSUInteger) index;
 
 @end

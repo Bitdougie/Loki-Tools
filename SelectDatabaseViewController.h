@@ -1,5 +1,5 @@
 //
-//  ConstructDatabaseViewController.h
+//  SelectDatabaseViewController.h
 //  Loki_Tools
 //
 /*
@@ -22,24 +22,25 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <my_global.h>
-#import <my_sys.h>
-#import <mysql.h>
 #import "User.h"
 #import "ErrorMessageViewController.h"
+#import "xLokiProcedures.h"
 
 
-@interface ConstructDatabaseViewController : NSObject {
-	IBOutlet NSTextField *newDataBaseName;
+@interface SelectDatabaseViewController : NSObject {
 	IBOutlet NSWindow *window;
+	IBOutlet NSBrowser *databaseBrowser;
+	IBOutlet NSTextField *selectedDatabase;
 	User *userLogin;
 	ErrorMessageViewController *error;
 }
 
--(ConstructDatabaseViewController *)initWithUser: (User *) userObject;
+-(SelectDatabaseViewController *)initWithUser: (User *) userObject;
 
--(void)openConstructDatabase;
-
--(IBAction)constructDatabase: (id) sender;
+-(IBAction)refresh:(id) sender;
+-(IBAction)connect:(id) sender;
+-(IBAction)postSelected:(id) sender;
+-(void)populateList;
+-(void)openSelectDatabase;
 
 @end

@@ -30,6 +30,7 @@
 #import "MaintenaceViewController.h"
 #import "LoginViewController.h"
 #import "User.h"
+#import "SelectDatabaseViewController.h"
 
 @interface Loki_ToolsAppDelegate : NSObject <NSApplicationDelegate> {
 @private
@@ -37,11 +38,13 @@
 	MaintenaceViewController *maintenaceView;
 	LoginViewController *loginView;
 	User *userLogin;
+	SelectDatabaseViewController *selectDatabaseView;
 	
 	//menu items
 	IBOutlet NSMenuItem *loginMenu;
 	IBOutlet NSMenuItem *searchMenu;
 	IBOutlet NSMenuItem *maintenaceMenu;
+	IBOutlet NSMenuItem *selectDatabaseMenu;
 	IBOutlet NSMenu *mainMenu;
 	
 }
@@ -49,6 +52,7 @@
 -(IBAction) openSearch: (id) sender;
 -(IBAction) openMaintenace: (id) sender;
 -(IBAction) openLogin: (id) sender;
+-(IBAction) openSelectDatabase:(id) sender;
 
 -(void)menuAuthority;
 

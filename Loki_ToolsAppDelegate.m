@@ -31,13 +31,14 @@
 @implementation Loki_ToolsAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	// Insert code here to initialize your application 
 	userLogin = [[User alloc]init];
 	searchView = [[SearchViewController alloc] init];
 	maintenaceView = [MaintenaceViewController alloc];
 	[maintenaceView initWithUser:userLogin];
 	loginView = [LoginViewController alloc];
 	[loginView initWithUser:userLogin andMainProgram: self];
+	selectDatabaseView = [SelectDatabaseViewController alloc];
+	[selectDatabaseView initWithUser:userLogin];
 	[self menuAuthority];
 }
 
@@ -48,17 +49,17 @@
 
 -(IBAction) openMaintenace: (id) sender
 {
-	if (![NSBundle loadNibNamed:@"MaintenaceViewController" owner: maintenaceView]) {
-		ErrorMessageViewController *error;
-		error = [[ErrorMessageViewController alloc]init];
-		[error openErrorMessage:@"[Loki_ToolsAppDelegate openMaintence]" withMessage:@"Could not load MaintenaceViewController.xib"];
-		[error setErrorNo:1];
-	}	
+	[maintenaceView openMaintenace];
 }
 
 -(IBAction) openLogin: (id) sender
 {
 	[loginView openLogin];
+}
+
+-(IBAction) openSelectDatabase: (id) sender
+{
+	[selectDatabaseView openSelectDatabase];
 }
 
 -(void)menuAuthority
@@ -68,11 +69,13 @@
 		[loginMenu setEnabled:YES];
 		[searchMenu setEnabled:NO];
 		[maintenaceMenu setEnabled:YES];
+		[selectDatabaseMenu setEnabled:YES];
 	}
 	else {
 		[loginMenu setEnabled:YES];
 		[searchMenu setEnabled:NO];
 		[maintenaceMenu setEnabled:NO];
+		[selectDatabaseMenu setEnabled:NO];
 	}
 
 }
