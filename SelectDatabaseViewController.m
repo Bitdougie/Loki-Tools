@@ -137,12 +137,35 @@
 
 -(IBAction)connect:(id) sender
 {
-	NSLog(@"connect");
+	NSString *oldDatabaseName;
+	oldDatabaseName = [userLogin databaseName];
+	[oldDatabaseName retain];
+	[userLogin setDatabaseName:[selectedDatabase stringValue]];
+	DatabaseSetupConnections *connection;
+	connection = [DatabaseSetupConnections alloc];
+	[connection initWithUser:userLogin];
+	
+	if ([connection connectDatabase]) {
+		[userLogin setDatabaseName:oldDatabaseName];
+		[connection disconnectDatabase];
+		[oldDatabaseName release];
+		[connection release];
+		return;
+	}
+
+	[connection disconnectDatabase];
+	[oldDatabaseName release];
+	[connection release];
 }
 
 -(IBAction)postSelected:(id) sender
 {
-	NSLog(@"Post selected");
+	if ([databaseBrowser clickedRow] >= 0) {
+		[selectedDatabase setStringValue:[[rootNode childAtIndex:[databaseBrowser clickedRow]] displayName]];
+	}
+	else {
+		[selectedDatabase setStringValue:@""];
+	}
 }
 
 -(void)dealloc
@@ -153,7 +176,6 @@
 	[super dealloc];
 }
 
-//browser Delegate code start
 -(id) rootItemForBrowser:(NSBrowser *)browser
 {
 	return rootNode;
@@ -187,6 +209,5 @@
 	BrowserList *node = (BrowserList *)item;
 	return [node displayName];
 }
-//browser Delegate code end
 
 @end
