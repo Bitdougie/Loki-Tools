@@ -25,14 +25,16 @@
 #import "User.h"
 #import "ErrorMessageViewController.h"
 #import "xLokiProcedures.h"
+#import "BrowserList.h"
 
 
-@interface SelectDatabaseViewController : NSObject {
+@interface SelectDatabaseViewController : NSObject <NSBrowserDelegate> {
 	IBOutlet NSWindow *window;
 	IBOutlet NSBrowser *databaseBrowser;
 	IBOutlet NSTextField *selectedDatabase;
 	User *userLogin;
 	ErrorMessageViewController *error;
+	BrowserList *rootNode;
 }
 
 -(SelectDatabaseViewController *)initWithUser: (User *) userObject;

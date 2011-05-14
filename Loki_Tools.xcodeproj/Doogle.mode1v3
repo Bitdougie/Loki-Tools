@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>41BDEEA7137C7DC200418B59</string>
+						<string>41BDEF4B137E298D00418B59</string>
 						<key>history</key>
 						<array>
 							<string>41BB23C5137C0C0100DFC314</string>
@@ -376,7 +376,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>41BDEEA4137C7DC200418B59</string>
+										<string>41BDEF4A137E298D00418B59</string>
 										<key>history</key>
 										<array>
 											<string>4132880E137220A30091EA22</string>
@@ -400,14 +400,14 @@
 											<string>41C3BC88137AB9F9001D30CA</string>
 											<string>41BDEE9A137C7DC200418B59</string>
 											<string>41BDEE9B137C7DC200418B59</string>
-											<string>41BDEE9C137C7DC200418B59</string>
-											<string>41BDEE9D137C7DC200418B59</string>
 											<string>41BDEE9E137C7DC200418B59</string>
 											<string>41BDEE9F137C7DC200418B59</string>
 											<string>41BDEEA0137C7DC200418B59</string>
 											<string>41BDEEA1137C7DC200418B59</string>
-											<string>41BDEEA2137C7DC200418B59</string>
-											<string>41BDEEA3137C7DC200418B59</string>
+											<string>41BDEED4137CA4EE00418B59</string>
+											<string>41BDEF28137D2AE700418B59</string>
+											<string>41BDEF29137D2AE700418B59</string>
+											<string>41BDEF2A137D2AE700418B59</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -605,9 +605,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>41BDEEF8137CA66400418B59</string>
+		<string>41BDEEF9137CA66400418B59</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>41366F4F13788D5100894871</string>
 		<string>41061C7E1371192500E49917</string>
+		<string>41366F4F13788D5100894871</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Doogle/Programming/Objective-C/Loki-Tools/Loki-Tools/Loki_Tools.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -703,7 +706,7 @@
 			<key>WindowToolGUID</key>
 			<string>41061C7E1371192500E49917</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -982,7 +985,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>41BB23CC137C0C0100DFC314</string>
+				<string>41BDEEF6137CA66400418B59</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

@@ -39,12 +39,14 @@
 		userLogin = userObject;
 		[userLogin retain];
 		error = [[ErrorMessageViewController alloc]init];
+		rootNode = [BrowserList alloc];
+		[rootNode initWithDisplayName:@"rootNode"];
 	}
 	return self;
 }
 
 -(void)openSelectDatabase
-{
+{	
 	if (![NSBundle loadNibNamed:@"SelectDatabaseViewController" owner: self]) {
 		[error openErrorMessage:@"SelectDatabaseViewController:openSelectDatabase" withMessage:@"Could not load SelectDatabaseViewController.xib"];
 		[error setErrorNo:1];
@@ -55,15 +57,16 @@
 
 -(void)populateList
 {
-	NSLog(@"Populate list \n");
 	NSMutableString *query;
 	query = [[NSMutableString alloc]init];
 	char *charQuery;
 	MYSQL_RES *res_set;
 	MYSQL_ROW row;
-	NSMutableArray *databaseList;
 	NSString *databaseName;
 	DatabaseSetupConnections *connection;
+	BrowserList *tempList;
+
+	[rootNode removeAllChildren];
 	
 	connection = [DatabaseSetupConnections alloc];
 	[connection initWithUser:userLogin];
@@ -107,19 +110,19 @@
 		return;
 	}
 	else {
-		databaseList = [[NSMutableArray alloc]init];
-		
 		while ((row = mysql_fetch_row(res_set)) != NULL) {
 			databaseName = [[NSString alloc]initWithUTF8String:row[0]];
-			[databaseList addObject:databaseName];
+			tempList = [BrowserList alloc];
+			[tempList initWithDisplayName:databaseName];
+			[rootNode addChild:tempList];
+			
+			[tempList release];
 			[databaseName release];
 		}
 		mysql_free_result(res_set);
-		//construct Browser data structures here
-		[databaseList release];
 	}
 	
-	//new code here
+	[databaseBrowser loadColumnZero];
 
 	[connection disconnectDatabase];
 	[connection release];
@@ -129,7 +132,6 @@
 
 -(IBAction)refresh:(id) sender
 {
-	NSLog(@"refresh \n");
 	[self populateList];
 }
 
@@ -147,7 +149,44 @@
 {
 	[userLogin release];
 	[error release];
+	[rootNode release];
 	[super dealloc];
 }
+
+//browser Delegate code start
+-(id) rootItemForBrowser:(NSBrowser *)browser
+{
+	return rootNode;
+}
+
+-(NSInteger)browser:(NSBrowser *)browser numberOfChildrenOfItem:(id)item
+{
+	BrowserList *node = (BrowserList *)item;
+	return [node numberOfChildren];
+}
+
+-(id)browser:(NSBrowser *)browser child:(NSInteger)index ofItem:(id)item
+{
+	BrowserList *node = (BrowserList *)item;
+	return[node childAtIndex:index];
+}
+
+-(BOOL)browser:(NSBrowser *)browser isLeafItem:(id)item
+{
+	BrowserList *node = (BrowserList *)item;
+	if ([node numberOfChildren] > 0) {
+		return FALSE;
+	}
+	else {
+		return TRUE;
+	}
+}
+
+-(id)browser:(NSBrowser *)browser objectValueForItem:(id)item
+{
+	BrowserList *node = (BrowserList *)item;
+	return [node displayName];
+}
+//browser Delegate code end
 
 @end
