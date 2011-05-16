@@ -166,7 +166,7 @@
 	query = [[NSString alloc] initWithString:rawQuery];
 	[rawQuery release];
 	
-	rawCharQuery = (char*)xmalloc(sizeof([query length]));
+	rawCharQuery = (char*)xmalloc(sizeof(char[[query length]]));
 	ESLength = (2*[query length] +1);
 	charSQLEscapedString = (char*)xmalloc(sizeof(char [ESLength]));
 	

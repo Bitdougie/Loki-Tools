@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>41366F4F13788D5100894871</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>ConstructDatabaseViewController.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>41366F5013788D5100894871</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>ConstructDatabaseViewController.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>41BDEF91137E37A000418B59</string>
-						<key>history</key>
-						<array>
-							<string>41BB23C5137C0C0100DFC314</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {752, 852}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>4 135 752 893 0 0 1680 1028 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -305,16 +264,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
-								<string>41366F821378999100894871</string>
-								<string>41C3BC65137A2BDE001D30CA</string>
-								<string>91AD41E813527CDA0003FF41</string>
-								<string>91AD41E913527CEF0003FF41</string>
-								<string>91AD41C61352610A0003FF41</string>
-								<string>91AD41C7135261190003FF41</string>
+								<string>41BDEF9B1380713900418B59</string>
+								<string>41BDEF9C1380714B00418B59</string>
 								<string>91A7259D134AD09900AF74BA</string>
 								<string>91A7259E134AD0C700AF74BA</string>
-								<string>91A72599134ACEA900AF74BA</string>
-								<string>080E96DDFE201D6D7F000001</string>
+								<string>91AD41E813527CDA0003FF41</string>
+								<string>91A7259A134ACEBB00AF74BA</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
@@ -364,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SelectDatabaseViewController.m</string>
+								<string>TraderTypeViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -372,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SelectDatabaseViewController.m</string>
+										<string>TraderTypeViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>41BDEF90137E37A000418B59</string>
+										<string>41BDF0A11381400D00418B59</string>
 										<key>history</key>
 										<array>
 											<string>4132880E137220A30091EA22</string>
@@ -390,8 +345,6 @@
 											<string>41366FD31378D18400894871</string>
 											<string>41366FD41378D18400894871</string>
 											<string>41366FD51378D18400894871</string>
-											<string>41366FD71378D18400894871</string>
-											<string>41366FDE1378EAE000894871</string>
 											<string>41366FF11379DDDC00894871</string>
 											<string>41BDEE9A137C7DC200418B59</string>
 											<string>41BDEE9E137C7DC200418B59</string>
@@ -399,15 +352,21 @@
 											<string>41BDEEA0137C7DC200418B59</string>
 											<string>41BDEEA1137C7DC200418B59</string>
 											<string>41BDEED4137CA4EE00418B59</string>
-											<string>41BDEF28137D2AE700418B59</string>
 											<string>41BDEF73137E355400418B59</string>
 											<string>41BDEF74137E355400418B59</string>
-											<string>41BDEF76137E355400418B59</string>
-											<string>41BDEF77137E355400418B59</string>
 											<string>41BDEF81137E36AA00418B59</string>
 											<string>41BDEF82137E36AA00418B59</string>
-											<string>41BDEF83137E36AA00418B59</string>
-											<string>41BDEF84137E36AA00418B59</string>
+											<string>41BDF0011380D65000418B59</string>
+											<string>41BDF0021380D65000418B59</string>
+											<string>41BDF0031380D65000418B59</string>
+											<string>41BDF0041380D65000418B59</string>
+											<string>41BDF0051380D65000418B59</string>
+											<string>41BDF0061380D65000418B59</string>
+											<string>41BDF0071380D65000418B59</string>
+											<string>41BDF0091380D65000418B59</string>
+											<string>41BDF0681380E67A00418B59</string>
+											<string>41BDF0691380E67A00418B59</string>
+											<string>41BDF06A1380E67A00418B59</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -609,7 +568,6 @@
 		<string>41BDEEF9137CA66400418B59</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>41061C7E1371192500E49917</string>
-		<string>41366F4F13788D5100894871</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Doogle/Programming/Objective-C/Loki-Tools/Loki-Tools/Loki_Tools.xcodeproj</string>
 	</array>
@@ -635,7 +593,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>BrowserList.m</string>
+								<string>TraderTypeViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -960,9 +918,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {526, 852}}</string>
+								<string>{{0, 0}, {785, 852}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1154 135 526 893 0 0 1680 1028 </string>
+								<string>894 135 785 893 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -991,7 +949,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>1154 135 526 893 0 0 1680 1028 </string>
+			<string>894 135 785 893 0 0 1680 1028 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

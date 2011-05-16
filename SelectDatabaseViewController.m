@@ -99,7 +99,7 @@
 	{
 		NSString *errorMessage;
 		errorMessage = [[NSString alloc] initWithUTF8String: mysql_error([connection conn])];
-		[error openErrorMessage:@"ChangePasswordViewController:changePassword" withMessage: errorMessage];
+		[error openErrorMessage:@"SelectDatabaseViewController:populateList" withMessage: errorMessage];
 		[error setErrorNo:0];
 		
 		[errorMessage release];
@@ -156,6 +156,7 @@
 	[connection disconnectDatabase];
 	[oldDatabaseName release];
 	[connection release];
+	[window close];
 }
 
 -(IBAction)postSelected:(id) sender

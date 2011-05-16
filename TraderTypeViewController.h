@@ -1,7 +1,6 @@
 //
-//  Loki_ToolsAppDelegate.h
+//  TraderTypeViewController.h
 //  Loki_Tools
-//
 /*
  Loki Tools a Search engine, data preperation tool that does data mining
  and retail analysis.
@@ -24,40 +23,27 @@
  This program comes with ABSOLUTELY NO WARRANTY;
  */
 
-
 #import <Cocoa/Cocoa.h>
-#import "SearchViewController.h"
-#import "MaintenaceViewController.h"
-#import "LoginViewController.h"
 #import "User.h"
-#import "SelectDatabaseViewController.h"
-#import "TraderTypeViewController.h"
+#import "BrowserList.h"
+#import "ErrorMessageViewController.h"
 
-@interface Loki_ToolsAppDelegate : NSObject <NSApplicationDelegate> {
-@private
-	SearchViewController *searchView;
-	MaintenaceViewController *maintenaceView;
-	LoginViewController *loginView;
+
+@interface TraderTypeViewController : NSObject <NSBrowserDelegate> {
+	IBOutlet NSTextField *traderType;
+	IBOutlet NSTextView *summary;
+	IBOutlet NSTextField *rebate;
+	IBOutlet NSBrowser *browser;
 	User *userLogin;
-	SelectDatabaseViewController *selectDatabaseView;
-	TraderTypeViewController *traderTypeView;
-	
-	//menu items
-	IBOutlet NSMenuItem *loginMenu;
-	IBOutlet NSMenuItem *searchMenu;
-	IBOutlet NSMenuItem *maintenaceMenu;
-	IBOutlet NSMenuItem *selectDatabaseMenu;
-	IBOutlet NSMenuItem *traderTypeMenu;
-	IBOutlet NSMenu *mainMenu;
-	
+	BrowserList *rootNode;
+	ErrorMessageViewController *error;
 }
 
--(IBAction) openSearch: (id) sender;
--(IBAction) openMaintenace: (id) sender;
--(IBAction) openLogin: (id) sender;
--(IBAction) openSelectDatabase:(id) sender;
--(IBAction) openTrader:(id) sender;
-
--(void)menuAuthority;
+-(TraderTypeViewController *)initWithUser:(User *)userObject;
+-(IBAction)update:(id) sender;
+-(IBAction)selectTrader:(id) sender;
+-(IBAction)refresh:(id) sender;
+-(void)openTraderType;
+-(void)populateList;
 
 @end

@@ -39,7 +39,37 @@
 	[loginView initWithUser:userLogin andMainProgram: self];
 	selectDatabaseView = [SelectDatabaseViewController alloc];
 	[selectDatabaseView initWithUser:userLogin];
+	traderTypeView = [TraderTypeViewController alloc];
+	[traderTypeView initWithUser: userLogin];
 	[self menuAuthority];
+}
+
+-(void) dealloc
+{
+	[userLogin release];
+	[searchView release];
+	[maintenaceView release];
+	[traderTypeView release];
+	[super dealloc];
+}
+
+-(void)menuAuthority
+{
+	//sets which menus can be used
+	if ([userLogin validLogin]) {
+		[loginMenu setEnabled:YES];
+		[searchMenu setEnabled:NO];
+		[maintenaceMenu setEnabled:YES];
+		[selectDatabaseMenu setEnabled:YES];
+		[traderTypeMenu setEnabled:YES];
+	}
+	else {
+		[loginMenu setEnabled:YES];
+		[searchMenu setEnabled:NO];
+		[maintenaceMenu setEnabled:NO];
+		[selectDatabaseMenu setEnabled:NO];
+		[traderTypeMenu setEnabled:NO];
+	}
 }
 
 -(IBAction) openSearch: (id) sender
@@ -62,29 +92,9 @@
 	[selectDatabaseView openSelectDatabase];
 }
 
--(void)menuAuthority
+-(IBAction) openTrader: (id) sender
 {
-	//sets which menus can be used
-	if ([userLogin validLogin]) {
-		[loginMenu setEnabled:YES];
-		[searchMenu setEnabled:NO];
-		[maintenaceMenu setEnabled:YES];
-		[selectDatabaseMenu setEnabled:YES];
-	}
-	else {
-		[loginMenu setEnabled:YES];
-		[searchMenu setEnabled:NO];
-		[maintenaceMenu setEnabled:NO];
-		[selectDatabaseMenu setEnabled:NO];
-	}
-
+	[traderTypeView openTraderType];
 }
 
--(void) dealloc
-{
-	[userLogin release];
-	[searchView release];
-	[maintenaceView release];
-	[super dealloc];
-}
 @end
