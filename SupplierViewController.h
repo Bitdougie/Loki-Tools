@@ -1,5 +1,5 @@
 //
-//  TraderTypeViewController.h
+//  SupplierViewController.h
 //  Loki_Tools
 /*
  Loki Tools a Search engine, data preperation tool that does data mining
@@ -23,28 +23,43 @@
  This program comes with ABSOLUTELY NO WARRANTY;
  */
 
+
 #import <Cocoa/Cocoa.h>
 #import "User.h"
-#import "BrowserList.h"
 #import "ErrorMessageViewController.h"
+#import "BrowserList.h"
 
-
-@interface TraderTypeViewController : NSObject <NSBrowserDelegate> {
-	IBOutlet NSTextField *traderType;
-	IBOutlet NSTextView *summary;
-	IBOutlet NSTextField *rebate;
+@interface SupplierViewController : NSObject <NSBrowserDelegate,NSComboBoxDataSource>  {
+	IBOutlet NSComboBox *supplierCode;
+	IBOutlet NSComboBox *traderType;
 	IBOutlet NSBrowser *browser;
+	IBOutlet NSTextField *name;
+	IBOutlet NSTextView *postalAddress;
+	IBOutlet NSTextView *physicalAddress;
+	IBOutlet NSTextField *fax;
+	IBOutlet NSTextField *phone;
+	IBOutlet NSTextField *email;
+	IBOutlet NSTextField *website;
+	IBOutlet NSTextField *freightFree;
+	IBOutlet NSSearchField *search;
+	
 	User *userLogin;
-	BrowserList *rootNode;
 	ErrorMessageViewController *error;
+	BrowserList *rootNodeBrowser;
+	NSMutableArray *supplierComboBox;
 }
 
--(TraderTypeViewController *)initWithUser:(User *)userObject;
+-(SupplierViewController *)initWithUser:(User *)userObject;
+
+-(IBAction)selectSupplier:(id) sender;
+
+-(IBAction)search:(id) sender;
+-(IBAction)edit:(id) sender;
+-(IBAction)add:(id) sender;
 -(IBAction)remove:(id) sender;
--(IBAction)update:(id) sender;
--(IBAction)selectTrader:(id) sender;
 -(IBAction)refresh:(id) sender;
--(void)openTraderType;
--(void)populateList;
+
+-(void)openSupplier;
+-(void)populate: (NSString *) searchString;
 
 @end

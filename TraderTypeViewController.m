@@ -262,11 +262,57 @@
 	[connection release];
 }
 
+-(IBAction)remove:(id) sender
+{
+	if (![[traderType stringValue]compare:@""]){
+		return;
+	}
+	else {
+		NSMutableString *query;
+		query = [[NSMutableString alloc]init];
+		char *charQuery;
+		DatabaseSetupConnections *connection;
+	
+		connection = [DatabaseSetupConnections alloc];
+		[connection initWithUser:userLogin];
+	
+		[connection connectDatabase];
+	
+		[query setString:@"DELETE FROM TRADER_TYPE WHERE TITLE = '"];
+		[query appendString:[connection escapedSQLQuery:[traderType stringValue]]];
+		[query appendString:@"';"];
+	
+		charQuery = (char *)xmalloc(sizeof(char[[query length]]));
+	
+		(void)strcpy(charQuery,[query UTF8String]);
+	
+		if (mysql_real_query([connection conn], charQuery, [query length])) {
+			NSString *errorMessage;
+			errorMessage = [[NSString alloc]initWithUTF8String:mysql_error([connection conn])];
+			[error openErrorMessage:@"TraderTypeViewController:remove" withMessage: errorMessage];
+			[error setErrorNo:0];
+		
+			[errorMessage release];
+			[connection disconnectDatabase];
+			[connection release];
+			[query release];
+			free(charQuery);
+		}	
+	
+		[connection disconnectDatabase];
+		[connection release];
+		[query release];
+		free(charQuery);
+		[self populateList];
+	}
+}
+
 -(void)openTraderType
 {	
 	if (![NSBundle loadNibNamed:@"TraderTypeViewController" owner: self]) {
 		[error openErrorMessage:@"TraderTypeViewController:openTraderType" withMessage:@"Could not load TraderTypeViewController.xib"];
 		[error setErrorNo:1];
+		return;
 	}
 	
 	[self populateList];
