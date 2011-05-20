@@ -58,8 +58,7 @@
 
 -(IBAction)search:(id) sender
 {
-	NSLog(@"searching list");
-	
+	NSLog(@"search \n");
 	[supplierCode setStringValue:@""];
 	[traderType setStringValue:@""];
 	[name setStringValue:@""];
@@ -75,7 +74,7 @@
 
 -(IBAction)selectSupplier:(id) sender
 {
-	NSLog(@"select supplier \n");
+	NSLog(@"selectSupplier \n");
 	NSMutableString *query;
 	char *charQuery;
 	DatabaseSetupConnections *connection;
@@ -95,7 +94,6 @@
 	if (sender == browser) {
 	
 		if ([browser clickedRow] >= 0) {
-			NSLog(@"browser select \n");
 			[query appendString:@"TRADE_NAME = '"];
 			[query appendString:[connection escapedSQLQuery:[[rootNodeBrowser childAtIndex:[browser clickedRow]] displayName]]];
 			[query appendString:@"';"];
@@ -131,6 +129,7 @@
 					[connection disconnectDatabase];
 					[connection release];
 					[query release];
+					return;
 				}
 				else {
 				
@@ -167,9 +166,14 @@
 						[website setStringValue:temp];
 						[temp release];
 					
-						temp = [[NSString alloc] initWithUTF8String:row[8]];
-						[freightFree setStringValue:temp];
-						[temp release];
+						if (row[8] == NULL) {
+							[freightFree setStringValue:@""];
+						}
+						else {
+							temp = [[NSString alloc] initWithUTF8String:row[8]];
+							[freightFree setStringValue:temp];
+							[temp release];
+						}
 					
 						temp = [[NSString alloc] initWithUTF8String:row[9]];
 						[traderType setStringValue:temp];
@@ -184,8 +188,6 @@
 		}
 	}
 	else {
-		NSLog(@"comboBox select \n");
-		
 		if ([[supplierCode stringValue] compare:@""]) 
 		{
 			[query appendString:@"SUPPLIER_CODE = '"];
@@ -259,10 +261,15 @@
 						[website setStringValue:temp];
 						[temp release];
 					
-						temp = [[NSString alloc] initWithUTF8String:row[8]];
-						[freightFree setStringValue:temp];
-						[temp release];
-						
+						if (row[8] == NULL) {
+							[freightFree setStringValue:@""];
+						}
+						else {
+							temp = [[NSString alloc] initWithUTF8String:row[8]];
+							[freightFree setStringValue:temp];
+							[temp release];
+						}
+
 						temp = [[NSString alloc] initWithUTF8String:row[9]];
 						[traderType setStringValue:temp];
 						[temp release];
@@ -283,7 +290,7 @@
 
 -(IBAction)edit:(id) sender
 {
-	NSLog(@"edit \n");
+	NSLog(@"edit");
 	NSMutableString *query;
 	char *charQuery;
 	DatabaseSetupConnections *connection;
@@ -308,7 +315,12 @@
 	[query appendString:[connection escapedSQLQuery:[email stringValue]]];
 	[query appendString:@"', WEBSITE = '"];
 	[query appendString:[connection escapedSQLQuery:[website stringValue]]];
-	[query appendFormat:@"', FREIGHT_FREE_LIMIT = %f", [freightFree doubleValue]];
+	if ([[freightFree stringValue] compare:@""]) {
+		[query appendFormat:@"', FREIGHT_FREE_LIMIT = %f", [freightFree doubleValue]];
+	}
+	else {
+		[query appendString:@"', FREIGHT_FREE_LIMIT = NULL"];
+	}
 	[query appendString:@", TRADER = '"];
 	[query appendString:[connection escapedSQLQuery:[traderType stringValue]]];
 	[query appendString:@"' WHERE SUPPLIER_CODE = '"];
@@ -342,7 +354,7 @@
 
 -(IBAction)add:(id) sender
 {
-	NSLog(@"add \n");
+	NSLog(@"add\n");
 	NSMutableString *query;
 	char *charQuery;
 	DatabaseSetupConnections *connection;
@@ -443,20 +455,19 @@
 	[query release];
 	free(charQuery);
 	
-	[self refresh: self];
+	[self refresh: @"SupplierViewController:refresh"];
 }
 
 -(void)openSupplier
 {
-	NSLog(@"open supplier \n");
-	
+	NSLog(@"openSupplier \n");
 	if (![NSBundle loadNibNamed:@"SupplierViewController" owner: self]) {
 		[error openErrorMessage:@"SupplierViewController:openSupplier" withMessage:@"Could not load SupplierViewController.xib"];
 		[error setErrorNo:1];
 		return;
 	}
 	
-	[self refresh: @"openSupplier"];
+	[self refresh: self];
 }
 
 -(void)populate:(NSString *) searchString
@@ -529,10 +540,10 @@
 				[tradeName release];
 				[browserTemp release];
 			}
-		
+		    mysql_free_result(res_set);
 		}
 		
-		mysql_free_result(res_set);
+		
 	}
 	
 	[browser loadColumnZero];

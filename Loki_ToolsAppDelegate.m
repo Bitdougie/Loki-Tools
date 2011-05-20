@@ -43,6 +43,8 @@
 	[traderTypeView initWithUser: userLogin];
 	supplierView = [SupplierViewController alloc];
 	[supplierView initWithUser:userLogin];
+	storeView = [StoreViewController alloc];
+	[storeView initWithUser:userLogin];
 	[self menuAuthority];
 }
 
@@ -53,6 +55,7 @@
 	[maintenaceView release];
 	[traderTypeView release];
 	[supplierView release];
+	[storeView release];
 	[super dealloc];
 }
 
@@ -66,6 +69,7 @@
 		[selectDatabaseMenu setEnabled:YES];
 		[traderTypeMenu setEnabled:YES];
 		[supplierMenu setEnabled:YES];
+		[storeMenu setEnabled:YES];
 	}
 	else {
 		[loginMenu setEnabled:YES];
@@ -74,6 +78,7 @@
 		[selectDatabaseMenu setEnabled:NO];
 		[traderTypeMenu setEnabled:NO];
 		[supplierMenu setEnabled:NO];
+		[storeMenu setEnabled:NO];
 	}
 }
 
@@ -105,6 +110,11 @@
 -(IBAction)openSupplier:(id) sender
 {
 	[supplierView openSupplier];
+}
+
+-(IBAction)openStore:(id) sender;
+{
+	[storeView openStore];
 }
 
 @end

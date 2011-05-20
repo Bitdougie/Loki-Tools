@@ -13,6 +13,8 @@
 		41328ACC1373B56A0091EA22 /* ConstructDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41328ACB1373B56A0091EA22 /* ConstructDatabaseViewController.m */; };
 		41366F7C1378992000894871 /* SelectDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41366F7B1378992000894871 /* SelectDatabaseViewController.m */; };
 		41366F851378A11E00894871 /* SelectDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41366F841378A11E00894871 /* SelectDatabaseViewController.xib */; };
+		417837C913848595006C6730 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417837C813848595006C6730 /* StoreViewController.xib */; };
+		417837CC138485B8006C6730 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 417837CB138485B8006C6730 /* StoreViewController.m */; };
 		41BB23B1137B6CE300DFC314 /* BrowserList.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BB23B0137B6CE300DFC314 /* BrowserList.m */; };
 		41BB3F171381C11F003643B0 /* SupplierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BB3F161381C11F003643B0 /* SupplierViewController.xib */; };
 		41BB3F1A1381C134003643B0 /* SupplierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BB3F191381C134003643B0 /* SupplierViewController.m */; };
@@ -58,6 +60,9 @@
 		41366F7A1378992000894871 /* SelectDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDatabaseViewController.h; sourceTree = "<group>"; };
 		41366F7B1378992000894871 /* SelectDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDatabaseViewController.m; sourceTree = "<group>"; };
 		41366F841378A11E00894871 /* SelectDatabaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectDatabaseViewController.xib; sourceTree = "<group>"; };
+		417837C813848595006C6730 /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
+		417837CA138485B8006C6730 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
+		417837CB138485B8006C6730 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 		41BB23AF137B6CE300DFC314 /* BrowserList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserList.h; sourceTree = "<group>"; };
 		41BB23B0137B6CE300DFC314 /* BrowserList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserList.m; sourceTree = "<group>"; };
 		41BB3F161381C11F003643B0 /* SupplierViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplierViewController.xib; sourceTree = "<group>"; };
@@ -153,11 +158,12 @@
 		29B97314FDCFA39411CA2CEA /* Loki_Tools */ = {
 			isa = PBXGroup;
 			children = (
-				41BB3F141381C0E4003643B0 /* Supplier */,
 				91A7259D134AD09900AF74BA /* Main Application */,
 				91AD41E813527CDA0003FF41 /* Login */,
 				41366F821378999100894871 /* Select Database */,
 				41BDEF9B1380713900418B59 /* Trader Type */,
+				41BB3F141381C0E4003643B0 /* Supplier */,
+				417837C6138484E8006C6730 /* Store */,
 				91A72597134ACE7200AF74BA /* Maintenace & Setup */,
 				91A72599134ACEA900AF74BA /* Search Engine */,
 				91A7259B134ACED000AF74BA /* Stock Management */,
@@ -237,6 +243,24 @@
 				41C3BC65137A2BDE001D30CA /* Display */,
 			);
 			name = "Select Database";
+			sourceTree = "<group>";
+		};
+		417837C6138484E8006C6730 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				417837C713848531006C6730 /* Display */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		417837C713848531006C6730 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				417837C813848595006C6730 /* StoreViewController.xib */,
+				417837CA138485B8006C6730 /* StoreViewController.h */,
+				417837CB138485B8006C6730 /* StoreViewController.m */,
+			);
+			name = Display;
 			sourceTree = "<group>";
 		};
 		41BB3F141381C0E4003643B0 /* Supplier */ = {
@@ -460,6 +484,7 @@
 				41366F851378A11E00894871 /* SelectDatabaseViewController.xib in Resources */,
 				41BDEF9E1380719200418B59 /* TraderTypeViewController.xib in Resources */,
 				41BB3F171381C11F003643B0 /* SupplierViewController.xib in Resources */,
+				417837C913848595006C6730 /* StoreViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +513,7 @@
 				41BB23B1137B6CE300DFC314 /* BrowserList.m in Sources */,
 				41BDEFA1138071BA00418B59 /* TraderTypeViewController.m in Sources */,
 				41BB3F1A1381C134003643B0 /* SupplierViewController.m in Sources */,
+				417837CC138485B8006C6730 /* StoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
