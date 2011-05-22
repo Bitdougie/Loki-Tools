@@ -15,6 +15,8 @@
 		41366F851378A11E00894871 /* SelectDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41366F841378A11E00894871 /* SelectDatabaseViewController.xib */; };
 		417837C913848595006C6730 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417837C813848595006C6730 /* StoreViewController.xib */; };
 		417837CC138485B8006C6730 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 417837CB138485B8006C6730 /* StoreViewController.m */; };
+		417838F71386182D006C6730 /* DiscountsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417838F61386182D006C6730 /* DiscountsViewController.xib */; };
+		417838FA13861844006C6730 /* DiscountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 417838F913861844006C6730 /* DiscountsViewController.m */; };
 		41BB23B1137B6CE300DFC314 /* BrowserList.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BB23B0137B6CE300DFC314 /* BrowserList.m */; };
 		41BB3F171381C11F003643B0 /* SupplierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BB3F161381C11F003643B0 /* SupplierViewController.xib */; };
 		41BB3F1A1381C134003643B0 /* SupplierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BB3F191381C134003643B0 /* SupplierViewController.m */; };
@@ -63,6 +65,9 @@
 		417837C813848595006C6730 /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
 		417837CA138485B8006C6730 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		417837CB138485B8006C6730 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		417838F61386182D006C6730 /* DiscountsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountsViewController.xib; sourceTree = "<group>"; };
+		417838F813861844006C6730 /* DiscountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountsViewController.h; sourceTree = "<group>"; };
+		417838F913861844006C6730 /* DiscountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountsViewController.m; sourceTree = "<group>"; };
 		41BB23AF137B6CE300DFC314 /* BrowserList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserList.h; sourceTree = "<group>"; };
 		41BB23B0137B6CE300DFC314 /* BrowserList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserList.m; sourceTree = "<group>"; };
 		41BB3F161381C11F003643B0 /* SupplierViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplierViewController.xib; sourceTree = "<group>"; };
@@ -158,6 +163,7 @@
 		29B97314FDCFA39411CA2CEA /* Loki_Tools */ = {
 			isa = PBXGroup;
 			children = (
+				417838F4138617FC006C6730 /* Discounts */,
 				91A7259D134AD09900AF74BA /* Main Application */,
 				91AD41E813527CDA0003FF41 /* Login */,
 				41366F821378999100894871 /* Select Database */,
@@ -259,6 +265,24 @@
 				417837C813848595006C6730 /* StoreViewController.xib */,
 				417837CA138485B8006C6730 /* StoreViewController.h */,
 				417837CB138485B8006C6730 /* StoreViewController.m */,
+			);
+			name = Display;
+			sourceTree = "<group>";
+		};
+		417838F4138617FC006C6730 /* Discounts */ = {
+			isa = PBXGroup;
+			children = (
+				417838F513861808006C6730 /* Display */,
+			);
+			name = Discounts;
+			sourceTree = "<group>";
+		};
+		417838F513861808006C6730 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				417838F61386182D006C6730 /* DiscountsViewController.xib */,
+				417838F813861844006C6730 /* DiscountsViewController.h */,
+				417838F913861844006C6730 /* DiscountsViewController.m */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -485,6 +509,7 @@
 				41BDEF9E1380719200418B59 /* TraderTypeViewController.xib in Resources */,
 				41BB3F171381C11F003643B0 /* SupplierViewController.xib in Resources */,
 				417837C913848595006C6730 /* StoreViewController.xib in Resources */,
+				417838F71386182D006C6730 /* DiscountsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +539,7 @@
 				41BDEFA1138071BA00418B59 /* TraderTypeViewController.m in Sources */,
 				41BB3F1A1381C134003643B0 /* SupplierViewController.m in Sources */,
 				417837CC138485B8006C6730 /* StoreViewController.m in Sources */,
+				417838FA13861844006C6730 /* DiscountsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

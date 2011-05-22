@@ -45,6 +45,8 @@
 	[supplierView initWithUser:userLogin];
 	storeView = [StoreViewController alloc];
 	[storeView initWithUser:userLogin];
+	discountsView = [DiscountsViewController alloc];
+	[discountsView initWithUser:userLogin];
 	[self menuAuthority];
 }
 
@@ -56,6 +58,7 @@
 	[traderTypeView release];
 	[supplierView release];
 	[storeView release];
+	[discountsView release];
 	[super dealloc];
 }
 
@@ -70,6 +73,7 @@
 		[traderTypeMenu setEnabled:YES];
 		[supplierMenu setEnabled:YES];
 		[storeMenu setEnabled:YES];
+		[discountsMenu setEnabled:YES];
 	}
 	else {
 		[loginMenu setEnabled:YES];
@@ -79,6 +83,7 @@
 		[traderTypeMenu setEnabled:NO];
 		[supplierMenu setEnabled:NO];
 		[storeMenu setEnabled:NO];
+		[discountsMenu setEnabled:NO];
 	}
 }
 
@@ -115,6 +120,11 @@
 -(IBAction)openStore:(id) sender;
 {
 	[storeView openStore];
+}
+
+-(IBAction)openDiscounts:(id) sender;
+{
+	[discountsView openDiscounts];
 }
 
 @end

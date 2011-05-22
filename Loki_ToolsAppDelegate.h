@@ -34,6 +34,7 @@
 #import "TraderTypeViewController.h"
 #import "SupplierViewController.h"
 #import "StoreViewController.h"
+#import "DiscountsViewController.h"
 
 @interface Loki_ToolsAppDelegate : NSObject <NSApplicationDelegate> {
 @private
@@ -45,6 +46,7 @@
 	TraderTypeViewController *traderTypeView;
 	SupplierViewController *supplierView;
 	StoreViewController *storeView;
+	DiscountsViewController *discountsView;
 	
 	//menu items
 	IBOutlet NSMenuItem *supplierMenu;
@@ -54,6 +56,7 @@
 	IBOutlet NSMenuItem *selectDatabaseMenu;
 	IBOutlet NSMenuItem *traderTypeMenu;
 	IBOutlet NSMenuItem *storeMenu;
+	IBOutlet NSMenuItem *discountsMenu;
 	IBOutlet NSMenu *mainMenu;
 	
 }
@@ -65,6 +68,7 @@
 -(IBAction) openTrader:(id) sender;
 -(IBAction) openSupplier:(id) sender;
 -(IBAction) openStore:(id) sender;
+-(IBAction) openDiscounts:(id) sender;
 
 -(void)menuAuthority;
 
