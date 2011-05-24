@@ -7,106 +7,111 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */; };
-		41328AC91373B5480091EA22 /* ConstructDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41328AC81373B5480091EA22 /* ConstructDatabaseViewController.xib */; };
-		41328ACC1373B56A0091EA22 /* ConstructDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41328ACB1373B56A0091EA22 /* ConstructDatabaseViewController.m */; };
-		41366F7C1378992000894871 /* SelectDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41366F7B1378992000894871 /* SelectDatabaseViewController.m */; };
-		41366F851378A11E00894871 /* SelectDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41366F841378A11E00894871 /* SelectDatabaseViewController.xib */; };
-		417837C913848595006C6730 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417837C813848595006C6730 /* StoreViewController.xib */; };
-		417837CC138485B8006C6730 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 417837CB138485B8006C6730 /* StoreViewController.m */; };
-		417838F71386182D006C6730 /* DiscountsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417838F61386182D006C6730 /* DiscountsViewController.xib */; };
-		417838FA13861844006C6730 /* DiscountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 417838F913861844006C6730 /* DiscountsViewController.m */; };
-		41BB23B1137B6CE300DFC314 /* BrowserList.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BB23B0137B6CE300DFC314 /* BrowserList.m */; };
-		41BB3F171381C11F003643B0 /* SupplierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BB3F161381C11F003643B0 /* SupplierViewController.xib */; };
-		41BB3F1A1381C134003643B0 /* SupplierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BB3F191381C134003643B0 /* SupplierViewController.m */; };
-		41BDEF9E1380719200418B59 /* TraderTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BDEF9D1380719200418B59 /* TraderTypeViewController.xib */; };
-		41BDEFA1138071BA00418B59 /* TraderTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BDEFA0138071BA00418B59 /* TraderTypeViewController.m */; };
+		419464C6138B6D0F00631183 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419464C5138B6D0F00631183 /* MainMenu.xib */; };
+		419464CC138B703D00631183 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464CB138B703D00631183 /* main.m */; };
+		419464D1138B70AE00631183 /* Loki_ToolsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464D0138B70AE00631183 /* Loki_ToolsAppDelegate.m */; };
+		419464D4138B715800631183 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464D3138B715800631183 /* User.m */; };
+		419464D7138B718600631183 /* DatabaseSetupConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464D6138B718600631183 /* DatabaseSetupConnections.m */; };
+		419464DA138B719F00631183 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464D9138B719F00631183 /* LoginViewController.m */; };
+		419464DD138B71D400631183 /* SelectDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464DC138B71D400631183 /* SelectDatabaseViewController.m */; };
+		419464DF138B71E800631183 /* SelectDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419464DE138B71E800631183 /* SelectDatabaseViewController.xib */; };
+		419464E2138B723100631183 /* TraderTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464E1138B723100631183 /* TraderTypeViewController.m */; };
+		419464E4138B724A00631183 /* TraderTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419464E3138B724A00631183 /* TraderTypeViewController.xib */; };
+		419464E6138B725800631183 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419464E5138B725800631183 /* LoginViewController.xib */; };
+		419464ED138B730200631183 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464EC138B730200631183 /* ProductsViewController.m */; };
+		419464FB138B733500631183 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419464FA138B733500631183 /* ProductsViewController.xib */; };
+		419464FE138B736200631183 /* SupplierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464FD138B736200631183 /* SupplierViewController.m */; };
+		41946500138B737400631183 /* SupplierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419464FF138B737400631183 /* SupplierViewController.xib */; };
+		41946503138B739E00631183 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41946502138B739E00631183 /* StoreViewController.m */; };
+		41946505138B73B400631183 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41946504138B73B400631183 /* StoreViewController.xib */; };
+		41946508138B73DE00631183 /* DiscountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41946507138B73DE00631183 /* DiscountsViewController.m */; };
+		4194650A138B73ED00631183 /* DiscountsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41946509138B73ED00631183 /* DiscountsViewController.xib */; };
+		4194650D138B742500631183 /* ConstructDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4194650C138B742500631183 /* ConstructDatabaseViewController.m */; };
+		4194650F138B743500631183 /* ConstructDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4194650E138B743500631183 /* ConstructDatabaseViewController.xib */; };
+		41946512138B745100631183 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41946511138B745100631183 /* ChangePasswordViewController.m */; };
+		41946514138B745E00631183 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41946513138B745E00631183 /* ChangePasswordViewController.xib */; };
+		41946519138B749900631183 /* MaintenaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41946518138B749900631183 /* MaintenaceViewController.m */; };
+		4194651B138B74A800631183 /* MaintenaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4194651A138B74A800631183 /* MaintenaceViewController.xib */; };
+		4194651E138B74E000631183 /* SearchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4194651D138B74E000631183 /* SearchNode.m */; };
+		41946521138B74FC00631183 /* SearchSetupConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = 41946520138B74FC00631183 /* SearchSetupConnections.m */; };
+		41946524138B752E00631183 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41946523138B752E00631183 /* SearchViewController.m */; };
+		41946527138B756600631183 /* ErrorMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41946526138B756600631183 /* ErrorMessageViewController.m */; };
+		41946529138B759100631183 /* ErrorMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41946528138B759100631183 /* ErrorMessageViewController.xib */; };
+		4194652C138B75C400631183 /* SupplierProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 4194652B138B75C400631183 /* SupplierProduct.m */; };
+		4194652F138B75E400631183 /* BrowserList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4194652E138B75E400631183 /* BrowserList.m */; };
+		41946531138B75EF00631183 /* xLokiProcedures.c in Sources */ = {isa = PBXBuildFile; fileRef = 41946530138B75EF00631183 /* xLokiProcedures.c */; };
+		41946534138B760A00631183 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41946533138B760A00631183 /* SearchViewController.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
-		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9156115313676F6300F0D316 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9156115213676F6300F0D316 /* LICENSE */; };
 		91561157136770BE00F0D316 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 91561156136770BE00F0D316 /* README */; };
-		915DAD0E134C28E800FED0C5 /* MaintenaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915DAD0D134C28E800FED0C5 /* MaintenaceViewController.xib */; };
-		915DAD12134C2A8000FED0C5 /* MaintenaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915DAD11134C2A8000FED0C5 /* MaintenaceViewController.m */; };
-		91A33C10132EFA9800B8EC62 /* SearchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A33C0F132EFA9800B8EC62 /* SearchNode.m */; };
-		91A98A3A130B4F3F00195A80 /* xLokiProcedures.c in Sources */ = {isa = PBXBuildFile; fileRef = 91A98A39130B4F3F00195A80 /* xLokiProcedures.c */; };
-		91AD41CA135261420003FF41 /* ErrorMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AD41C9135261420003FF41 /* ErrorMessageViewController.m */; };
-		91AD41CC135261F30003FF41 /* ErrorMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91AD41CB135261F30003FF41 /* ErrorMessageViewController.xib */; };
-		91AD41EB13527D710003FF41 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91AD41EA13527D710003FF41 /* LoginViewController.xib */; };
-		91AD41EE13527D9F0003FF41 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AD41ED13527D9F0003FF41 /* LoginViewController.m */; };
-		91AD424F1352B76D0003FF41 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AD424E1352B76D0003FF41 /* User.m */; };
-		91C07F65135797B6007B27F0 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91C07F64135797B6007B27F0 /* ChangePasswordViewController.xib */; };
-		91C07F68135798AB007B27F0 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C07F67135798AB007B27F0 /* ChangePasswordViewController.m */; };
-		91CF47DE1304BD770074F92F /* DatabaseSetupConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CF47DD1304BD770074F92F /* DatabaseSetupConnections.m */; };
-		91CF47E31304BDA80074F92F /* SearchSetupConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CF47E21304BDA80074F92F /* SearchSetupConnections.m */; };
-		91CF47E81304BDE10074F92F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CF47E71304BDE10074F92F /* SearchViewController.m */; };
-		91CF47EC1304BE320074F92F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91CF47EB1304BE320074F92F /* SearchViewController.xib */; };
-		91ECD62A130D14C3009C6718 /* SupplierProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ECD629130D14C3009C6718 /* SupplierProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		256AC3D80F4B6AC300CF3369 /* Loki_ToolsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loki_ToolsAppDelegate.h; sourceTree = "<group>"; };
-		256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Loki_ToolsAppDelegate.m; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* Loki_Tools_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loki_Tools_Prefix.pch; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		41328AC81373B5480091EA22 /* ConstructDatabaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConstructDatabaseViewController.xib; sourceTree = "<group>"; };
-		41328ACA1373B56A0091EA22 /* ConstructDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstructDatabaseViewController.h; sourceTree = "<group>"; };
-		41328ACB1373B56A0091EA22 /* ConstructDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstructDatabaseViewController.m; sourceTree = "<group>"; };
-		41366F7A1378992000894871 /* SelectDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDatabaseViewController.h; sourceTree = "<group>"; };
-		41366F7B1378992000894871 /* SelectDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDatabaseViewController.m; sourceTree = "<group>"; };
-		41366F841378A11E00894871 /* SelectDatabaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectDatabaseViewController.xib; sourceTree = "<group>"; };
-		417837C813848595006C6730 /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
-		417837CA138485B8006C6730 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
-		417837CB138485B8006C6730 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
-		417838F61386182D006C6730 /* DiscountsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountsViewController.xib; sourceTree = "<group>"; };
-		417838F813861844006C6730 /* DiscountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountsViewController.h; sourceTree = "<group>"; };
-		417838F913861844006C6730 /* DiscountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountsViewController.m; sourceTree = "<group>"; };
-		41BB23AF137B6CE300DFC314 /* BrowserList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserList.h; sourceTree = "<group>"; };
-		41BB23B0137B6CE300DFC314 /* BrowserList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserList.m; sourceTree = "<group>"; };
-		41BB3F161381C11F003643B0 /* SupplierViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplierViewController.xib; sourceTree = "<group>"; };
-		41BB3F181381C134003643B0 /* SupplierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplierViewController.h; sourceTree = "<group>"; };
-		41BB3F191381C134003643B0 /* SupplierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplierViewController.m; sourceTree = "<group>"; };
-		41BDEF9D1380719200418B59 /* TraderTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TraderTypeViewController.xib; sourceTree = "<group>"; };
-		41BDEF9F138071BA00418B59 /* TraderTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraderTypeViewController.h; sourceTree = "<group>"; };
-		41BDEFA0138071BA00418B59 /* TraderTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraderTypeViewController.m; sourceTree = "<group>"; };
+		419464C5138B6D0F00631183 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = English.lproj/nibs/MainMenu.xib; sourceTree = "<group>"; };
+		419464CB138B703D00631183 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
+		419464CF138B709100631183 /* Loki_ToolsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Loki_ToolsAppDelegate.h; path = src/Loki_ToolsAppDelegate.h; sourceTree = "<group>"; };
+		419464D0138B70AE00631183 /* Loki_ToolsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Loki_ToolsAppDelegate.m; path = src/Loki_ToolsAppDelegate.m; sourceTree = "<group>"; };
+		419464D2138B714B00631183 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = src/User.h; sourceTree = "<group>"; };
+		419464D3138B715800631183 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = src/User.m; sourceTree = "<group>"; };
+		419464D5138B717900631183 /* DatabaseSetupConnections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseSetupConnections.h; path = src/DatabaseSetupConnections.h; sourceTree = "<group>"; };
+		419464D6138B718600631183 /* DatabaseSetupConnections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseSetupConnections.m; path = src/DatabaseSetupConnections.m; sourceTree = "<group>"; };
+		419464D8138B719400631183 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/LoginViewController.h; sourceTree = "<group>"; };
+		419464D9138B719F00631183 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/LoginViewController.m; sourceTree = "<group>"; };
+		419464DB138B71C600631183 /* SelectDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectDatabaseViewController.h; path = src/SelectDatabaseViewController.h; sourceTree = "<group>"; };
+		419464DC138B71D400631183 /* SelectDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectDatabaseViewController.m; path = src/SelectDatabaseViewController.m; sourceTree = "<group>"; };
+		419464DE138B71E800631183 /* SelectDatabaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SelectDatabaseViewController.xib; path = English.lproj/nibs/SelectDatabaseViewController.xib; sourceTree = "<group>"; };
+		419464E0138B722600631183 /* TraderTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TraderTypeViewController.h; path = src/TraderTypeViewController.h; sourceTree = "<group>"; };
+		419464E1138B723100631183 /* TraderTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TraderTypeViewController.m; path = src/TraderTypeViewController.m; sourceTree = "<group>"; };
+		419464E3138B724A00631183 /* TraderTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TraderTypeViewController.xib; path = English.lproj/nibs/TraderTypeViewController.xib; sourceTree = "<group>"; };
+		419464E5138B725800631183 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginViewController.xib; path = English.lproj/nibs/LoginViewController.xib; sourceTree = "<group>"; };
+		419464EB138B72E900631183 /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsViewController.h; path = src/ProductsViewController.h; sourceTree = "<group>"; };
+		419464EC138B730200631183 /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductsViewController.m; path = src/ProductsViewController.m; sourceTree = "<group>"; };
+		419464EE138B730200631183 /* Loki_Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loki_Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		419464FA138B733500631183 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProductsViewController.xib; path = English.lproj/nibs/ProductsViewController.xib; sourceTree = "<group>"; };
+		419464FC138B735200631183 /* SupplierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SupplierViewController.h; path = src/SupplierViewController.h; sourceTree = "<group>"; };
+		419464FD138B736200631183 /* SupplierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SupplierViewController.m; path = src/SupplierViewController.m; sourceTree = "<group>"; };
+		419464FF138B737400631183 /* SupplierViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SupplierViewController.xib; path = English.lproj/nibs/SupplierViewController.xib; sourceTree = "<group>"; };
+		41946501138B739000631183 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreViewController.h; path = src/StoreViewController.h; sourceTree = "<group>"; };
+		41946502138B739E00631183 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoreViewController.m; path = src/StoreViewController.m; sourceTree = "<group>"; };
+		41946504138B73B400631183 /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StoreViewController.xib; path = English.lproj/nibs/StoreViewController.xib; sourceTree = "<group>"; };
+		41946506138B73D200631183 /* DiscountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountsViewController.h; path = src/DiscountsViewController.h; sourceTree = "<group>"; };
+		41946507138B73DE00631183 /* DiscountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountsViewController.m; path = src/DiscountsViewController.m; sourceTree = "<group>"; };
+		41946509138B73ED00631183 /* DiscountsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DiscountsViewController.xib; path = English.lproj/nibs/DiscountsViewController.xib; sourceTree = "<group>"; };
+		4194650B138B741800631183 /* ConstructDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstructDatabaseViewController.h; path = src/ConstructDatabaseViewController.h; sourceTree = "<group>"; };
+		4194650C138B742500631183 /* ConstructDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConstructDatabaseViewController.m; path = src/ConstructDatabaseViewController.m; sourceTree = "<group>"; };
+		4194650E138B743500631183 /* ConstructDatabaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConstructDatabaseViewController.xib; path = English.lproj/nibs/ConstructDatabaseViewController.xib; sourceTree = "<group>"; };
+		41946510138B744400631183 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePasswordViewController.h; path = src/ChangePasswordViewController.h; sourceTree = "<group>"; };
+		41946511138B745100631183 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePasswordViewController.m; path = src/ChangePasswordViewController.m; sourceTree = "<group>"; };
+		41946513138B745E00631183 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChangePasswordViewController.xib; path = English.lproj/nibs/ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		41946517138B748D00631183 /* MaintenaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaintenaceViewController.h; path = src/MaintenaceViewController.h; sourceTree = "<group>"; };
+		41946518138B749900631183 /* MaintenaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaintenaceViewController.m; path = src/MaintenaceViewController.m; sourceTree = "<group>"; };
+		4194651A138B74A800631183 /* MaintenaceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MaintenaceViewController.xib; path = English.lproj/nibs/MaintenaceViewController.xib; sourceTree = "<group>"; };
+		4194651C138B74CD00631183 /* SearchNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchNode.h; path = src/SearchNode.h; sourceTree = "<group>"; };
+		4194651D138B74E000631183 /* SearchNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchNode.m; path = src/SearchNode.m; sourceTree = "<group>"; };
+		4194651F138B74EC00631183 /* SearchSetupConnections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchSetupConnections.h; path = src/SearchSetupConnections.h; sourceTree = "<group>"; };
+		41946520138B74FC00631183 /* SearchSetupConnections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchSetupConnections.m; path = src/SearchSetupConnections.m; sourceTree = "<group>"; };
+		41946522138B751000631183 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = src/SearchViewController.h; sourceTree = "<group>"; };
+		41946523138B752E00631183 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = src/SearchViewController.m; sourceTree = "<group>"; };
+		41946525138B755B00631183 /* ErrorMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorMessageViewController.h; path = src/ErrorMessageViewController.h; sourceTree = "<group>"; };
+		41946526138B756600631183 /* ErrorMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ErrorMessageViewController.m; path = src/ErrorMessageViewController.m; sourceTree = "<group>"; };
+		41946528138B759100631183 /* ErrorMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ErrorMessageViewController.xib; path = English.lproj/nibs/ErrorMessageViewController.xib; sourceTree = "<group>"; };
+		4194652A138B75B300631183 /* SupplierProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SupplierProduct.h; path = src/SupplierProduct.h; sourceTree = "<group>"; };
+		4194652B138B75C400631183 /* SupplierProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SupplierProduct.m; path = src/SupplierProduct.m; sourceTree = "<group>"; };
+		4194652D138B75D900631183 /* BrowserList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrowserList.h; path = src/BrowserList.h; sourceTree = "<group>"; };
+		4194652E138B75E400631183 /* BrowserList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowserList.m; path = src/BrowserList.m; sourceTree = "<group>"; };
+		41946530138B75EF00631183 /* xLokiProcedures.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xLokiProcedures.c; path = src/xLokiProcedures.c; sourceTree = "<group>"; };
+		41946532138B75FB00631183 /* xLokiProcedures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xLokiProcedures.h; path = src/xLokiProcedures.h; sourceTree = "<group>"; };
+		41946533138B760A00631183 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchViewController.xib; path = English.lproj/nibs/SearchViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Loki_Tools-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Loki_Tools-Info.plist"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Loki_Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loki_Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9156115213676F6300F0D316 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		91561156136770BE00F0D316 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		915DAD0D134C28E800FED0C5 /* MaintenaceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaintenaceViewController.xib; sourceTree = "<group>"; };
-		915DAD10134C2A8000FED0C5 /* MaintenaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaintenaceViewController.h; sourceTree = "<group>"; };
-		915DAD11134C2A8000FED0C5 /* MaintenaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaintenaceViewController.m; sourceTree = "<group>"; };
-		91A33C0E132EFA9800B8EC62 /* SearchNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchNode.h; sourceTree = "<group>"; };
-		91A33C0F132EFA9800B8EC62 /* SearchNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchNode.m; sourceTree = "<group>"; };
-		91A98A38130B4F3F00195A80 /* xLokiProcedures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xLokiProcedures.h; sourceTree = "<group>"; };
-		91A98A39130B4F3F00195A80 /* xLokiProcedures.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xLokiProcedures.c; sourceTree = "<group>"; };
-		91AD41C8135261420003FF41 /* ErrorMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorMessageViewController.h; sourceTree = "<group>"; };
-		91AD41C9135261420003FF41 /* ErrorMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorMessageViewController.m; sourceTree = "<group>"; };
-		91AD41CB135261F30003FF41 /* ErrorMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorMessageViewController.xib; sourceTree = "<group>"; };
-		91AD41EA13527D710003FF41 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		91AD41EC13527D9F0003FF41 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		91AD41ED13527D9F0003FF41 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		91AD424D1352B76D0003FF41 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		91AD424E1352B76D0003FF41 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		91C07F64135797B6007B27F0 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
-		91C07F66135798AB007B27F0 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
-		91C07F67135798AB007B27F0 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
-		91CF47DC1304BD770074F92F /* DatabaseSetupConnections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseSetupConnections.h; sourceTree = "<group>"; };
-		91CF47DD1304BD770074F92F /* DatabaseSetupConnections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSetupConnections.m; sourceTree = "<group>"; };
-		91CF47E11304BDA80074F92F /* SearchSetupConnections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSetupConnections.h; sourceTree = "<group>"; };
-		91CF47E21304BDA80074F92F /* SearchSetupConnections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchSetupConnections.m; sourceTree = "<group>"; };
-		91CF47E61304BDE10074F92F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		91CF47E71304BDE10074F92F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		91CF47EB1304BE320074F92F /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		91ECD628130D14C3009C6718 /* SupplierProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplierProduct.h; sourceTree = "<group>"; };
-		91ECD629130D14C3009C6718 /* SupplierProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplierProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +129,10 @@
 		080E96DDFE201D6D7F000001 /* Objects & Procedures */ = {
 			isa = PBXGroup;
 			children = (
-				91ECD628130D14C3009C6718 /* SupplierProduct.h */,
-				91ECD629130D14C3009C6718 /* SupplierProduct.m */,
-				91A98A38130B4F3F00195A80 /* xLokiProcedures.h */,
-				91A98A39130B4F3F00195A80 /* xLokiProcedures.c */,
-				41BB23AF137B6CE300DFC314 /* BrowserList.h */,
-				41BB23B0137B6CE300DFC314 /* BrowserList.m */,
+				41946532138B75FB00631183 /* xLokiProcedures.h */,
+				41946530138B75EF00631183 /* xLokiProcedures.c */,
+				4194652E138B75E400631183 /* BrowserList.m */,
+				4194652D138B75D900631183 /* BrowserList.h */,
 			);
 			name = "Objects & Procedures";
 			sourceTree = "<group>";
@@ -155,7 +158,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* Loki_Tools.app */,
+				419464EE138B730200631183 /* Loki_Tools.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,13 +166,14 @@
 		29B97314FDCFA39411CA2CEA /* Loki_Tools */ = {
 			isa = PBXGroup;
 			children = (
-				417838F4138617FC006C6730 /* Discounts */,
+				413A49CA1389046600152959 /* Products */,
 				91A7259D134AD09900AF74BA /* Main Application */,
 				91AD41E813527CDA0003FF41 /* Login */,
 				41366F821378999100894871 /* Select Database */,
 				41BDEF9B1380713900418B59 /* Trader Type */,
 				41BB3F141381C0E4003643B0 /* Supplier */,
 				417837C6138484E8006C6730 /* Store */,
+				417838F4138617FC006C6730 /* Discounts */,
 				91A72597134ACE7200AF74BA /* Maintenace & Setup */,
 				91A72599134ACEA900AF74BA /* Search Engine */,
 				91A7259B134ACED000AF74BA /* Stock Management */,
@@ -189,8 +193,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				419464CB138B703D00631183 /* main.m */,
 				256AC3F00F4B6AF500CF3369 /* Loki_Tools_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -216,9 +220,9 @@
 		41366F7F1378993F00894871 /* MaintenaceViewController */ = {
 			isa = PBXGroup;
 			children = (
-				915DAD11134C2A8000FED0C5 /* MaintenaceViewController.m */,
-				915DAD10134C2A8000FED0C5 /* MaintenaceViewController.h */,
-				915DAD0D134C28E800FED0C5 /* MaintenaceViewController.xib */,
+				4194651A138B74A800631183 /* MaintenaceViewController.xib */,
+				41946518138B749900631183 /* MaintenaceViewController.m */,
+				41946517138B748D00631183 /* MaintenaceViewController.h */,
 			);
 			name = MaintenaceViewController;
 			sourceTree = "<group>";
@@ -226,9 +230,9 @@
 		41366F801378996700894871 /* ChangePasswordViewController */ = {
 			isa = PBXGroup;
 			children = (
-				91C07F67135798AB007B27F0 /* ChangePasswordViewController.m */,
-				91C07F66135798AB007B27F0 /* ChangePasswordViewController.h */,
-				91C07F64135797B6007B27F0 /* ChangePasswordViewController.xib */,
+				41946513138B745E00631183 /* ChangePasswordViewController.xib */,
+				41946511138B745100631183 /* ChangePasswordViewController.m */,
+				41946510138B744400631183 /* ChangePasswordViewController.h */,
 			);
 			name = ChangePasswordViewController;
 			sourceTree = "<group>";
@@ -236,9 +240,9 @@
 		41366F811378997C00894871 /* ConstructDatabaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				41328ACB1373B56A0091EA22 /* ConstructDatabaseViewController.m */,
-				41328ACA1373B56A0091EA22 /* ConstructDatabaseViewController.h */,
-				41328AC81373B5480091EA22 /* ConstructDatabaseViewController.xib */,
+				4194650E138B743500631183 /* ConstructDatabaseViewController.xib */,
+				4194650C138B742500631183 /* ConstructDatabaseViewController.m */,
+				4194650B138B741800631183 /* ConstructDatabaseViewController.h */,
 			);
 			name = ConstructDatabaseViewController;
 			sourceTree = "<group>";
@@ -249,6 +253,24 @@
 				41C3BC65137A2BDE001D30CA /* Display */,
 			);
 			name = "Select Database";
+			sourceTree = "<group>";
+		};
+		413A49CA1389046600152959 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				413A49CB1389048000152959 /* Display */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		413A49CB1389048000152959 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				419464FA138B733500631183 /* ProductsViewController.xib */,
+				419464EC138B730200631183 /* ProductsViewController.m */,
+				419464EB138B72E900631183 /* ProductsViewController.h */,
+			);
+			name = Display;
 			sourceTree = "<group>";
 		};
 		417837C6138484E8006C6730 /* Store */ = {
@@ -262,9 +284,9 @@
 		417837C713848531006C6730 /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				417837C813848595006C6730 /* StoreViewController.xib */,
-				417837CA138485B8006C6730 /* StoreViewController.h */,
-				417837CB138485B8006C6730 /* StoreViewController.m */,
+				41946504138B73B400631183 /* StoreViewController.xib */,
+				41946502138B739E00631183 /* StoreViewController.m */,
+				41946501138B739000631183 /* StoreViewController.h */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -280,9 +302,9 @@
 		417838F513861808006C6730 /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				417838F61386182D006C6730 /* DiscountsViewController.xib */,
-				417838F813861844006C6730 /* DiscountsViewController.h */,
-				417838F913861844006C6730 /* DiscountsViewController.m */,
+				41946509138B73ED00631183 /* DiscountsViewController.xib */,
+				41946507138B73DE00631183 /* DiscountsViewController.m */,
+				41946506138B73D200631183 /* DiscountsViewController.h */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -298,9 +320,9 @@
 		41BB3F151381C0F8003643B0 /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				41BB3F161381C11F003643B0 /* SupplierViewController.xib */,
-				41BB3F181381C134003643B0 /* SupplierViewController.h */,
-				41BB3F191381C134003643B0 /* SupplierViewController.m */,
+				419464FF138B737400631183 /* SupplierViewController.xib */,
+				419464FD138B736200631183 /* SupplierViewController.m */,
+				419464FC138B735200631183 /* SupplierViewController.h */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -316,9 +338,9 @@
 		41BDEF9C1380714B00418B59 /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				41BDEF9D1380719200418B59 /* TraderTypeViewController.xib */,
-				41BDEF9F138071BA00418B59 /* TraderTypeViewController.h */,
-				41BDEFA0138071BA00418B59 /* TraderTypeViewController.m */,
+				419464E3138B724A00631183 /* TraderTypeViewController.xib */,
+				419464E1138B723100631183 /* TraderTypeViewController.m */,
+				419464E0138B722600631183 /* TraderTypeViewController.h */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -326,9 +348,9 @@
 		41C3BC65137A2BDE001D30CA /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				41366F841378A11E00894871 /* SelectDatabaseViewController.xib */,
-				41366F7A1378992000894871 /* SelectDatabaseViewController.h */,
-				41366F7B1378992000894871 /* SelectDatabaseViewController.m */,
+				419464DE138B71E800631183 /* SelectDatabaseViewController.xib */,
+				419464DC138B71D400631183 /* SelectDatabaseViewController.m */,
+				419464DB138B71C600631183 /* SelectDatabaseViewController.h */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -355,10 +377,6 @@
 			isa = PBXGroup;
 			children = (
 				91A7259C134ACF6D00AF74BA /* Display */,
-				91CF47E21304BDA80074F92F /* SearchSetupConnections.m */,
-				91CF47E11304BDA80074F92F /* SearchSetupConnections.h */,
-				91A33C0F132EFA9800B8EC62 /* SearchNode.m */,
-				91A33C0E132EFA9800B8EC62 /* SearchNode.h */,
 			);
 			name = "Search Engine";
 			sourceTree = "<group>";
@@ -380,9 +398,15 @@
 		91A7259C134ACF6D00AF74BA /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				91CF47E61304BDE10074F92F /* SearchViewController.h */,
-				91CF47E71304BDE10074F92F /* SearchViewController.m */,
-				91CF47EB1304BE320074F92F /* SearchViewController.xib */,
+				41946533138B760A00631183 /* SearchViewController.xib */,
+				4194652B138B75C400631183 /* SupplierProduct.m */,
+				4194652A138B75B300631183 /* SupplierProduct.h */,
+				41946523138B752E00631183 /* SearchViewController.m */,
+				41946522138B751000631183 /* SearchViewController.h */,
+				41946520138B74FC00631183 /* SearchSetupConnections.m */,
+				4194651F138B74EC00631183 /* SearchSetupConnections.h */,
+				4194651D138B74E000631183 /* SearchNode.m */,
+				4194651C138B74CD00631183 /* SearchNode.h */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -390,9 +414,9 @@
 		91A7259D134AD09900AF74BA /* Main Application */ = {
 			isa = PBXGroup;
 			children = (
+				419464D0138B70AE00631183 /* Loki_ToolsAppDelegate.m */,
+				419464CF138B709100631183 /* Loki_ToolsAppDelegate.h */,
 				91A7259E134AD0C700AF74BA /* Display */,
-				256AC3D90F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m */,
-				256AC3D80F4B6AC300CF3369 /* Loki_ToolsAppDelegate.h */,
 			);
 			name = "Main Application";
 			sourceTree = "<group>";
@@ -400,7 +424,7 @@
 		91A7259E134AD0C700AF74BA /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				419464C5138B6D0F00631183 /* MainMenu.xib */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -416,9 +440,9 @@
 		91AD41C7135261190003FF41 /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				91AD41C8135261420003FF41 /* ErrorMessageViewController.h */,
-				91AD41C9135261420003FF41 /* ErrorMessageViewController.m */,
-				91AD41CB135261F30003FF41 /* ErrorMessageViewController.xib */,
+				41946528138B759100631183 /* ErrorMessageViewController.xib */,
+				41946526138B756600631183 /* ErrorMessageViewController.m */,
+				41946525138B755B00631183 /* ErrorMessageViewController.h */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -426,10 +450,10 @@
 		91AD41E813527CDA0003FF41 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				91AD424D1352B76D0003FF41 /* User.h */,
-				91AD424E1352B76D0003FF41 /* User.m */,
-				91CF47DC1304BD770074F92F /* DatabaseSetupConnections.h */,
-				91CF47DD1304BD770074F92F /* DatabaseSetupConnections.m */,
+				419464D6138B718600631183 /* DatabaseSetupConnections.m */,
+				419464D5138B717900631183 /* DatabaseSetupConnections.h */,
+				419464D3138B715800631183 /* User.m */,
+				419464D2138B714B00631183 /* User.h */,
 				91AD41E913527CEF0003FF41 /* Display */,
 			);
 			name = Login;
@@ -438,9 +462,9 @@
 		91AD41E913527CEF0003FF41 /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				91AD41EA13527D710003FF41 /* LoginViewController.xib */,
-				91AD41EC13527D9F0003FF41 /* LoginViewController.h */,
-				91AD41ED13527D9F0003FF41 /* LoginViewController.m */,
+				419464E5138B725800631183 /* LoginViewController.xib */,
+				419464D9138B719F00631183 /* LoginViewController.m */,
+				419464D8138B719400631183 /* LoginViewController.h */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -463,7 +487,7 @@
 			name = Loki_Tools;
 			productInstallPath = "$(HOME)/Applications";
 			productName = Loki_Tools;
-			productReference = 8D1107320486CEB800E47090 /* Loki_Tools.app */;
+			productReference = 419464EE138B730200631183 /* Loki_Tools.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -496,20 +520,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
-				91CF47EC1304BE320074F92F /* SearchViewController.xib in Resources */,
-				915DAD0E134C28E800FED0C5 /* MaintenaceViewController.xib in Resources */,
-				91AD41CC135261F30003FF41 /* ErrorMessageViewController.xib in Resources */,
-				91AD41EB13527D710003FF41 /* LoginViewController.xib in Resources */,
-				91C07F65135797B6007B27F0 /* ChangePasswordViewController.xib in Resources */,
 				9156115313676F6300F0D316 /* LICENSE in Resources */,
 				91561157136770BE00F0D316 /* README in Resources */,
-				41328AC91373B5480091EA22 /* ConstructDatabaseViewController.xib in Resources */,
-				41366F851378A11E00894871 /* SelectDatabaseViewController.xib in Resources */,
-				41BDEF9E1380719200418B59 /* TraderTypeViewController.xib in Resources */,
-				41BB3F171381C11F003643B0 /* SupplierViewController.xib in Resources */,
-				417837C913848595006C6730 /* StoreViewController.xib in Resources */,
-				417838F71386182D006C6730 /* DiscountsViewController.xib in Resources */,
+				419464C6138B6D0F00631183 /* MainMenu.xib in Resources */,
+				419464DF138B71E800631183 /* SelectDatabaseViewController.xib in Resources */,
+				419464E4138B724A00631183 /* TraderTypeViewController.xib in Resources */,
+				419464E6138B725800631183 /* LoginViewController.xib in Resources */,
+				419464FB138B733500631183 /* ProductsViewController.xib in Resources */,
+				41946500138B737400631183 /* SupplierViewController.xib in Resources */,
+				41946505138B73B400631183 /* StoreViewController.xib in Resources */,
+				4194650A138B73ED00631183 /* DiscountsViewController.xib in Resources */,
+				4194650F138B743500631183 /* ConstructDatabaseViewController.xib in Resources */,
+				41946514138B745E00631183 /* ChangePasswordViewController.xib in Resources */,
+				4194651B138B74A800631183 /* MaintenaceViewController.xib in Resources */,
+				41946529138B759100631183 /* ErrorMessageViewController.xib in Resources */,
+				41946534138B760A00631183 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,26 +545,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				256AC3DA0F4B6AC300CF3369 /* Loki_ToolsAppDelegate.m in Sources */,
-				91CF47DE1304BD770074F92F /* DatabaseSetupConnections.m in Sources */,
-				91CF47E31304BDA80074F92F /* SearchSetupConnections.m in Sources */,
-				91CF47E81304BDE10074F92F /* SearchViewController.m in Sources */,
-				91A98A3A130B4F3F00195A80 /* xLokiProcedures.c in Sources */,
-				91ECD62A130D14C3009C6718 /* SupplierProduct.m in Sources */,
-				91A33C10132EFA9800B8EC62 /* SearchNode.m in Sources */,
-				915DAD12134C2A8000FED0C5 /* MaintenaceViewController.m in Sources */,
-				91AD41CA135261420003FF41 /* ErrorMessageViewController.m in Sources */,
-				91AD41EE13527D9F0003FF41 /* LoginViewController.m in Sources */,
-				91AD424F1352B76D0003FF41 /* User.m in Sources */,
-				91C07F68135798AB007B27F0 /* ChangePasswordViewController.m in Sources */,
-				41328ACC1373B56A0091EA22 /* ConstructDatabaseViewController.m in Sources */,
-				41366F7C1378992000894871 /* SelectDatabaseViewController.m in Sources */,
-				41BB23B1137B6CE300DFC314 /* BrowserList.m in Sources */,
-				41BDEFA1138071BA00418B59 /* TraderTypeViewController.m in Sources */,
-				41BB3F1A1381C134003643B0 /* SupplierViewController.m in Sources */,
-				417837CC138485B8006C6730 /* StoreViewController.m in Sources */,
-				417838FA13861844006C6730 /* DiscountsViewController.m in Sources */,
+				419464CC138B703D00631183 /* main.m in Sources */,
+				419464D1138B70AE00631183 /* Loki_ToolsAppDelegate.m in Sources */,
+				419464D4138B715800631183 /* User.m in Sources */,
+				419464D7138B718600631183 /* DatabaseSetupConnections.m in Sources */,
+				419464DA138B719F00631183 /* LoginViewController.m in Sources */,
+				419464DD138B71D400631183 /* SelectDatabaseViewController.m in Sources */,
+				419464E2138B723100631183 /* TraderTypeViewController.m in Sources */,
+				419464ED138B730200631183 /* ProductsViewController.m in Sources */,
+				419464FE138B736200631183 /* SupplierViewController.m in Sources */,
+				41946503138B739E00631183 /* StoreViewController.m in Sources */,
+				41946508138B73DE00631183 /* DiscountsViewController.m in Sources */,
+				4194650D138B742500631183 /* ConstructDatabaseViewController.m in Sources */,
+				41946512138B745100631183 /* ChangePasswordViewController.m in Sources */,
+				41946519138B749900631183 /* MaintenaceViewController.m in Sources */,
+				4194651E138B74E000631183 /* SearchNode.m in Sources */,
+				41946521138B74FC00631183 /* SearchSetupConnections.m in Sources */,
+				41946524138B752E00631183 /* SearchViewController.m in Sources */,
+				41946527138B756600631183 /* ErrorMessageViewController.m in Sources */,
+				4194652C138B75C400631183 /* SupplierProduct.m in Sources */,
+				4194652F138B75E400631183 /* BrowserList.m in Sources */,
+				41946531138B75EF00631183 /* xLokiProcedures.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,14 +578,6 @@
 				089C165DFE840E0CC02AAC07 /* English */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1DDD58150DA1D0A300B32029 /* English */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
