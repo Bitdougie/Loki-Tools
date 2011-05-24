@@ -24,10 +24,17 @@
  */
 
 #import <Cocoa/Cocoa.h>
-
+#import "User.h"
+#import "ErrorMessageViewController.h"
 
 @interface ProductsViewController : NSObject <NSBrowserDelegate> {
-
+	
+	User *userLogin;
+	ErrorMessageViewController *error;
 }
+
+-(ProductsViewController *)initWithUser:(User *)userObject;
+
+-(void)openProducts;
 
 @end

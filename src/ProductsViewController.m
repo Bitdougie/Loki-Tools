@@ -28,4 +28,32 @@
 
 @implementation ProductsViewController
 
+-(ProductsViewController *)initWithUser:(User *)userObject
+{
+	self = [super init];
+	
+	if(self)
+	{
+		userLogin = userObject;
+		[userLogin retain];
+		error = [[ErrorMessageViewController alloc]init];
+	}
+	return self;
+}
+
+-(void)dealloc
+{
+	[userLogin release];
+	[error release];
+	[super dealloc];
+}
+
+-(void)openProducts
+{
+	if (![NSBundle loadNibNamed:@"ProductsViewController" owner: self]) {
+		[error openErrorMessage:@"ProductViewController:openProduct" withMessage:@"Could not load ProductViewController.xib"];
+		[error setErrorNo:1];
+	}
+}
+
 @end
