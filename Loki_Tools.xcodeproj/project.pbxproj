@@ -41,6 +41,7 @@
 		4194652F138B75E400631183 /* BrowserList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4194652E138B75E400631183 /* BrowserList.m */; };
 		41946531138B75EF00631183 /* xLokiProcedures.c in Sources */ = {isa = PBXBuildFile; fileRef = 41946530138B75EF00631183 /* xLokiProcedures.c */; };
 		41946534138B760A00631183 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41946533138B760A00631183 /* SearchViewController.xib */; };
+		41DF9076138C50270046BF50 /* FileBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DF9075138C50270046BF50 /* FileBrowser.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9156115313676F6300F0D316 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9156115213676F6300F0D316 /* LICENSE */; };
@@ -109,6 +110,8 @@
 		41946530138B75EF00631183 /* xLokiProcedures.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xLokiProcedures.c; path = src/xLokiProcedures.c; sourceTree = "<group>"; };
 		41946532138B75FB00631183 /* xLokiProcedures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xLokiProcedures.h; path = src/xLokiProcedures.h; sourceTree = "<group>"; };
 		41946533138B760A00631183 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchViewController.xib; path = English.lproj/nibs/SearchViewController.xib; sourceTree = "<group>"; };
+		41DF9074138C50270046BF50 /* FileBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileBrowser.h; path = src/FileBrowser.h; sourceTree = "<group>"; };
+		41DF9075138C50270046BF50 /* FileBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileBrowser.m; path = src/FileBrowser.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Loki_Tools-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Loki_Tools-Info.plist"; sourceTree = "<group>"; };
 		9156115213676F6300F0D316 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		91561156136770BE00F0D316 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
@@ -259,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				413A49CB1389048000152959 /* Display */,
+				41DF9074138C50270046BF50 /* FileBrowser.h */,
+				41DF9075138C50270046BF50 /* FileBrowser.m */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -566,6 +571,7 @@
 				4194652C138B75C400631183 /* SupplierProduct.m in Sources */,
 				4194652F138B75E400631183 /* BrowserList.m in Sources */,
 				41946531138B75EF00631183 /* xLokiProcedures.c in Sources */,
+				41DF9076138C50270046BF50 /* FileBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
