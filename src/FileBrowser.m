@@ -40,11 +40,11 @@
 
 -(NSString *)displayName
 {
-	id *dirFile;
+	id dirFile;
 	NSError *errorInfo;
 	
-	if ([url getResourceValue:dirFile forKey:NSURLLocalizedNameKey error:&errorInfo]) {
-		return (NSString *)dirFile;
+	if ([url getResourceValue: &dirFile forKey:NSURLLocalizedNameKey error:&errorInfo]) {
+		return dirFile;
 	}
 	else {
 		NSString *errorMessage;
@@ -94,12 +94,6 @@
 				}
 			}
 		}
-		else{
-			[error openErrorMessage:@"FileBrowser:children" withMessage:@"could not obtain content at path"];
-			[error setErrorNo:1];
-			[children release];
-			return contentsAtPath;
-		}
 		
 		[children release];
 		children = newChildren;
@@ -123,6 +117,11 @@
 	for(FileBrowser *child in [children allValues]){
 		[child invalidateChildren];
 	}
+}
+
+-(NSString *)fullFilePath
+{
+	return [url path];
 }
 
 @end

@@ -25,5 +25,6 @@
 @property(readonly,retain)NSColor *labelColor;
 
 -(void)invalidateChildren;
+-(NSString *)fullFilePath;
 
 @end

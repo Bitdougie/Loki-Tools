@@ -26,9 +26,13 @@
 #import <Cocoa/Cocoa.h>
 #import "User.h"
 #import "ErrorMessageViewController.h"
+#import "FileBrowser.h"
 
 @interface ProductsViewController : NSObject <NSBrowserDelegate> {
+	IBOutlet NSBrowser *browser;
+	IBOutlet NSTextField *path;
 	
+	FileBrowser *rootNode;
 	User *userLogin;
 	ErrorMessageViewController *error;
 }

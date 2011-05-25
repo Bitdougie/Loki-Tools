@@ -45,6 +45,7 @@
 {
 	[userLogin release];
 	[error release];
+	[rootNode release];
 	[super dealloc];
 }
 
@@ -53,7 +54,46 @@
 	if (![NSBundle loadNibNamed:@"ProductsViewController" owner: self]) {
 		[error openErrorMessage:@"ProductViewController:openProduct" withMessage:@"Could not load ProductViewController.xib"];
 		[error setErrorNo:1];
+		return;
 	}
+}
+
+-(id)rootItemForBrowser:(NSBrowser *)browser
+{
+	if(rootNode == nil){
+		rootNode = [[FileBrowser alloc] initWithURL:[NSURL fileURLWithPath:@"/Users/"]];
+	}
+	return rootNode;
+}
+
+-(NSInteger)browser:(NSBrowser *)browser numberOfChildrenOfItem:(id)item
+{
+	FileBrowser *node = (FileBrowser *)item;
+	return [[node children] count];
+}
+
+-(id)browser:(NSBrowser *)browser child:(NSInteger)index ofItem:(id)item
+{
+	FileBrowser *node = (FileBrowser *)item;
+	return [[node children] objectAtIndex:index];
+}
+
+-(BOOL)browser:(NSBrowser *)browser isLeafItem:(id) item{
+	FileBrowser *node = (FileBrowser *)item;
+	if (![node isDirectory]) {
+		[path setStringValue:[node fullFilePath]];
+	}
+	else {
+		[path setStringValue:@"Nothing Currently Selected ... :-("];
+	}
+
+	return ![node isDirectory];
+}
+
+-(id)browser:(NSBrowser *)browser objectValueForItem:(id) item{
+
+	FileBrowser *node = (FileBrowser *)item;
+	return [node displayName];
 }
 
 @end
