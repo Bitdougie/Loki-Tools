@@ -337,21 +337,9 @@
 	[query setString:@"LOAD DATA LOCAL INFILE '"];
 	[query appendString:[connection escapedSQLQuery:[path stringValue]]];
 	[query appendString:@"' REPLACE INTO TABLE PRODUCT FIELDS TERMINATED BY ',' ENCLOSED BY '\"' \
-	 (SUPPLIER_PART_NO,\
-	 PRODUCT_DESCRIPTION,\
-	 BRAND, \
-	 UNIT, \
-	 LIST_PRICE,\
-	 PACK_LIST_PRICE, \
-	 NETT_CONTRACT_PRICE,\
-	 BROKEN_PACK_DISCOUNT_CATAGORY,\
-	 PACK_DISCOUNT_CATAGORY, \
-	 SUPPLIER_BAR_CODE, \
-	 PACK_QUANTITY, \
-	 CATALOGUE_PAGE, \
-	 STOCKED_INDENT, \
-	 PRODUCT_DETAILS) \
-	 SET SUPPLIER_CODE = '"];
+	 (SUPPLIER_PART_NO,  PRODUCT_DESCRIPTION,  BRAND,  UNIT,  LIST_PRICE,  PACK_LIST_PRICE,  NETT_CONTRACT_PRICE,  BROKEN_PACK_DISCOUNT_CATAGORY, \
+	 PACK_DISCOUNT_CATAGORY,  SUPPLIER_BAR_CODE,  PACK_QUANTITY,  CATALOGUE_PAGE,  STOCKED_INDENT,  PRODUCT_DETAILS) \
+	 SET SUPPLIER_CODE = '"]; 
 	[query appendString:[connection escapedSQLQuery:[supplierCode stringValue]]];
 	[query appendString:@"', STORE_CODE = '"];
 	[query appendString:[connection escapedSQLQuery:[storeCode stringValue]]];
