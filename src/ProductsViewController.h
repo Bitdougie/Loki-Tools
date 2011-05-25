@@ -31,6 +31,10 @@
 @interface ProductsViewController : NSObject <NSBrowserDelegate> {
 	IBOutlet NSBrowser *browser;
 	IBOutlet NSTextField *path;
+	IBOutlet NSComboBox *supplierCode;
+	IBOutlet NSComboBox *storeCode;
+	IBOutlet NSTextField *supplierName;
+	IBOutlet NSTextField *storeName;
 	
 	FileBrowser *rootNode;
 	User *userLogin;
@@ -40,5 +44,10 @@
 -(ProductsViewController *)initWithUser:(User *)userObject;
 
 -(void)openProducts;
+
+-(IBAction)refresh:(id) sender;
+-(IBAction)selectSupplier:(id) sender;
+-(IBAction)selectStore:(id) sender;
+-(IBAction)pullIn:(id) sender;
 
 @end
