@@ -32,7 +32,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	userLogin = [[User alloc]init];
-	searchView = [[SearchViewController alloc] init];
+	searchView = [SearchViewController alloc];
+	[searchView initWithUser:userLogin];
 	maintenaceView = [MaintenaceViewController alloc];
 	[maintenaceView initWithUser:userLogin];
 	loginView = [LoginViewController alloc];
@@ -70,7 +71,7 @@
 	//sets which menus can be used
 	if ([userLogin validLogin]) {
 		[loginMenu setEnabled:YES];
-		[searchMenu setEnabled:NO];
+		[searchMenu setEnabled:YES];
 		[maintenaceMenu setEnabled:YES];
 		[selectDatabaseMenu setEnabled:YES];
 		[traderTypeMenu setEnabled:YES];
@@ -94,7 +95,7 @@
 
 -(IBAction) openSearch: (id) sender
 {
-	//[searchView openSearchWindow];
+	[searchView openSearchWindow];
 }
 
 -(IBAction) openMaintenace: (id) sender

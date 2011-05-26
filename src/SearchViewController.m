@@ -30,63 +30,40 @@
 
 @implementation SearchViewController
 
-@synthesize productSearchKey, productBrowser, searchWindow;
-
--(SearchViewController *) init
+-(SearchViewController *)initWithUser:(User *)userObject
 {
 	self = [super init];
 	
 	if (self) {
-		//when something important is needed here (clap your hands)
+		userLogin = userObject;
+		[userLogin retain];
+		error = [[ErrorMessageViewController alloc]init];
 	}
 	
 	return self;
 }
 
+-(void)dealloc
+{
+	[error release];
+	[userLogin release];
+	[super dealloc];
+}
+
 -(void)openSearchWindow
 {
-	if([searchWindow isVisible])
-	{
-		[searchWindow orderFront:@"[SearchViewController openSearchWindow]"];
+	NSLog(@"openSeachWindow \n");
+	if (![NSBundle loadNibNamed:@"SearchViewController" owner: self]) {
+		[error openErrorMessage:@"SearchViewController:openSearchWindow" withMessage:@"Could not load SearchViewController.xib"];
+		[error setErrorNo:1];
+		return;
 	}
-	else {
-		[NSBundle loadNibNamed:@"SearchViewController" owner: self];
-	}
-
 }
 
 
 -(IBAction) searchNow: (id) sender
 {
-	NSString* searchKey = [productSearchKey stringValue];
 	
-	//NSBrowserCell* cell = [[NSBrowserCell alloc]initTextCell:@"Fox and Gun Ltd"];
-	
-	NSBrowserCell* cellTest; 
-	
-	//NSMatrix* databaseCol;
-	
-	//databaseCol = [productBrowser matrixInColumn:0];
-	
-	//[databaseCol putCell:cell atRow:0 column:0];
-	
-	NSLog(@"Search Key: %@ \n",searchKey);
-	
-	[productBrowser setMaxVisibleColumns:1];
-	
-	cellTest = [productBrowser loadedCellAtRow:0 column:0];
-	
-	[cellTest setStringValue:@"testing finally worked"];
-	
-	SearchSetupConnections* database = [[SearchSetupConnections alloc]init];
-	
-	[database connectDatabase];
-	
-	[database searchForSupplier:searchKey];
-	
-	[database disconnectDatabase];
-	
-	[database release];
 }
 
 @end

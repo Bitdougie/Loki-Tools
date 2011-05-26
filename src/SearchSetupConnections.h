@@ -30,15 +30,8 @@
 
 
 @interface SearchSetupConnections : DatabaseSetupConnections {
-	NSString *productTableName;
-	NSString *productDescriptionFieldName;
-	NSString *supplierTradeNameFieldName;
-	NSString *supplierTableName;
-	NSString *supplierCodeFieldName;
-	NSString *productSupplierCodeFieldName;
-}
 
--(NSMutableArray *)searchForSupplier: (NSString *) searchKey;
+}
 
 -(NSMutableArray *)searchToSQLQuery: (NSString *) searchKey;
 

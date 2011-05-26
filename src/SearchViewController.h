@@ -27,20 +27,25 @@
 
 #import <Cocoa/Cocoa.h>
 #import "SearchSetupConnections.h"
+#import "User.h"
+#import "ErrorMessageViewController.h"
 
 
 @interface SearchViewController : NSObject <NSBrowserDelegate> {
 	IBOutlet NSSearchField *productSearchKey;
 	IBOutlet NSBrowser *productBrowser;
 	IBOutlet NSWindow *searchWindow;
-	BOOL windowLive;
+	
+	User *userLogin;
+	ErrorMessageViewController *error;
 }
 
-@property (nonatomic, retain) IBOutlet NSSearchField *productSearchKey;
-@property (nonatomic, retain) IBOutlet NSBrowser *productBrowser;
-@property (nonatomic, retain) IBOutlet NSWindow *searchWindow;
+-(SearchViewController *)initWithUser:(User *)userObject;
 
 -(IBAction) searchNow: (id) sender;
+
 -(void) openSearchWindow;
+
+
 
 @end

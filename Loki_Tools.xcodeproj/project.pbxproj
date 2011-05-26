@@ -37,7 +37,6 @@
 		41946524138B752E00631183 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41946523138B752E00631183 /* SearchViewController.m */; };
 		41946527138B756600631183 /* ErrorMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41946526138B756600631183 /* ErrorMessageViewController.m */; };
 		41946529138B759100631183 /* ErrorMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41946528138B759100631183 /* ErrorMessageViewController.xib */; };
-		4194652C138B75C400631183 /* SupplierProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 4194652B138B75C400631183 /* SupplierProduct.m */; };
 		4194652F138B75E400631183 /* BrowserList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4194652E138B75E400631183 /* BrowserList.m */; };
 		41946531138B75EF00631183 /* xLokiProcedures.c in Sources */ = {isa = PBXBuildFile; fileRef = 41946530138B75EF00631183 /* xLokiProcedures.c */; };
 		41946534138B760A00631183 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41946533138B760A00631183 /* SearchViewController.xib */; };
@@ -103,8 +102,6 @@
 		41946525138B755B00631183 /* ErrorMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorMessageViewController.h; path = src/ErrorMessageViewController.h; sourceTree = "<group>"; };
 		41946526138B756600631183 /* ErrorMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ErrorMessageViewController.m; path = src/ErrorMessageViewController.m; sourceTree = "<group>"; };
 		41946528138B759100631183 /* ErrorMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ErrorMessageViewController.xib; path = English.lproj/nibs/ErrorMessageViewController.xib; sourceTree = "<group>"; };
-		4194652A138B75B300631183 /* SupplierProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SupplierProduct.h; path = src/SupplierProduct.h; sourceTree = "<group>"; };
-		4194652B138B75C400631183 /* SupplierProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SupplierProduct.m; path = src/SupplierProduct.m; sourceTree = "<group>"; };
 		4194652D138B75D900631183 /* BrowserList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrowserList.h; path = src/BrowserList.h; sourceTree = "<group>"; };
 		4194652E138B75E400631183 /* BrowserList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowserList.m; path = src/BrowserList.m; sourceTree = "<group>"; };
 		41946530138B75EF00631183 /* xLokiProcedures.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xLokiProcedures.c; path = src/xLokiProcedures.c; sourceTree = "<group>"; };
@@ -169,7 +166,7 @@
 		29B97314FDCFA39411CA2CEA /* Loki_Tools */ = {
 			isa = PBXGroup;
 			children = (
-				413A49CA1389046600152959 /* Products */,
+				91A72599134ACEA900AF74BA /* Search Engine */,
 				91A7259D134AD09900AF74BA /* Main Application */,
 				91AD41E813527CDA0003FF41 /* Login */,
 				41366F821378999100894871 /* Select Database */,
@@ -177,8 +174,8 @@
 				41BB3F141381C0E4003643B0 /* Supplier */,
 				417837C6138484E8006C6730 /* Store */,
 				417838F4138617FC006C6730 /* Discounts */,
+				413A49CA1389046600152959 /* Product Pull In */,
 				91A72597134ACE7200AF74BA /* Maintenace & Setup */,
-				91A72599134ACEA900AF74BA /* Search Engine */,
 				91A7259B134ACED000AF74BA /* Stock Management */,
 				91A7259A134ACEBB00AF74BA /* EDIPT Functionality */,
 				91AD41C61352610A0003FF41 /* Error Handling */,
@@ -258,14 +255,14 @@
 			name = "Select Database";
 			sourceTree = "<group>";
 		};
-		413A49CA1389046600152959 /* Products */ = {
+		413A49CA1389046600152959 /* Product Pull In */ = {
 			isa = PBXGroup;
 			children = (
 				413A49CB1389048000152959 /* Display */,
 				41DF9074138C50270046BF50 /* FileBrowser.h */,
 				41DF9075138C50270046BF50 /* FileBrowser.m */,
 			);
-			name = Products;
+			name = "Product Pull In";
 			sourceTree = "<group>";
 		};
 		413A49CB1389048000152959 /* Display */ = {
@@ -404,8 +401,6 @@
 			isa = PBXGroup;
 			children = (
 				41946533138B760A00631183 /* SearchViewController.xib */,
-				4194652B138B75C400631183 /* SupplierProduct.m */,
-				4194652A138B75B300631183 /* SupplierProduct.h */,
 				41946523138B752E00631183 /* SearchViewController.m */,
 				41946522138B751000631183 /* SearchViewController.h */,
 				41946520138B74FC00631183 /* SearchSetupConnections.m */,
@@ -568,7 +563,6 @@
 				41946521138B74FC00631183 /* SearchSetupConnections.m in Sources */,
 				41946524138B752E00631183 /* SearchViewController.m in Sources */,
 				41946527138B756600631183 /* ErrorMessageViewController.m in Sources */,
-				4194652C138B75C400631183 /* SupplierProduct.m in Sources */,
 				4194652F138B75E400631183 /* BrowserList.m in Sources */,
 				41946531138B75EF00631183 /* xLokiProcedures.c in Sources */,
 				41DF9076138C50270046BF50 /* FileBrowser.m in Sources */,
