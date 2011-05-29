@@ -26,22 +26,21 @@
 
 
 #import "SearchNode.h"
-
+#import "SearchSetupConnections.h"
 
 @implementation SearchNode
 
-@dynamic displayName, children, isProduct, icon, labelColour;
+@synthesize supplierName, brandName, productDescription, supplierCode, productCode;
 
--(SearchNode *)initWithName:(NSString *)name isProduct: (BOOL) product
+-(SearchNode *)initWithUser:(User *)userObject
 {
 	self = [super init];
 	
 	if(self){
-		displayName = [[NSMutableString alloc]init];
+		userLogin = userObject;
+		[userLogin retain];
+		error = [[ErrorMessageViewController alloc]init];
 		children = [[NSMutableArray alloc]init];
-		
-		[self setDisplayName: name];
-		[self setIsProduct: product];
 	}
 
 	return self;
@@ -49,29 +48,71 @@
 
 -(void)dealloc
 {
-	[displayName release];
-	[children release];	
+	[children release];
+	[error release];
+	[userLogin release];
 	[super dealloc];
 }
-/*
--(NSString *)displayName
-{
-}
 
--(NSImage *)icon
+-(int) searchString:(NSString *)string
 {
-}
-
--(BOOL)isProduct
-{
+	return 0;
 }
 
 -(NSArray *)children
 {
-}
+	NSMutableString *query;
+	char *charQuery;
+	SearchSetupConnections *connection;
+	MYSQL_RES *res_set;
+	MYSQL_ROW row;
+	NSArray *childrenCopy;
 	
--(NSColor *)labelColour
-{
+	query = [[NSMutableString alloc]init];
+	connection = [SearchSetupConnections alloc];
+	[connection initWithUser:userLogin];
+	[connection connectDatabase];
+	
+	if (supplierCode == nil) {
+		
+	}
+	else {
+		if (brandName == nil) {
+			
+		}
+		else {
+			if (productCode == nil) {
+				
+			}
+			else {
+				
+			}
+
+		}
+
+	}
+	
+	[connection disconnectDatabase];
+	[connection release];
+	[query release];
+	return childrenCopy;
 }
-*/
+
+-(BOOL)isProduct
+{
+	if (productCode == nil) {
+		return FALSE;
+	}
+	else {
+		return TRUE;
+	}
+
+}
+
+-(void)populateChildren
+{
+	
+}
+
 @end
+

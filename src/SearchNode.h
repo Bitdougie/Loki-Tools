@@ -26,23 +26,34 @@
 
 
 #import <Cocoa/Cocoa.h>
-
+#import "User.h"
+#import "ErrorMessageViewController.h"
 
 @interface SearchNode : NSObject {
 @private
-	NSMutableString *displayName;
+	NSString *searchString;
+	NSString *supplierCode;
+	NSString *supplierName;
+	NSString *brandName;
+	NSString *productCode;
+	NSString *productDescription;
+	
 	NSMutableArray *children;
-	NSImage *icon;
-	NSColor *labelColour;
-	BOOL isProduct;
+	User *userLogin;
+	ErrorMessageViewController *error;
 }
 
-@property(nonatomic,copy)NSString *displayName;
-@property(nonatomic,copy)NSMutableArray *children;
-@property(nonatomic,copy)NSImage *icon;
-@property(nonatomic,copy)NSColor *labelColour;
-@property(nonatomic)BOOL isProduct;
+@property(nonatomic,copy)NSString *supplierName;
+@property(nonatomic,copy)NSString *brandName;
+@property(nonatomic,copy)NSString *productDescription;
+@property(nonatomic,copy)NSString *supplierCode;
+@property(nonatomic,copy)NSString *productCode;
 
--(SearchNode *)initWithName:(NSString *)name isProduct:(BOOL) offSpring;
+-(int)searchString:(NSString *)string;
+-(NSArray *)children;
+-(BOOL)isProduct;
+-(void)populateChildren;
+
+-(SearchNode *)initWithUser:(User *) userObject;
 
 @end
