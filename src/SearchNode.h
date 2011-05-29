@@ -38,7 +38,6 @@
 	NSString *productCode;
 	NSString *productDescription;
 	
-	NSMutableArray *children;
 	User *userLogin;
 	ErrorMessageViewController *error;
 }
@@ -48,11 +47,10 @@
 @property(nonatomic,copy)NSString *productDescription;
 @property(nonatomic,copy)NSString *supplierCode;
 @property(nonatomic,copy)NSString *productCode;
+@property(nonatomic,copy)NSString *searchString;
 
--(int)searchString:(NSString *)string;
--(NSArray *)children;
+-(NSMutableArray *)children;
 -(BOOL)isProduct;
--(void)populateChildren;
 
 -(SearchNode *)initWithUser:(User *) userObject;
 
