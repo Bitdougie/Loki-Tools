@@ -12,6 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="2"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -56,7 +57,6 @@
 							<int key="NSvFlags">266</int>
 							<string key="NSFrame">{{20, 500}, {553, 22}}</string>
 							<reference key="NSSuperview" ref="1006"/>
-							<reference key="NSWindow"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSearchFieldCell" key="NSCell" id="489861911">
@@ -140,7 +140,6 @@
 							<int key="NSvFlags">274</int>
 							<string key="NSFrame">{{20, 20}, {553, 475}}</string>
 							<reference key="NSSuperview" ref="1006"/>
-							<reference key="NSWindow"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSBrowserCell" key="NSCellPrototype">
@@ -166,7 +165,6 @@
 					</object>
 					<string key="NSFrameSize">{593, 537}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
@@ -178,27 +176,35 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">productSearchKey</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="806508830"/>
-					</object>
-					<int key="connectionID">13</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">productBrowser</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="346479337"/>
 					</object>
-					<int key="connectionID">14</int>
+					<int key="connectionID">18</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">searchWindow</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="1005"/>
+						<string key="label">delegate</string>
+						<reference key="source" ref="346479337"/>
+						<reference key="destination" ref="1001"/>
 					</object>
-					<int key="connectionID">15</int>
+					<int key="connectionID">19</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">productSearchKey</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="806508830"/>
+					</object>
+					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">searchNow:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="806508830"/>
+					</object>
+					<int key="connectionID">21</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -242,8 +248,8 @@
 						<reference key="object" ref="1006"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="346479337"/>
 							<reference ref="806508830"/>
+							<reference ref="346479337"/>
 						</object>
 						<reference key="parent" ref="1005"/>
 					</object>
@@ -282,12 +288,13 @@
 					<string>3.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
+					<string>6.IBViewBoundsToFrameTransform</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{474, 444}, {593, 537}}</string>
+					<string>{{109, 410}, {593, 537}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{474, 444}, {593, 537}}</string>
+					<string>{{109, 410}, {593, 537}}</string>
 					<integer value="1"/>
 					<string>{196, 240}</string>
 					<string>{{202, 428}, {480, 270}}</string>
@@ -295,6 +302,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUGgAABBoAAAA</bytes>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -313,7 +323,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">15</int>
+			<int key="maxID">21</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -338,13 +348,11 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>productBrowser</string>
 							<string>productSearchKey</string>
-							<string>searchWindow</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSBrowser</string>
 							<string>NSSearchField</string>
-							<string>NSWindow</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -353,7 +361,6 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>productBrowser</string>
 							<string>productSearchKey</string>
-							<string>searchWindow</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -364,10 +371,6 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">productSearchKey</string>
 								<string key="candidateClassName">NSSearchField</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">searchWindow</string>
-								<string key="candidateClassName">NSWindow</string>
 							</object>
 						</object>
 					</object>

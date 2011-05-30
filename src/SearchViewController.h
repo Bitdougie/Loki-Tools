@@ -29,15 +29,16 @@
 #import "SearchSetupConnections.h"
 #import "User.h"
 #import "ErrorMessageViewController.h"
+#import "SearchNode.h"
 
 
 @interface SearchViewController : NSObject <NSBrowserDelegate> {
 	IBOutlet NSSearchField *productSearchKey;
 	IBOutlet NSBrowser *productBrowser;
-	IBOutlet NSWindow *searchWindow;
 	
 	User *userLogin;
 	ErrorMessageViewController *error;
+	SearchNode *rootNode;
 }
 
 -(SearchViewController *)initWithUser:(User *)userObject;
@@ -45,7 +46,5 @@
 -(IBAction) searchNow: (id) sender;
 
 -(void) openSearchWindow;
-
-
 
 @end

@@ -38,6 +38,10 @@
 		userLogin = userObject;
 		[userLogin retain];
 		error = [[ErrorMessageViewController alloc]init];
+		rootNode = [SearchNode alloc];
+		[rootNode initWithUser:userLogin];
+		[rootNode setSearchString: @""];
+		[rootNode setIsLeafNode:FALSE];
 	}
 	
 	return self;
@@ -47,6 +51,7 @@
 {
 	[error release];
 	[userLogin release];
+	[rootNode release];
 	[super dealloc];
 }
 
@@ -60,10 +65,55 @@
 	}
 }
 
-
 -(IBAction) searchNow: (id) sender
 {
+	[rootNode newSearchString:[productSearchKey stringValue]];
+	[productBrowser loadColumnZero];
+}
+
+-(id)rootItemForBrowser:(NSBrowser *)browser
+{
+	return rootNode;
+}
+
+-(NSInteger)browser:(NSBrowser *)browser numberOfChildrenOfItem:(id)item
+{
+	SearchNode *node = (SearchNode *)item;
+	return [node numOfChildren];
+}
+
+-(id)browser:(NSBrowser *)browser child:(NSInteger)index ofItem:(id)item
+{
+	SearchNode *node = (SearchNode *)item;
+	return [node childAtIndex:index];
+}
+
+-(BOOL)browser:(NSBrowser *)browser isLeafItem:(id)item
+{
+	SearchNode *node = (SearchNode *)item;	
+	return [node isLeafNode];
+}
+
+-(id)browser:(NSBrowser *)browser objectValueForItem:(id)item
+{
+	SearchNode *node = (SearchNode *)item;
 	
+	if ([node supplierCode] != nil) {
+		if ([node brandName] != nil ) {
+			if ([node productCode] != nil) {
+				return [node productDescription];
+			}
+			else {
+				return [node brandName];
+			}
+		}
+		else {
+			return [node supplierName];
+		}
+	}
+	else{
+		return @"rootNode";
+	}
 }
 
 @end

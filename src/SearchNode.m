@@ -30,7 +30,7 @@
 
 @implementation SearchNode
 
-@synthesize supplierName, brandName, productDescription, supplierCode, productCode, searchString;
+@synthesize supplierName, brandName, productDescription, supplierCode, productCode, searchString, isLeafNode, noOfChildren;
 
 -(SearchNode *)initWithUser:(User *)userObject
 {
@@ -47,6 +47,9 @@
 
 -(void)dealloc
 {
+	if (children != nil) {
+		[children release];
+	}
 	[error release];
 	[userLogin release];
 	[super dealloc];
@@ -60,31 +63,31 @@
 	MYSQL_RES *res_set;
 	MYSQL_ROW row;
 	NSArray *searchStrings;
-	NSMutableArray *children;
+	NSMutableArray *childrenCopy;
 	NSString *tempString;
 	SearchNode *tempNode;
-
+	
 	query = [[NSMutableString alloc]init];
 	connection = [SearchSetupConnections alloc];
 	[connection initWithUser:userLogin];
 	[connection connectDatabase];
-	children = [[NSMutableArray alloc]init];
+	childrenCopy = [[NSMutableArray alloc]init];
 	
 	if (supplierCode == nil) {
 		[query setString:@" SELECT PRODUCT.SUPPLIER_CODE, SUPPLIER.TRADE_NAME FROM PRODUCT INNER JOIN SUPPLIER ON \
 		 SUPPLIER.SUPPLIER_CODE = PRODUCT.SUPPLIER_CODE WHERE PRODUCT.PRODUCT_DESCRIPTION LIKE '%"];
 		searchStrings = [connection searchToSQLQuery:[self searchString]];
-		[query appendString:[[searchStrings objectAtIndex:0]stringValue]];
+		[query appendString:[searchStrings objectAtIndex:0]];
 		[query appendString:@"%' "];
 
 		for(int i = 1; i < [searchStrings count]; i++)
 		{
 			[query appendString:@"AND PRODUCT.PRODUCT_DESCRIPTION LIKE '%"];
-			[query appendString:[[searchStrings objectAtIndex:i]stringValue]];
+			[query appendString:[searchStrings objectAtIndex:i]];
 			[query appendString:@"%' "];
 		}
-
-		[query appendString:@";"];
+		
+		[query appendString:@" GROUP BY PRODUCT.SUPPLIER_CODE;"];
 		
 		charQuery = (char *)xmalloc(sizeof(char[[query length]]));
 		(void)strcpy(charQuery,[query UTF8String]);
@@ -100,8 +103,8 @@
 			[connection disconnectDatabase];
 			[connection release];
 			[query release];
-			[children autorelease];
-			return children;
+			[childrenCopy autorelease];
+			return childrenCopy;
 		}
 		else {
 			res_set = mysql_store_result([connection conn]);
@@ -117,8 +120,8 @@
 				[connection release];
 				[query release];
 				free(charQuery);
-				[children autorelease];
-				return children;
+				[childrenCopy autorelease];
+				return childrenCopy;
 			}
 			else{
 				while ((row = mysql_fetch_row(res_set)) != NULL) {
@@ -130,7 +133,8 @@
 					[tempString release];
 					tempString = [[NSString alloc]initWithUTF8String:row[1]];
 					[tempNode setSupplierName:tempString];
-					[children addObject:tempNode];
+					[tempNode setIsLeafNode:FALSE];
+					[childrenCopy addObject:tempNode];
 					[tempNode release];
 				}
 				mysql_free_result(res_set);
@@ -145,17 +149,17 @@
 			[query appendString:[connection escapedSQLQuery:[self supplierCode]]];
 			[query appendString:@"' AND PRODUCT.PRODUCT_DESCRIPTION LIKE '%"];
 			searchStrings = [connection searchToSQLQuery:[self searchString]];
-			[query appendString:[[searchStrings objectAtIndex:0]stringValue]];
+			[query appendString:[searchStrings objectAtIndex:0]];
 			[query appendString:@"%' "];
 			
 			for(int i = 1; i < [searchStrings count]; i++)
 			{
 				[query appendString:@"AND PRODUCT.PRODUCT_DESCRIPTION LIKE '%"];
-				[query appendString:[[searchStrings objectAtIndex:i]stringValue]];
+				[query appendString:[searchStrings objectAtIndex:i]];
 				[query appendString:@"%' "];
 			}
 			
-			[query appendString:@";"];
+			[query appendString:@" GROUP BY PRODUCT.BRAND;"];
 			
 			charQuery = (char *)xmalloc(sizeof(char[[query length]]));
 			
@@ -172,8 +176,8 @@
 				[connection disconnectDatabase];
 				[connection release];
 				[query release];
-				[children autorelease];
-				return children;
+				[childrenCopy autorelease];
+				return childrenCopy;
 			}
 			else {
 				res_set = mysql_store_result([connection conn]);
@@ -189,8 +193,8 @@
 					[connection release];
 					[query release];
 					free(charQuery);
-					[children autorelease];
-					return children;
+					[childrenCopy autorelease];
+					return childrenCopy;
 				}
 				else{
 					while ((row = mysql_fetch_row(res_set)) != NULL) {
@@ -199,10 +203,15 @@
 						[tempNode setSearchString:[self searchString]];
 						[tempNode setSupplierCode:[self supplierCode]];
 						[tempNode setSupplierName:[self supplierName]];
-						tempString = [[NSString alloc]init];
-						[tempString initWithUTF8String:row[0]];
-						[tempNode setBrandName:tempString];
-						[children addObject:tempNode];
+						tempString =[[NSString alloc] initWithUTF8String:row[0]];
+						if ([tempString isEqualToString:@""]) {
+							[tempNode setBrandName:@"No Brand"];
+						}
+						else {
+							[tempNode setBrandName:tempString];
+						}
+						[tempNode setIsLeafNode:FALSE];
+						[childrenCopy addObject:tempNode];
 						[tempNode release];
 						[tempString release];
 					}
@@ -217,18 +226,25 @@
 				[query setString:@"SELECT PRODUCT.PRODUCT_DESCRIPTION, PRODUCT.SUPPLIER_PART_NO FROM PRODUCT WHERE PRODUCT.SUPPLIER_CODE ='"];
 				[query appendString:[connection escapedSQLQuery:[self supplierCode]]];
 				[query appendString:@"' AND PRODUCT.BRAND = '"];
-				[query appendString:[connection escapedSQLQuery:[self brandName]]];
+				if ([[self brandName] isEqualToString: @"No Brand"]) {
+					[query appendString:@""];
+				}
+				else {
+					[query appendString:[connection escapedSQLQuery:[self brandName]]];
+				}
 				[query appendString:@"' AND PRODUCT.PRODUCT_DESCRIPTION LIKE '%"];
 				searchStrings = [connection searchToSQLQuery:[self searchString]];
-				[query appendString:[[searchStrings objectAtIndex:0]stringValue]];
+				[query appendString:[searchStrings objectAtIndex:0]];
 				[query appendString:@"%' "];
 				
 				for(int i = 1; i < [searchStrings count]; i++)
 				{
 					[query appendString:@"AND PRODUCT.PRODUCT_DESCRIPTION LIKE '%"];
-					[query appendString:[[searchStrings objectAtIndex:i]stringValue]];
+					[query appendString:[searchStrings objectAtIndex:i]];
 					[query appendString:@"%' "];
 				}
+				
+				[query appendString:@";"];
 				
 				charQuery = (char *)xmalloc(sizeof(char[[query length]]));
 				
@@ -245,8 +261,8 @@
 					[connection disconnectDatabase];
 					[connection release];
 					[query release];
-					[children autorelease];
-					return children;
+					[childrenCopy autorelease];
+					return childrenCopy;
 				}
 				else {
 					res_set = mysql_store_result([connection conn]);
@@ -262,8 +278,8 @@
 						[connection release];
 						[query release];
 						free(charQuery);
-						[children autorelease];
-						return children;
+						[childrenCopy autorelease];
+						return childrenCopy;
 					}
 					else{
 						while ((row = mysql_fetch_row(res_set)) != NULL) {
@@ -277,9 +293,10 @@
 							[tempNode setProductDescription:tempString];
 							[tempString release];
 							tempString = [[NSString alloc]initWithUTF8String:row[1]];
-							[tempNode setProductDescription:tempString];
+							[tempNode setProductCode:tempString];
+							[tempNode setIsLeafNode:TRUE];
 							[tempString release];
-							[children addObject:tempNode];
+							[childrenCopy addObject:tempNode];
 							[tempNode release];
 						}
 						mysql_free_result(res_set);
@@ -294,19 +311,37 @@
 	[connection release];
 	[query release];
 	free(charQuery);
-	[children autorelease];
-	return children;
+	[self setNoOfChildren:[childrenCopy count]];
+	[childrenCopy autorelease];
+	return childrenCopy;
 }
 
--(BOOL)isProduct
+-(SearchNode *)childAtIndex:(int)index
 {
-	if (productCode == nil) {
-		return FALSE;
+	if (children == nil) {
+		children = [[NSArray alloc]initWithArray:[self children]];
 	}
-	else {
-		return TRUE;
-	}
+	
+	return [children objectAtIndex:index];
+}
 
+-(int)numOfChildren
+{
+	if (children == nil) {
+		children = [[NSArray alloc]initWithArray:[self children]];
+	}
+	
+	return [self noOfChildren];
+}
+
+-(void)newSearchString:(NSString *)newSearchKey
+{
+	if (children != nil) {
+		[children release];
+		children = nil;
+	}
+	
+	[self setSearchString:newSearchKey];
 }
 
 @end

@@ -40,6 +40,9 @@
 	
 	User *userLogin;
 	ErrorMessageViewController *error;
+	int noOfChildren;
+	BOOL isLeafNode;
+	NSArray *children;
 }
 
 @property(nonatomic,copy)NSString *supplierName;
@@ -48,10 +51,13 @@
 @property(nonatomic,copy)NSString *supplierCode;
 @property(nonatomic,copy)NSString *productCode;
 @property(nonatomic,copy)NSString *searchString;
+@property(nonatomic)BOOL isLeafNode;
+@property(nonatomic)int noOfChildren;
 
 -(NSMutableArray *)children;
--(BOOL)isProduct;
-
+-(SearchNode *)childAtIndex:(int)index;
+-(int)numOfChildren;
 -(SearchNode *)initWithUser:(User *) userObject;
+-(void)newSearchString:(NSString *)newSearchKey;
 
 @end
