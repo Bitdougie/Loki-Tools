@@ -42,6 +42,8 @@
 		[rootNode initWithUser:userLogin];
 		[rootNode setSearchString: @""];
 		[rootNode setIsLeafNode:FALSE];
+		productView = [ProductViewController alloc];
+		[productView initWithUser:userLogin];
 	}
 	
 	return self;
@@ -49,6 +51,7 @@
 
 -(void)dealloc
 {
+	[productView release];
 	[error release];
 	[userLogin release];
 	[rootNode release];
@@ -57,7 +60,6 @@
 
 -(void)openSearchWindow
 {
-	NSLog(@"openSeachWindow \n");
 	if (![NSBundle loadNibNamed:@"SearchViewController" owner: self]) {
 		[error openErrorMessage:@"SearchViewController:openSearchWindow" withMessage:@"Could not load SearchViewController.xib"];
 		[error setErrorNo:1];
@@ -69,6 +71,16 @@
 {
 	[rootNode newSearchString:[productSearchKey stringValue]];
 	[productBrowser loadColumnZero];
+}
+
+-(IBAction) selectItem: (id) sender
+{
+	if ([productBrowser clickedColumn] == 2) {
+		SearchNode *node = [productBrowser itemAtRow:[productBrowser clickedRow] inColumn:[productBrowser clickedColumn]];
+		[node retain];
+		[productView openProductNo:[node productCode] andSupplierCode:[node supplierCode]];
+		[node release];
+	}
 }
 
 -(id)rootItemForBrowser:(NSBrowser *)browser

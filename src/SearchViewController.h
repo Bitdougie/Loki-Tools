@@ -30,6 +30,7 @@
 #import "User.h"
 #import "ErrorMessageViewController.h"
 #import "SearchNode.h"
+#import "ProductViewController.h"
 
 
 @interface SearchViewController : NSObject <NSBrowserDelegate> {
@@ -39,11 +40,13 @@
 	User *userLogin;
 	ErrorMessageViewController *error;
 	SearchNode *rootNode;
+	ProductViewController *productView;
 }
 
 -(SearchViewController *)initWithUser:(User *)userObject;
 
 -(IBAction) searchNow: (id) sender;
+-(IBAction) selectItem: (id) sender;
 
 -(void) openSearchWindow;
 
