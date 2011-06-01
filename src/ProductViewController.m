@@ -66,7 +66,8 @@
 	[connection initWithUser:userLogin];
 	[connection connectDatabase];
 	
-	[query setString:@"SELECT PRODUCT.SUPPLIER_PART_NO, "];
+	[query setString:@"SELECT PRODUCT.SUPPLIER_CODE, PRODUCT.SUPPLIER_PART_NO, PRODUCT.PRODUCT_DESCRIPTION,\
+	 PRODUCT.BRAND, PRODUCT.UNIT,PRODUCT.PACK_QUANTITY
 }
 
 @end

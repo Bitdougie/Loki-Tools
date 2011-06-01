@@ -71,6 +71,9 @@
 	MYSQL_ROW row;
 	NSString *tempString;
 	
+	[supplierCode removeAllItems];
+	[storeCode removeAllItems];
+	
 	query = [[NSMutableString alloc]init];
 	connection = [DatabaseSetupConnections alloc];
 	[connection initWithUser:userLogin];
@@ -438,6 +441,8 @@
 		return;
 	}
 	
+	[discountCode removeItemWithObjectValue:[discountCode stringValue]];
+	
 	[connection disconnectDatabase];
 	[connection release];
 	[query release];
@@ -485,6 +490,7 @@
 		return;
 	}
 	
+	[discountCode addItemWithObjectValue:[discountCode stringValue]];
 	[connection disconnectDatabase];
 	[connection release];
 	[query release];
