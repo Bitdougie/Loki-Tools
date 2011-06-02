@@ -27,6 +27,7 @@
 
 #import "Loki_ToolsAppDelegate.h"
 #import "ErrorMessageViewController.h"
+#import "LoginViewController.h"
 
 @implementation Loki_ToolsAppDelegate
 
@@ -36,8 +37,8 @@
 	[searchView initWithUser:userLogin];
 	maintenaceView = [MaintenaceViewController alloc];
 	[maintenaceView initWithUser:userLogin];
-	loginView = [LoginViewController alloc];
-	[loginView initWithUser:userLogin andMainProgram: self];
+	//loginView = [LoginViewController alloc];
+	//[loginView initWithUser:userLogin andMainProgram: self];
 	selectDatabaseView = [SelectDatabaseViewController alloc];
 	[selectDatabaseView initWithUser:userLogin];
 	traderTypeView = [TraderTypeViewController alloc];
@@ -105,7 +106,21 @@
 
 -(IBAction) openLogin: (id) sender
 {
-	[loginView openLogin];
+	NSLog(@"openLogin \n");
+	LoginViewController *loginView;
+	
+	loginView = [LoginViewController alloc];
+	
+	[loginView initWithUser:userLogin andMainProgram:self andMyOwner: loginView];
+	
+	if (![NSBundle loadNibNamed:@"LoginViewController" owner: loginView]) {
+		ErrorMessageViewController *error;
+		error = [[ErrorMessageViewController alloc]init];
+		[error openErrorMessage:@"Login:openLogin" withMessage:@"Could not load LoginViewController.xib"];
+		[error setErrorNo:1];
+	}
+	
+	[loginView release];
 }
 
 -(IBAction) openSelectDatabase: (id) sender

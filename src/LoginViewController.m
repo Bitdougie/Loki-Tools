@@ -30,7 +30,7 @@ This program comes with ABSOLUTELY NO WARRANTY;
 
 @implementation LoginViewController
 
--(LoginViewController *)initWithUser: (User *) userObject andMainProgram: (Loki_ToolsAppDelegate *) mainAppObject
+-(LoginViewController *)initWithUser: (User *) userObject andMainProgram: (Loki_ToolsAppDelegate *) mainAppObject andMyOwner:(LoginViewController *)owner
 {
 	self = [super init];
 	
@@ -39,11 +39,14 @@ This program comes with ABSOLUTELY NO WARRANTY;
 		mainProgram = mainAppObject;
 		[userLogin retain];
 		[mainProgram retain];
+		myOwner = owner;
+		[myOwner retain];
 	}
 	
 	return self;
 }
 
+/*
 -(void)openLogin
 {
 	if (![NSBundle loadNibNamed:@"LoginViewController" owner: self]) {
@@ -53,6 +56,13 @@ This program comes with ABSOLUTELY NO WARRANTY;
 		[error setErrorNo:1];
 	}
 
+}
+ */
+
+-(void)windowWillClose:(NSNotification *)notification
+{
+	NSLog(@"time to choose my poison");
+	[myOwner release];
 }
 
 -(IBAction)login: (id) sender;

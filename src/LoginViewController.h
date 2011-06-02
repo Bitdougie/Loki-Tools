@@ -29,18 +29,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.//
 
 @class Loki_ToolsAppDelegate;
 
-@interface LoginViewController : NSObject {
+@interface LoginViewController : NSObject <NSWindowDelegate>{
 	IBOutlet NSWindow *loginWindow;
 	IBOutlet NSTextField *user;
 	IBOutlet NSSecureTextField *password;
 	User *userLogin;
 	Loki_ToolsAppDelegate *mainProgram;
 	BOOL nibLoaded;
+	LoginViewController *myOwner;
 }
 
--(LoginViewController *)initWithUser:(User *)userObject andMainProgram:(Loki_ToolsAppDelegate *) mainAppObject;
+-(LoginViewController *)initWithUser:(User *)userObject andMainProgram:(Loki_ToolsAppDelegate *) mainAppObject andMyOwner:(LoginViewController *)owner;
 
--(void) openLogin;
+//-(void) openLogin;
 
 -(IBAction) login: (id) sender;
 

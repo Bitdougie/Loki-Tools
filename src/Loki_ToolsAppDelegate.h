@@ -28,7 +28,7 @@
 #import <Cocoa/Cocoa.h>
 #import "SearchViewController.h"
 #import "MaintenaceViewController.h"
-#import "LoginViewController.h"
+//#import "LoginViewController.h"
 #import "User.h"
 #import "SelectDatabaseViewController.h"
 #import "TraderTypeViewController.h"
@@ -41,7 +41,7 @@
 @private
 	SearchViewController *searchView;
 	MaintenaceViewController *maintenaceView;
-	LoginViewController *loginView;
+	//LoginViewController *loginView;
 	User *userLogin;
 	SelectDatabaseViewController *selectDatabaseView;
 	TraderTypeViewController *traderTypeView;
