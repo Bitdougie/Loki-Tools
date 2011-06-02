@@ -352,8 +352,6 @@
 	
 	(void)strcpy(charQuery,[query UTF8String]);
 	
-	NSLog(@" %s",charQuery);
-	
 	if (mysql_real_query([connection conn], charQuery, [query length])) {
 		NSString *errorMessage;
 		errorMessage = [[NSString alloc]initWithUTF8String:mysql_error([connection conn])];
@@ -425,8 +423,6 @@
 				charQuery = (char *)xmalloc(sizeof(char[[query length]]));
 				
 				(void)strcpy(charQuery,[query UTF8String]);
-				
-				NSLog(@" %s \n",charQuery);
 				
 				if (mysql_real_query([connection conn], charQuery, [query length])) {
 					if (mysql_errno([connection conn]) != 1452) {

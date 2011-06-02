@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="3"/>
+			<integer value="7"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -601,7 +601,7 @@
 																		<string>public.url</string>
 																	</object>
 																</object>
-																<string key="NSFrame">{{0, 142}, {337, 133}}</string>
+																<string key="NSFrameSize">{337, 133}</string>
 																<reference key="NSSuperview" ref="290419978"/>
 																<object class="NSTextContainer" key="NSTextContainer" id="416775462">
 																	<object class="NSLayoutManager" key="NSLayoutManager">
@@ -2011,6 +2011,70 @@
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">supplierCodeText</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="687534995"/>
+					</object>
+					<int key="connectionID">156</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">productNo</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="75518483"/>
+					</object>
+					<int key="connectionID">157</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">description</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="837659153"/>
+					</object>
+					<int key="connectionID">158</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">brand</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="573723661"/>
+					</object>
+					<int key="connectionID">159</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">productUnits</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="727755264"/>
+					</object>
+					<int key="connectionID">160</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">productPackQuantity</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="529530807"/>
+					</object>
+					<int key="connectionID">161</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">productDetails</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="33186062"/>
+					</object>
+					<int key="connectionID">162</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">productComment</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="1070475960"/>
+					</object>
+					<int key="connectionID">163</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2156,8 +2220,8 @@
 							<reference ref="553969208"/>
 							<reference ref="520058694"/>
 							<reference ref="259517656"/>
-							<reference ref="454828355"/>
 							<reference ref="410814372"/>
+							<reference ref="454828355"/>
 						</object>
 						<reference key="parent" ref="530551381"/>
 					</object>
@@ -3115,6 +3179,7 @@
 					<string>135.IBNumberFormatterLocalizesFormatMetadataKey</string>
 					<string>135.IBPluginDependency</string>
 					<string>136.IBPluginDependency</string>
+					<string>136.IBViewBoundsToFrameTransform</string>
 					<string>137.IBPluginDependency</string>
 					<string>138.IBPluginDependency</string>
 					<string>139.IBPluginDependency</string>
@@ -3247,9 +3312,9 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{64, 286}, {790, 684}}</string>
+					<string>{{691, 253}, {790, 684}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{64, 286}, {790, 684}}</string>
+					<string>{{691, 253}, {790, 684}}</string>
 					<integer value="1"/>
 					<string>{196, 240}</string>
 					<string>{{202, 428}, {480, 270}}</string>
@@ -3334,6 +3399,9 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDFwAAw6EAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3531,7 +3599,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">155</int>
+			<int key="maxID">163</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3544,19 +3612,25 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>brand</string>
+							<string>cataloguePage</string>
 							<string>description</string>
 							<string>productComment</string>
 							<string>productDetails</string>
+							<string>productNo</string>
 							<string>productPackQuantity</string>
 							<string>productUnits</string>
 							<string>stocked</string>
+							<string>supplierCodeText</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
+							<string>NSTextField</string>
 							<string>NSTextView</string>
 							<string>NSTextView</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
@@ -3567,17 +3641,24 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>brand</string>
+							<string>cataloguePage</string>
 							<string>description</string>
 							<string>productComment</string>
 							<string>productDetails</string>
+							<string>productNo</string>
 							<string>productPackQuantity</string>
 							<string>productUnits</string>
 							<string>stocked</string>
+							<string>supplierCodeText</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
 								<string key="name">brand</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">cataloguePage</string>
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -3593,6 +3674,10 @@
 								<string key="candidateClassName">NSTextView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">productNo</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">productPackQuantity</string>
 								<string key="candidateClassName">NSTextField</string>
 							</object>
@@ -3602,6 +3687,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">stocked</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">supplierCodeText</string>
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 						</object>

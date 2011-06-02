@@ -11,17 +11,20 @@
 #import "ErrorMessageViewController.h"
 
 @interface ProductViewController : NSObject {
+	IBOutlet NSTextField *supplierCodeText;
+	IBOutlet NSTextField *productNo;
 	IBOutlet NSTextField *description;
 	IBOutlet NSTextField *brand;
 	IBOutlet NSTextField *productUnits;
 	IBOutlet NSTextField *productPackQuantity;
+	IBOutlet NSTextField *cataloguePage;
 	IBOutlet NSTextField *stocked;
 	IBOutlet NSTextView *productDetails;
 	IBOutlet NSTextView *productComment;
 	
 	User *userLogin;
-	NSString *supplierCode;
-	NSString *productCode;
+	NSMutableString *supplierCode;
+	NSMutableString *productCode;
 	ErrorMessageViewController *error;
 }
 
