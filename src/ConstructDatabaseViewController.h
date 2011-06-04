@@ -38,8 +38,6 @@
 
 -(ConstructDatabaseViewController *)initWithUser: (User *) userObject;
 
--(void)openConstructDatabase;
-
 -(IBAction)constructDatabase: (id) sender;
 
 @end

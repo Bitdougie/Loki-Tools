@@ -40,13 +40,6 @@
 	return self;
 }
 
--(void)openConstructDatabase{
-	if (![NSBundle loadNibNamed:@"ConstructDatabaseViewController" owner: self]) {
-		[error openErrorMessage:@"ConstructDatabaseViewController:openConstructDatabase" withMessage:@"Could not load ConstructDatabaseViewConstroller.xib"];
-		[error setErrorNo:1];
-	}	
-}
-
 -(IBAction)constructDatabase: (id) sender
 {
 	NSString *databaseName;

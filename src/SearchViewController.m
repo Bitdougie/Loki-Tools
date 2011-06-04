@@ -42,8 +42,6 @@
 		[rootNode initWithUser:userLogin];
 		[rootNode setSearchString: @""];
 		[rootNode setIsLeafNode:FALSE];
-		productView = [ProductViewController alloc];
-		[productView initWithUser:userLogin];
 	}
 	
 	return self;
@@ -51,7 +49,6 @@
 
 -(void)dealloc
 {
-	[productView release];
 	[error release];
 	[userLogin release];
 	[rootNode release];
@@ -60,11 +57,7 @@
 
 -(void)openSearchWindow
 {
-	if (![NSBundle loadNibNamed:@"SearchViewController" owner: self]) {
-		[error openErrorMessage:@"SearchViewController:openSearchWindow" withMessage:@"Could not load SearchViewController.xib"];
-		[error setErrorNo:1];
-		return;
-	}
+
 }
 
 -(IBAction) searchNow: (id) sender
@@ -76,10 +69,26 @@
 -(IBAction) selectItem: (id) sender
 {
 	if ([productBrowser clickedColumn] == 2) {
+		ProductViewController *productView;
+		productView = [ProductViewController alloc];
+		[productView initWithUser:userLogin];
+		
 		SearchNode *node = [productBrowser itemAtRow:[productBrowser clickedRow] inColumn:[productBrowser clickedColumn]];
 		[node retain];
-		[productView openProductNo:[node productCode] andSupplierCode:[node supplierCode]];
+		
+		NSLog(@"openProductNo \n");
+		[productView setProductCode: [node productCode]];
+		[productView setSupplierCode:[node supplierCode]];
+		
 		[node release];
+		
+		if (![NSBundle loadNibNamed:@"ProductViewController" owner: productView]) {
+			[error openErrorMessage:@"ProductViewController:openProductNo" withMessage:@"Could not load ProductViewController.xib"];
+			[error setErrorNo:1];
+			return;
+		}
+		
+		[productView populateWindow];
 	}
 }
 

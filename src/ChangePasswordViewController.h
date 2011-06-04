@@ -45,8 +45,6 @@
 
 -(ChangePasswordViewController *)initWithUser:(User *)userObject;
 
--(void)openChangePassword;
-
 -(IBAction)changePassword: (id) sender;
 
 @end

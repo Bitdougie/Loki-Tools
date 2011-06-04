@@ -458,18 +458,6 @@
 	[self refresh: @"SupplierViewController:refresh"];
 }
 
--(void)openSupplier
-{
-	NSLog(@"openSupplier \n");
-	if (![NSBundle loadNibNamed:@"SupplierViewController" owner: self]) {
-		[error openErrorMessage:@"SupplierViewController:openSupplier" withMessage:@"Could not load SupplierViewController.xib"];
-		[error setErrorNo:1];
-		return;
-	}
-	
-	[self refresh: self];
-}
-
 -(void)populate:(NSString *) searchString
 {
 	NSLog(@"populate \n");

@@ -45,14 +45,12 @@
 	return self;
 }
 
--(void)openSelectDatabase
-{	
-	if (![NSBundle loadNibNamed:@"SelectDatabaseViewController" owner: self]) {
-		[error openErrorMessage:@"SelectDatabaseViewController:openSelectDatabase" withMessage:@"Could not load SelectDatabaseViewController.xib"];
-		[error setErrorNo:1];
-	}
-	
-	[self populateList];
+-(void)dealloc
+{
+	[userLogin release];
+	[error release];
+	[rootNode release];
+	[super dealloc];
 }
 
 -(void)populateList
@@ -137,6 +135,7 @@
 
 -(IBAction)connect:(id) sender
 {
+	NSLog(@"connect");
 	NSString *oldDatabaseName;
 	oldDatabaseName = [userLogin databaseName];
 	[oldDatabaseName retain];
@@ -156,7 +155,7 @@
 	[connection disconnectDatabase];
 	[oldDatabaseName release];
 	[connection release];
-	[window close];
+	[window performClose:@"self"];
 }
 
 -(IBAction)postSelected:(id) sender
@@ -167,14 +166,6 @@
 	else {
 		[selectedDatabase setStringValue:@""];
 	}
-}
-
--(void)dealloc
-{
-	[userLogin release];
-	[error release];
-	[rootNode release];
-	[super dealloc];
 }
 
 -(id) rootItemForBrowser:(NSBrowser *)browser

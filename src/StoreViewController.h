@@ -54,7 +54,6 @@
 
 -(StoreViewController *)initWithUser:(User *)userObject;
 
--(void)openStore;
 -(IBAction)refresh: (id) sender;
 -(IBAction)select:(id) sender;
 -(IBAction)addStore:(id) sender;

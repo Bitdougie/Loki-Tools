@@ -54,18 +54,6 @@
 	[super dealloc];
 }
 
--(void)openStore
-{
-	NSLog(@"openStore \n");
-	if (![NSBundle loadNibNamed:@"StoreViewController" owner: self]) {
-		[error openErrorMessage:@"StoreViewController:openStore" withMessage:@"Could not load StoreViewController.xib"];
-		[error setErrorNo:1];
-		return;
-	}
-	
-	[self refresh: self];
-}
-
 -(IBAction)refresh:(id) sender
 {
 	NSLog(@"refresh");

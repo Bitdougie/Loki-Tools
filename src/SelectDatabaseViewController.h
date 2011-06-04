@@ -35,6 +35,7 @@
 	User *userLogin;
 	ErrorMessageViewController *error;
 	BrowserList *rootNode;
+	SelectDatabaseViewController *myOwner;
 }
 
 -(SelectDatabaseViewController *)initWithUser: (User *) userObject;
@@ -43,6 +44,5 @@
 -(IBAction)connect:(id) sender;
 -(IBAction)postSelected:(id) sender;
 -(void)populateList;
--(void)openSelectDatabase;
 
 @end

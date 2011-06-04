@@ -59,7 +59,6 @@
 -(IBAction)remove:(id) sender;
 -(IBAction)refresh:(id) sender;
 
--(void)openSupplier;
 -(void)populate: (NSString *) searchString;
 
 @end

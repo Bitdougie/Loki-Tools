@@ -39,16 +39,7 @@
 
 @interface Loki_ToolsAppDelegate : NSObject <NSApplicationDelegate> {
 @private
-	SearchViewController *searchView;
-	MaintenaceViewController *maintenaceView;
-	//LoginViewController *loginView;
 	User *userLogin;
-	SelectDatabaseViewController *selectDatabaseView;
-	TraderTypeViewController *traderTypeView;
-	SupplierViewController *supplierView;
-	StoreViewController *storeView;
-	DiscountsViewController *discountsView;
-	ProductsViewController *productsView;
 	
 	//menu items
 	IBOutlet NSMenuItem *supplierMenu;
@@ -73,7 +64,6 @@
 -(IBAction) openStore:(id) sender;
 -(IBAction) openDiscounts:(id) sender;
 -(IBAction) openProducts:(id) sender;
-
 -(void)menuAuthority;
 
 @end

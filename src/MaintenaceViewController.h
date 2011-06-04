@@ -32,16 +32,12 @@
 
 @interface MaintenaceViewController : NSObject {
 	IBOutlet NSWindow *maintenaceWindow;
-	ChangePasswordViewController *changePasswordViewController;
 	User *userLogin;
-	ConstructDatabaseViewController *constructDatabaseViewController;
 }
 
 @property(nonatomic, retain)NSWindow *maintenaceWindow;
 
 -(MaintenaceViewController *)initWithUser:(User *)userObject;
-
--(void) openMaintenace;
 
 -(IBAction) changePassword: (id) sender;
 -(IBAction) constructDatabase: (id) sender;

@@ -29,7 +29,7 @@
 #import "ErrorMessageViewController.h"
 
 
-@interface TraderTypeViewController : NSObject <NSBrowserDelegate> {
+@interface TraderTypeViewController : NSObject <NSBrowserDelegate,NSWindowDelegate> {
 	IBOutlet NSTextField *traderType;
 	IBOutlet NSTextView *summary;
 	IBOutlet NSTextField *rebate;
@@ -37,6 +37,7 @@
 	User *userLogin;
 	BrowserList *rootNode;
 	ErrorMessageViewController *error;
+	TraderTypeViewController *myOwner;
 }
 
 -(TraderTypeViewController *)initWithUser:(User *)userObject;
@@ -44,7 +45,6 @@
 -(IBAction)update:(id) sender;
 -(IBAction)selectTrader:(id) sender;
 -(IBAction)refresh:(id) sender;
--(void)openTraderType;
 -(void)populateList;
 
 @end

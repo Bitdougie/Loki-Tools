@@ -42,15 +42,6 @@
 	return self;
 }
 
--(void)openChangePassword{
-
-	if (![NSBundle loadNibNamed:@"ChangePasswordViewController" owner: self]) {
-		[error openErrorMessage:@"Maintenance:changePassword" withMessage:@"Could not load ChangePasswordViewController.xib"];
-		[error setErrorNo:1];
-	}
-	
-}
-
 -(IBAction)changePassword: (id) sender
 {
 	NSString *escapedpassword;

@@ -42,7 +42,6 @@
 
 -(DiscountsViewController *)initWithUser:(User *)userObject;
 
--(void)openDiscounts;
 -(void)populateDiscountCodes;
 
 -(IBAction)refresh:(id) sender;

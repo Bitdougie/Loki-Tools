@@ -12,6 +12,8 @@
 
 @implementation ProductViewController
 
+@synthesize productCode, supplierCode;
+
 -(ProductViewController *)initWithUser:(User *)userObject
 {
 	self = [super init];
@@ -21,8 +23,6 @@
 		userLogin = userObject;
 		[userLogin retain];
 		error = [[ErrorMessageViewController alloc]init];
-		productCode = [[NSMutableString alloc]init];
-		supplierCode = [[NSMutableString alloc]init];
 	}
 	
 	return self;
@@ -30,8 +30,6 @@
 
 -(void)dealloc
 {
-	[productCode release];
-	[supplierCode release];
 	[userLogin release];
 	[error release];
 	[super dealloc];
@@ -39,17 +37,7 @@
 
 -(void)openProductNo:(NSString *)newProductNo andSupplierCode:(NSString *)supplier
 {
-	NSLog(@"openProductNo \n");
-	[productCode setString: newProductNo];
-	[supplierCode setString: supplier];
 	
-	if (![NSBundle loadNibNamed:@"ProductViewController" owner: self]) {
-		[error openErrorMessage:@"ProductViewController:openProductNo" withMessage:@"Could not load ProductViewController.xib"];
-		[error setErrorNo:1];
-		return;
-	}
-	
-	[self populateWindow];
 }
 
 -(void)populateWindow

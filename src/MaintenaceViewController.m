@@ -40,39 +40,41 @@
 	if (self) {
 		userLogin = userObject;
 		[userLogin retain];
-		changePasswordViewController = [ChangePasswordViewController alloc];
-		[changePasswordViewController initWithUser:userLogin];
-		constructDatabaseViewController = [ConstructDatabaseViewController alloc];
-		[constructDatabaseViewController initWithUser:userLogin];
 	}
 	
 	return self;
 }
 
--(void) openMaintenace
-{
-	if (![NSBundle loadNibNamed:@"MaintenaceViewController" owner: self]) {
-		ErrorMessageViewController *error;
-		error = [[ErrorMessageViewController alloc]init];
-		[error openErrorMessage:@"[MaintenaceViewController openMaintence]" withMessage:@"Could not load MaintenaceViewController.xib"];
-		[error setErrorNo:1];
-	}	
-}
-
 -(IBAction) changePassword: (id) sender
 {
-	[changePasswordViewController openChangePassword];
+	ChangePasswordViewController *changePasswordViewController;
+	changePasswordViewController = [ChangePasswordViewController alloc];
+	[changePasswordViewController initWithUser:userLogin];
+	
+	if (![NSBundle loadNibNamed:@"ChangePasswordViewController" owner: changePasswordViewController]) {
+		ErrorMessageViewController *error;
+		error = [[ErrorMessageViewController alloc]init];
+		[error openErrorMessage:@"Maintenance:changePassword" withMessage:@"Could not load ChangePasswordViewController.xib"];
+		[error setErrorNo:1];
+	}
 }
 
 -(IBAction) constructDatabase: (id) sender
 {
-	[constructDatabaseViewController openConstructDatabase];
+	ConstructDatabaseViewController *constructDatabaseViewController;
+	constructDatabaseViewController = [ConstructDatabaseViewController alloc];
+	[constructDatabaseViewController initWithUser:userLogin];
+	
+	if (![NSBundle loadNibNamed:@"ConstructDatabaseViewController" owner: constructDatabaseViewController]) {
+		ErrorMessageViewController *error;
+		error = [[ErrorMessageViewController alloc]init];
+		[error openErrorMessage:@"ConstructDatabaseViewController:openConstructDatabase" withMessage:@"Could not load ConstructDatabaseViewConstroller.xib"];
+		[error setErrorNo:1];
+	}
 }
 
 -(void)dealloc
 {
-	[constructDatabaseViewController release];
-	[changePasswordViewController release];
 	[userLogin release];
 	[super dealloc];
 }

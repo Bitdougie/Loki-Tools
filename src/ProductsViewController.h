@@ -43,8 +43,6 @@
 
 -(ProductsViewController *)initWithUser:(User *)userObject;
 
--(void)openProducts;
-
 -(IBAction)refresh:(id) sender;
 -(IBAction)selectSupplier:(id) sender;
 -(IBAction)selectStore:(id) sender;

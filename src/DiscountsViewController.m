@@ -50,17 +50,6 @@
 	[super dealloc];
 }
 
--(void)openDiscounts
-{
-	NSLog(@"openDiscounts \n");
-	if (![NSBundle loadNibNamed:@"DiscountsViewController" owner: self]) {
-		[error openErrorMessage:@"DiscountsViewController:openDiscounts" withMessage:@"Could not load DiscountsViewController.xib"];
-		[error setErrorNo:1];
-	}
-	
-	[self refresh:self];
-}
-
 -(IBAction)refresh:(id) sender
 {
 	NSLog(@"refresh \n");

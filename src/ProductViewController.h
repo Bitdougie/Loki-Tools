@@ -23,10 +23,13 @@
 	IBOutlet NSTextView *productComment;
 	
 	User *userLogin;
-	NSMutableString *supplierCode;
-	NSMutableString *productCode;
+	NSString *supplierCode;
+	NSString *productCode;
 	ErrorMessageViewController *error;
 }
+
+@property(nonatomic,copy)NSString *supplierCode;
+@property(nonatomic,copy)NSString *productCode;
 
 -(ProductViewController *)initWithUser:(User *)userObject;
 

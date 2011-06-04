@@ -50,17 +50,6 @@
 	[super dealloc];
 }
 
--(void)openProducts
-{
-	if (![NSBundle loadNibNamed:@"ProductsViewController" owner: self]) {
-		[error openErrorMessage:@"ProductViewController:openProduct" withMessage:@"Could not load ProductViewController.xib"];
-		[error setErrorNo:1];
-		return;
-	}
-	
-	[self refresh:self];
-}
-
 -(IBAction)refresh:(id) sender
 {
 	NSLog(@"refresh \n");

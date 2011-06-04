@@ -30,51 +30,29 @@ This program comes with ABSOLUTELY NO WARRANTY;
 
 @implementation LoginViewController
 
--(LoginViewController *)initWithUser: (User *) userObject andMainProgram: (Loki_ToolsAppDelegate *) mainAppObject andMyOwner:(LoginViewController *)owner
+-(LoginViewController *)initWithUser: (User *) userObject
 {
 	self = [super init];
 	
 	if(self){
 		userLogin = userObject;
-		mainProgram = mainAppObject;
 		[userLogin retain];
-		[mainProgram retain];
-		myOwner = owner;
-		[myOwner retain];
 	}
 	
 	return self;
 }
 
-/*
--(void)openLogin
-{
-	if (![NSBundle loadNibNamed:@"LoginViewController" owner: self]) {
-		ErrorMessageViewController *error;
-		error = [[ErrorMessageViewController alloc]init];
-		[error openErrorMessage:@"Login:openLogin" withMessage:@"Could not load LoginViewController.xib"];
-		[error setErrorNo:1];
-	}
-
-}
- */
-
--(void)windowWillClose:(NSNotification *)notification
-{
-	NSLog(@"time to choose my poison");
-	[myOwner release];
-}
-
 -(IBAction)login: (id) sender;
 {
+	NSLog(@"login");
 	DatabaseSetupConnections *connection;
-	
+
 	connection = [DatabaseSetupConnections alloc];
-	
-	[connection initWithUser: userLogin];
-	
+
 	[userLogin setUserName:[user stringValue]];
 	[userLogin setPassword:[password stringValue]];
+	
+	[connection initWithUser: userLogin];
 	
 	if(![connection connectDatabase]){
 		[userLogin setValidLogin:TRUE];
@@ -83,17 +61,14 @@ This program comes with ABSOLUTELY NO WARRANTY;
 	else {
 		[userLogin setValidLogin:FALSE];
 	}
-
+	
 	[connection disconnectDatabase];
 	[connection release];
-	
-	[mainProgram menuAuthority];
 }
 
 -(void)dealloc
 {
-	[userLogin autorelease];
-	[mainProgram autorelease];
+	[userLogin release];
 	[super dealloc];
 }
 

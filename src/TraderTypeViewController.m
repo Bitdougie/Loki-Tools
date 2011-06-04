@@ -307,17 +307,6 @@
 	}
 }
 
--(void)openTraderType
-{	
-	if (![NSBundle loadNibNamed:@"TraderTypeViewController" owner: self]) {
-		[error openErrorMessage:@"TraderTypeViewController:openTraderType" withMessage:@"Could not load TraderTypeViewController.xib"];
-		[error setErrorNo:1];
-		return;
-	}
-	
-	[self populateList];
-}
-
 -(void)populateList
 {
 	NSMutableString *query;

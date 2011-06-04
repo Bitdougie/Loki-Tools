@@ -40,14 +40,11 @@
 	User *userLogin;
 	ErrorMessageViewController *error;
 	SearchNode *rootNode;
-	ProductViewController *productView;
 }
 
 -(SearchViewController *)initWithUser:(User *)userObject;
 
 -(IBAction) searchNow: (id) sender;
 -(IBAction) selectItem: (id) sender;
-
--(void) openSearchWindow;
 
 @end
