@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="7"/>
+			<integer value="3"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1713,7 +1713,7 @@
 															<object class="NSTextView" id="817648980">
 																<reference key="NSNextResponder" ref="1017763305"/>
 																<int key="NSvFlags">2322</int>
-																<string key="NSFrame">{{0, 89}, {693, 133}}</string>
+																<string key="NSFrameSize">{693, 133}</string>
 																<reference key="NSSuperview" ref="1017763305"/>
 																<object class="NSTextContainer" key="NSTextContainer" id="899761852">
 																	<object class="NSLayoutManager" key="NSLayoutManager">
@@ -2045,22 +2045,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">productUnits</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="727755264"/>
-					</object>
-					<int key="connectionID">160</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">productPackQuantity</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="529530807"/>
-					</object>
-					<int key="connectionID">161</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">productDetails</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="33186062"/>
@@ -2074,6 +2058,142 @@
 						<reference key="destination" ref="1070475960"/>
 					</object>
 					<int key="connectionID">163</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">promoDetails</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="817648980"/>
+					</object>
+					<int key="connectionID">164</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">stocked</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="410814372"/>
+					</object>
+					<int key="connectionID">165</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">cataloguePage</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="171962013"/>
+					</object>
+					<int key="connectionID">166</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">promoPageNo</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="874623298"/>
+					</object>
+					<int key="connectionID">167</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">promoID</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="279689837"/>
+					</object>
+					<int key="connectionID">168</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">storeCode</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="336019333"/>
+					</object>
+					<int key="connectionID">169</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">productPackQuantity</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="359691697"/>
+					</object>
+					<int key="connectionID">170</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">productUnits</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="726987697"/>
+					</object>
+					<int key="connectionID">171</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">selectStoreCode:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="336019333"/>
+					</object>
+					<int key="connectionID">172</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">price</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="714759468"/>
+					</object>
+					<int key="connectionID">173</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">rebatePrice</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="754268718"/>
+					</object>
+					<int key="connectionID">174</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">packPrice</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="897980796"/>
+					</object>
+					<int key="connectionID">175</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">rebatePackPrice</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="685226322"/>
+					</object>
+					<int key="connectionID">176</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">promoPrice</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="459644716"/>
+					</object>
+					<int key="connectionID">177</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">promoRebatePrice</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="467530921"/>
+					</object>
+					<int key="connectionID">178</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">promoSellExGST</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="881639491"/>
+					</object>
+					<int key="connectionID">179</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">promoSellIncGST</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="807800751"/>
+					</object>
+					<int key="connectionID">180</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3312,9 +3432,9 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{691, 253}, {790, 684}}</string>
+					<string>{{312, 246}, {790, 684}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{691, 253}, {790, 684}}</string>
+					<string>{{312, 246}, {790, 684}}</string>
 					<integer value="1"/>
 					<string>{196, 240}</string>
 					<string>{{202, 428}, {480, 270}}</string>
@@ -3599,7 +3719,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">163</int>
+			<int key="maxID">180</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3607,6 +3727,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">ProductViewController</string>
 					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">selectStoreCode:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">selectStoreCode:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">selectStoreCode:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
@@ -3614,12 +3745,24 @@
 							<string>brand</string>
 							<string>cataloguePage</string>
 							<string>description</string>
+							<string>packPrice</string>
+							<string>price</string>
 							<string>productComment</string>
 							<string>productDetails</string>
 							<string>productNo</string>
 							<string>productPackQuantity</string>
 							<string>productUnits</string>
+							<string>promoDetails</string>
+							<string>promoID</string>
+							<string>promoPageNo</string>
+							<string>promoPrice</string>
+							<string>promoRebatePrice</string>
+							<string>promoSellExGST</string>
+							<string>promoSellIncGST</string>
+							<string>rebatePackPrice</string>
+							<string>rebatePrice</string>
 							<string>stocked</string>
+							<string>storeCode</string>
 							<string>supplierCodeText</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -3627,12 +3770,24 @@
 							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
 							<string>NSTextView</string>
 							<string>NSTextView</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
+							<string>NSTextView</string>
 							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSComboBox</string>
 							<string>NSTextField</string>
 						</object>
 					</object>
@@ -3643,12 +3798,24 @@
 							<string>brand</string>
 							<string>cataloguePage</string>
 							<string>description</string>
+							<string>packPrice</string>
+							<string>price</string>
 							<string>productComment</string>
 							<string>productDetails</string>
 							<string>productNo</string>
 							<string>productPackQuantity</string>
 							<string>productUnits</string>
+							<string>promoDetails</string>
+							<string>promoID</string>
+							<string>promoPageNo</string>
+							<string>promoPrice</string>
+							<string>promoRebatePrice</string>
+							<string>promoSellExGST</string>
+							<string>promoSellIncGST</string>
+							<string>rebatePackPrice</string>
+							<string>rebatePrice</string>
 							<string>stocked</string>
+							<string>storeCode</string>
 							<string>supplierCodeText</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -3663,6 +3830,14 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">description</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">packPrice</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">price</string>
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -3686,8 +3861,48 @@
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">promoDetails</string>
+								<string key="candidateClassName">NSTextView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">promoID</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">promoPageNo</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">promoPrice</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">promoRebatePrice</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">promoSellExGST</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">promoSellIncGST</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">rebatePackPrice</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">rebatePrice</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">stocked</string>
 								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">storeCode</string>
+								<string key="candidateClassName">NSComboBox</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">supplierCodeText</string>

@@ -55,11 +55,6 @@
 	[super dealloc];
 }
 
--(void)openSearchWindow
-{
-
-}
-
 -(IBAction) searchNow: (id) sender
 {
 	[rootNode newSearchString:[productSearchKey stringValue]];
