@@ -2195,6 +2195,14 @@
 					</object>
 					<int key="connectionID">180</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">picture</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="309112891"/>
+					</object>
+					<int key="connectionID">181</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -3432,9 +3440,9 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>{{312, 246}, {790, 684}}</string>
+					<string>{{114, 246}, {790, 684}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{312, 246}, {790, 684}}</string>
+					<string>{{114, 246}, {790, 684}}</string>
 					<integer value="1"/>
 					<string>{196, 240}</string>
 					<string>{{202, 428}, {480, 270}}</string>
@@ -3719,7 +3727,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">180</int>
+			<int key="maxID">181</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3746,6 +3754,7 @@
 							<string>cataloguePage</string>
 							<string>description</string>
 							<string>packPrice</string>
+							<string>picture</string>
 							<string>price</string>
 							<string>productComment</string>
 							<string>productDetails</string>
@@ -3771,6 +3780,7 @@
 							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
+							<string>NSImageView</string>
 							<string>NSTextField</string>
 							<string>NSTextView</string>
 							<string>NSTextView</string>
@@ -3799,6 +3809,7 @@
 							<string>cataloguePage</string>
 							<string>description</string>
 							<string>packPrice</string>
+							<string>picture</string>
 							<string>price</string>
 							<string>productComment</string>
 							<string>productDetails</string>
@@ -3835,6 +3846,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">packPrice</string>
 								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">picture</string>
+								<string key="candidateClassName">NSImageView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">price</string>

@@ -40,6 +40,8 @@
 		4194652F138B75E400631183 /* BrowserList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4194652E138B75E400631183 /* BrowserList.m */; };
 		41946531138B75EF00631183 /* xLokiProcedures.c in Sources */ = {isa = PBXBuildFile; fileRef = 41946530138B75EF00631183 /* xLokiProcedures.c */; };
 		41946534138B760A00631183 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41946533138B760A00631183 /* SearchViewController.xib */; };
+		41A5851B139CE5CB00FF870E /* PhotoPullInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A5851A139CE5CB00FF870E /* PhotoPullInViewController.xib */; };
+		41A5851E139CE64000FF870E /* PhotoPullInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A5851D139CE64000FF870E /* PhotoPullInViewController.m */; };
 		41BCC16013949BE400F296A3 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BCC15F13949BE400F296A3 /* ProductViewController.xib */; };
 		41BCC16313949C0200F296A3 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BCC16213949C0200F296A3 /* ProductViewController.m */; };
 		41DF9076138C50270046BF50 /* FileBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DF9075138C50270046BF50 /* FileBrowser.m */; };
@@ -109,6 +111,9 @@
 		41946530138B75EF00631183 /* xLokiProcedures.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xLokiProcedures.c; path = src/xLokiProcedures.c; sourceTree = "<group>"; };
 		41946532138B75FB00631183 /* xLokiProcedures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xLokiProcedures.h; path = src/xLokiProcedures.h; sourceTree = "<group>"; };
 		41946533138B760A00631183 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchViewController.xib; path = English.lproj/nibs/SearchViewController.xib; sourceTree = "<group>"; };
+		41A5851A139CE5CB00FF870E /* PhotoPullInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PhotoPullInViewController.xib; path = English.lproj/nibs/PhotoPullInViewController.xib; sourceTree = "<group>"; };
+		41A5851C139CE64000FF870E /* PhotoPullInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoPullInViewController.h; path = src/PhotoPullInViewController.h; sourceTree = "<group>"; };
+		41A5851D139CE64000FF870E /* PhotoPullInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoPullInViewController.m; path = src/PhotoPullInViewController.m; sourceTree = "<group>"; };
 		41BCC15F13949BE400F296A3 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProductViewController.xib; path = English.lproj/nibs/ProductViewController.xib; sourceTree = "<group>"; };
 		41BCC16113949BF600F296A3 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductViewController.h; path = src/ProductViewController.h; sourceTree = "<group>"; };
 		41BCC16213949C0200F296A3 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductViewController.m; path = src/ProductViewController.m; sourceTree = "<group>"; };
@@ -134,8 +139,10 @@
 		080E96DDFE201D6D7F000001 /* Objects & Procedures */ = {
 			isa = PBXGroup;
 			children = (
-				41946532138B75FB00631183 /* xLokiProcedures.h */,
+				41DF9075138C50270046BF50 /* FileBrowser.m */,
+				41DF9074138C50270046BF50 /* FileBrowser.h */,
 				41946530138B75EF00631183 /* xLokiProcedures.c */,
+				41946532138B75FB00631183 /* xLokiProcedures.h */,
 				4194652E138B75E400631183 /* BrowserList.m */,
 				4194652D138B75D900631183 /* BrowserList.h */,
 			);
@@ -171,7 +178,7 @@
 		29B97314FDCFA39411CA2CEA /* Loki_Tools */ = {
 			isa = PBXGroup;
 			children = (
-				41BCC0E61394354E00F296A3 /* Product View */,
+				41A58517139CE56100FF870E /* Photo Pull In */,
 				91A7259D134AD09900AF74BA /* Main Application */,
 				91AD41E813527CDA0003FF41 /* Login */,
 				41366F821378999100894871 /* Select Database */,
@@ -181,6 +188,7 @@
 				417838F4138617FC006C6730 /* Discounts */,
 				413A49CA1389046600152959 /* Product Pull In */,
 				91A72599134ACEA900AF74BA /* Search Engine */,
+				41BCC0E61394354E00F296A3 /* Product View */,
 				91A72597134ACE7200AF74BA /* Maintenace & Setup */,
 				91A7259B134ACED000AF74BA /* Stock Management */,
 				91A7259A134ACEBB00AF74BA /* EDIPT Functionality */,
@@ -265,8 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				413A49CB1389048000152959 /* Display */,
-				41DF9074138C50270046BF50 /* FileBrowser.h */,
-				41DF9075138C50270046BF50 /* FileBrowser.m */,
 			);
 			name = "Product Pull In";
 			sourceTree = "<group>";
@@ -313,6 +319,24 @@
 				41946509138B73ED00631183 /* DiscountsViewController.xib */,
 				41946507138B73DE00631183 /* DiscountsViewController.m */,
 				41946506138B73D200631183 /* DiscountsViewController.h */,
+			);
+			name = Display;
+			sourceTree = "<group>";
+		};
+		41A58517139CE56100FF870E /* Photo Pull In */ = {
+			isa = PBXGroup;
+			children = (
+				41A58519139CE57400FF870E /* Display */,
+			);
+			name = "Photo Pull In";
+			sourceTree = "<group>";
+		};
+		41A58519139CE57400FF870E /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				41A5851A139CE5CB00FF870E /* PhotoPullInViewController.xib */,
+				41A5851C139CE64000FF870E /* PhotoPullInViewController.h */,
+				41A5851D139CE64000FF870E /* PhotoPullInViewController.m */,
 			);
 			name = Display;
 			sourceTree = "<group>";
@@ -560,6 +584,7 @@
 				41946529138B759100631183 /* ErrorMessageViewController.xib in Resources */,
 				41946534138B760A00631183 /* SearchViewController.xib in Resources */,
 				41BCC16013949BE400F296A3 /* ProductViewController.xib in Resources */,
+				41A5851B139CE5CB00FF870E /* PhotoPullInViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +617,7 @@
 				41946531138B75EF00631183 /* xLokiProcedures.c in Sources */,
 				41DF9076138C50270046BF50 /* FileBrowser.m in Sources */,
 				41BCC16313949C0200F296A3 /* ProductViewController.m in Sources */,
+				41A5851E139CE64000FF870E /* PhotoPullInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

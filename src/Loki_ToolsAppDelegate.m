@@ -28,6 +28,7 @@
 #import "Loki_ToolsAppDelegate.h"
 #import "ErrorMessageViewController.h"
 #import "LoginViewController.h"
+#import "PhotoPullInViewController.h"
 
 @implementation Loki_ToolsAppDelegate
 
@@ -207,6 +208,23 @@
 	}
 	
 	[productsView refresh:self];
+}
+
+-(IBAction)openPhotoPullIn:(id) sender
+{
+	PhotoPullInViewController *photoView;
+	photoView = [PhotoPullInViewController alloc];
+	[photoView initWithUser:userLogin];
+	
+	if (![NSBundle loadNibNamed:@"PhotoPullInViewController" owner: photoView]) {
+		ErrorMessageViewController *error;
+		error = [[ErrorMessageViewController alloc]init];
+		[error openErrorMessage:@"ProductViewController:openPhotoPullIn" withMessage:@"Could not load PhotoPullInViewController.xib"];
+		[error setErrorNo:1];
+		return;
+	}
+	
+	[photoView populateWindow];
 }
 
 @end

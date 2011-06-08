@@ -69,7 +69,7 @@
 	
 	[query setString:@"SELECT PRODUCT.SUPPLIER_CODE, PRODUCT.SUPPLIER_PART_NO, PRODUCT.PRODUCT_DESCRIPTION,\
 	 PRODUCT.BRAND, PRODUCT.UNIT, PRODUCT.PACK_QUANTITY, PRODUCT.CATALOGUE_PAGE, PRODUCT.STOCKED_INDENT, PRODUCT.PRODUCT_DETAILS,\
-	 PRODUCT.PROMOTION_DETAILS, PRODUCT.PROMOTION_ID, PRODUCT.PROMO_PAGE_NO, PRODUCT.COMMENTS, PRODUCT.DISCONTINUED\
+	 PRODUCT.PROMOTION_DETAILS, PRODUCT.PROMOTION_ID, PRODUCT.PROMO_PAGE_NO, PRODUCT.COMMENTS, PRODUCT.DISCONTINUED, PRODUCT.PICTURE\
 	 FROM PRODUCT WHERE PRODUCT.SUPPLIER_CODE = '"];
 	[query appendString:[connection escapedSQLQuery:supplierCode]];///working on code here
 	[query appendString:@"' AND PRODUCT.SUPPLIER_PART_NO = '"];
@@ -219,6 +219,11 @@
 					tempString = [[NSString alloc]initWithUTF8String:row[12]];
 					[productComment setString:tempString];
 					[tempString release];
+				}
+				
+				if (row[14] != NULL) {
+					NSLog(@"open my picture");
+					[picture setImage:(NSImage *)[NSUnarchiver unarchiveObjectWithData:[NSData dataWithBytes:row[14] length:sizeof(row[14])]]];
 				}
 
 			}

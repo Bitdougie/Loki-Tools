@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="29"/>
+			<integer value="296"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1270,6 +1270,14 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
+								<object class="NSMenuItem" id="151745798">
+									<reference key="NSMenu" ref="466310130"/>
+									<string key="NSTitle">Photo Pull In</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="35465992"/>
+									<reference key="NSMixedImage" ref="502551668"/>
+								</object>
 								<object class="NSMenuItem" id="102151532">
 									<reference key="NSMenu" ref="466310130"/>
 									<string key="NSTitle">Show Toolbar</string>
@@ -2226,6 +2234,14 @@
 					</object>
 					<int key="connectionID">580</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">openPhotoPullIn:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="151745798"/>
+					</object>
+					<int key="connectionID">582</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2693,6 +2709,7 @@
 							<reference ref="180832295"/>
 							<reference ref="441623071"/>
 							<reference ref="823315713"/>
+							<reference ref="151745798"/>
 						</object>
 						<reference key="parent" ref="586577488"/>
 					</object>
@@ -3313,6 +3330,11 @@
 						<reference key="object" ref="823315713"/>
 						<reference key="parent" ref="466310130"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">581</int>
+						<reference key="object" ref="151745798"/>
+						<reference key="parent" ref="466310130"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -3546,6 +3568,7 @@
 					<string>573.IBPluginDependency</string>
 					<string>58.IBPluginDependency</string>
 					<string>58.ImportedFromIB2</string>
+					<string>581.IBPluginDependency</string>
 					<string>72.IBPluginDependency</string>
 					<string>72.ImportedFromIB2</string>
 					<string>73.IBPluginDependency</string>
@@ -3680,13 +3703,13 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{{525, 802}, {197, 73}}</string>
-					<string>{{498, 870}, {440, 20}}</string>
+					<string>{{464, 870}, {440, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{74, 862}</string>
 					<string>{{6, 978}, {478, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{756, 647}, {231, 223}}</string>
+					<string>{{722, 627}, {231, 243}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{475, 832}, {234, 43}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3803,6 +3826,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
@@ -3846,7 +3870,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">580</int>
+			<int key="maxID">582</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3861,6 +3885,7 @@
 							<string>openDiscounts:</string>
 							<string>openLogin:</string>
 							<string>openMaintenace:</string>
+							<string>openPhotoPullIn:</string>
 							<string>openProducts:</string>
 							<string>openSearch:</string>
 							<string>openSelectDatabase:</string>
@@ -3879,6 +3904,7 @@
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
+							<string>id</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
@@ -3888,6 +3914,7 @@
 							<string>openDiscounts:</string>
 							<string>openLogin:</string>
 							<string>openMaintenace:</string>
+							<string>openPhotoPullIn:</string>
 							<string>openProducts:</string>
 							<string>openSearch:</string>
 							<string>openSelectDatabase:</string>
@@ -3907,6 +3934,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">openMaintenace:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">openPhotoPullIn:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

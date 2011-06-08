@@ -64,6 +64,7 @@
 -(IBAction) openStore:(id) sender;
 -(IBAction) openDiscounts:(id) sender;
 -(IBAction) openProducts:(id) sender;
+-(IBAction) openPhotoPullIn:(id) sender;
 -(void)menuAuthority;
 
 @end

@@ -190,4 +190,47 @@
 	[super dealloc];
 }
 
+/*
+-(int) loadBlob: (NSURL *) url withFrontQuery: (NSString *) frontQuery andBackQuery: (NSString *) backQuery
+{
+	File *file;
+	char *charQuery;
+	char *charImage;
+	int size;
+	unsigned long form_len;
+	
+	file = fopen([[url path] UTF8String], 'r');
+	
+	fseek(file, 0, SEEK_END);
+	size = ftell(file);
+	fseek(file,0,SEEK_SET);
+	
+	charImage = (char *)xmalloc(sizeof(char[(1 + 2*size)]));
+	charQuery = (char *)xmalloc(sizeof(char[[frontQuery length] + [backQuery length] + (1 + 2*size)]));
+	
+	charQuery = [frontQuery UTF8String];
+	
+	form_len = fread(charImage, 1, sizeof(charImage), file);
+	
+	charQuery += mysql_real_escape_string(conn, charQuery, charImage, form_len);
+	
+	charQuery += [backQuery UTF8String];
+	
+	if (mysql_real_query(conn, charQuery, strlen(charQuery))) {
+		errorMessage = [[NSString alloc] initWithUTF8String: mysql_error(conn)];
+		[view openErrorMessage:@"Database Setup Connections" withMessage:errorMessage];
+		[view setErrorNo:0];
+		[errorMessage release];
+		free(charImage);
+		free(charQuery);
+		return 1;
+	}
+	
+	
+	free(charImage);
+	free(charQuery);
+	return 0;
+}
+*/
+
 @end

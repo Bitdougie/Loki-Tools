@@ -546,6 +546,45 @@
 	}
 	
 	free(charQuery);
+	
+	[query setString:@"\
+	 CREATE TABLE PROMOTION\
+	 (\
+	 SUPPLIER_CODE VARCHAR(200) NOT NULL,\
+	 TRADE_NAME VARCHAR(200) NOT NULL,\
+	 PROMOTION_ID VARCHAR(150) NOT NULL,\
+	 BRAND VARCHAR(200) DEFAULT NULL,\
+	 SUPPLIER_PART_NO VARCHAR(200) NOT NULL,\
+	 PROMOTION_DETAILS VARCHAR(10000) NOT NULL,\
+	 PROMO_BUY_PRICE DOUBLE DEFAULT NULL,\
+	 PROMO_SELL_EX_GST DOUBLE DEFAULT NULL,\
+	 PROMO_SELL_INC_GST DOUBLE DEFAULT NULL,\
+	 PROMO_PAGE_NO VARCHAR(200) DEFAULT NULL,\
+	 PRIMARY KEY (SUPPLIER_CODE,SUPPLIER_PART_NO)\
+	 )ENGINE = InnoDB;\
+	 "];
+	
+	charQuery = (char*)xmalloc(sizeof(char[[query length]]));
+	(void)strcpy(charQuery,[query UTF8String]);
+	
+	NSLog(@" %s ", charQuery);
+	
+	if (mysql_query([connection conn], charQuery) != 0) {
+		errorMessage = [[NSString alloc] initWithUTF8String: mysql_error([connection conn])];
+		[error openErrorMessage:@"ChangePasswordViewController:changePassword" withMessage: errorMessage];
+		[error setErrorNo:0];
+		
+		[errorMessage release];
+		free(charQuery);
+		[connection disconnectDatabase];		
+		[query release];
+		[escapedDatabaseName release];
+		[connection release];
+		[databaseName release];
+		return;
+	}
+	
+	free(charQuery);
 	[connection disconnectDatabase];
 	
 	[query release];

@@ -48,6 +48,7 @@
 	IBOutlet NSTextField *promoRebatePrice;
 	IBOutlet NSTextField *promoSellExGST;
 	IBOutlet NSTextField *promoSellIncGST;
+	IBOutlet NSImageView *picture;
 	
 	User *userLogin;
 	NSString *supplierCode;
