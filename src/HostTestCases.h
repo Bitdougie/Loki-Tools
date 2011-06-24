@@ -1,5 +1,5 @@
 //
-//  Host
+//  HostTestCases.h
 //  Loki_Tools
 /*
  Loki Tools a Search engine, data preperation tool that does data mining
@@ -20,41 +20,13 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.//
  */
 
-#import "Host.h"
+#import <Cocoa/Cocoa.h>
+#import <SenTestingKit/SenTestingKit.h>
 
+@interface HostTestCases : SenTestCase {
 
-/**
- 
- Host Interface
- 
- */
-                     
-@implementation Host
-
-@synthesize hostName, portNumber, socketName, flags;
-
-/**
-	Initializes the host object with values
- */
-
--(Host *) init
-{
-	self = [super init];
-	
-	if(self)
-	{
-		[self setHostName:NULL];
-		[self setPortNumber:0];
-		[self setSocketName:NULL];
-		[self setFlags:0];
-	}
-	
-	return self;
 }
 
--(void)dealloc
-{
-	[super dealloc];
-}
+-(void)testInitialization;
 
 @end

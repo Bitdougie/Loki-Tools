@@ -9,3 +9,8 @@ build/*
 # osx noise
 .DS_Store
 profile
+
+#doxygen files
+doxygen.config
+doxygen.config~
+doc/*

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		412932A013B05C1100860DDC /* HostTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129329F13B05C1100860DDC /* HostTestCases.m */; };
 		419464C6138B6D0F00631183 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419464C5138B6D0F00631183 /* MainMenu.xib */; };
 		419464CC138B703D00631183 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464CB138B703D00631183 /* main.m */; };
 		419464D1138B70AE00631183 /* Loki_ToolsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464D0138B70AE00631183 /* Loki_ToolsAppDelegate.m */; };
@@ -44,17 +45,27 @@
 		41A5851E139CE64000FF870E /* PhotoPullInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A5851D139CE64000FF870E /* PhotoPullInViewController.m */; };
 		41BCC16013949BE400F296A3 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BCC15F13949BE400F296A3 /* ProductViewController.xib */; };
 		41BCC16313949C0200F296A3 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BCC16213949C0200F296A3 /* ProductViewController.m */; };
-		41BEA5F113A58B0E0075654A /* Host.m in Resources */ = {isa = PBXBuildFile; fileRef = 41BEA5F013A58B0E0075654A /* Host.m */; };
 		41BEA5F413A58B560075654A /* HostArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BEA5F313A58B560075654A /* HostArchiver.m */; };
 		41BEA5F713A58B720075654A /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BEA5F613A58B720075654A /* UserInfo.m */; };
 		41DF9076138C50270046BF50 /* FileBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DF9075138C50270046BF50 /* FileBrowser.m */; };
 		41E1A9FE13A5AC1B00F80A09 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E1A9FD13A5AC1B00F80A09 /* Login.m */; };
 		41E1AA0013A5AC3000F80A09 /* DatabaseLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E1A9FF13A5AC3000F80A09 /* DatabaseLogin.m */; };
+		41F0A6B413B2A95A00D071E0 /* Host.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BEA5F013A58B0E0075654A /* Host.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9156115313676F6300F0D316 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9156115213676F6300F0D316 /* LICENSE */; };
 		91561157136770BE00F0D316 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 91561156136770BE00F0D316 /* README */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		412931EC13AEE5A200860DDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = Loki_Tools;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -63,6 +74,10 @@
 		256AC3F00F4B6AF500CF3369 /* Loki_Tools_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loki_Tools_Prefix.pch; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		412931E713AEE52F00860DDC /* Loki_Tools_Fitness_Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Loki_Tools_Fitness_Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		412931E813AEE52F00860DDC /* Loki_Tools_Fitness_Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Loki_Tools_Fitness_Tests-Info.plist"; sourceTree = "<group>"; };
+		4129329E13B05C0200860DDC /* HostTestCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HostTestCases.h; path = src/HostTestCases.h; sourceTree = "<group>"; };
+		4129329F13B05C1100860DDC /* HostTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HostTestCases.m; path = src/HostTestCases.m; sourceTree = "<group>"; };
 		419464C5138B6D0F00631183 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = English.lproj/nibs/MainMenu.xib; sourceTree = "<group>"; };
 		419464CB138B703D00631183 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
 		419464CF138B709100631183 /* Loki_ToolsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Loki_ToolsAppDelegate.h; path = src/Loki_ToolsAppDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +155,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		412931E413AEE52F00860DDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				419464EE138B730200631183 /* Loki_Tools.app */,
+				412931E713AEE52F00860DDC /* Loki_Tools_Fitness_Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +255,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				412931E813AEE52F00860DDC /* Loki_Tools_Fitness_Tests-Info.plist */,
 				8D1107310486CEB800E47090 /* Loki_Tools-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -414,6 +438,8 @@
 		41BEA5ED13A587430075654A /* Connection */ = {
 			isa = PBXGroup;
 			children = (
+				4129329E13B05C0200860DDC /* HostTestCases.h */,
+				4129329F13B05C1100860DDC /* HostTestCases.m */,
 				41BEA5EF13A58B0E0075654A /* Host.h */,
 				41BEA5F013A58B0E0075654A /* Host.m */,
 				41BEA5F213A58B560075654A /* HostArchiver.h */,
@@ -553,6 +579,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		412931E613AEE52F00860DDC /* Loki_Tools_Fitness_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 412931EB13AEE53000860DDC /* Build configuration list for PBXNativeTarget "Loki_Tools_Fitness_Tests" */;
+			buildPhases = (
+				412931E213AEE52F00860DDC /* Resources */,
+				412931E313AEE52F00860DDC /* Sources */,
+				412931E413AEE52F00860DDC /* Frameworks */,
+				412931E513AEE52F00860DDC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				412931ED13AEE5A200860DDC /* PBXTargetDependency */,
+			);
+			name = Loki_Tools_Fitness_Tests;
+			productName = Loki_Tools_Fitness_Tests;
+			productReference = 412931E713AEE52F00860DDC /* Loki_Tools_Fitness_Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		8D1107260486CEB800E47090 /* Loki_Tools */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Loki_Tools" */;
@@ -591,11 +636,19 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Loki_Tools */,
+				412931E613AEE52F00860DDC /* Loki_Tools_Fitness_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		412931E213AEE52F00860DDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -618,13 +671,36 @@
 				41946534138B760A00631183 /* SearchViewController.xib in Resources */,
 				41BCC16013949BE400F296A3 /* ProductViewController.xib in Resources */,
 				41A5851B139CE5CB00FF870E /* PhotoPullInViewController.xib in Resources */,
-				41BEA5F113A58B0E0075654A /* Host.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		412931E513AEE52F00860DDC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		412931E313AEE52F00860DDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				412932A013B05C1100860DDC /* HostTestCases.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -656,10 +732,19 @@
 				41BEA5F713A58B720075654A /* UserInfo.m in Sources */,
 				41E1A9FE13A5AC1B00F80A09 /* Login.m in Sources */,
 				41E1AA0013A5AC3000F80A09 /* DatabaseLogin.m in Sources */,
+				41F0A6B413B2A95A00D071E0 /* Host.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		412931ED13AEE5A200860DDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* Loki_Tools */;
+			targetProxy = 412931EC13AEE5A200860DDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -673,12 +758,69 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		412931E913AEE52F00860DDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Loki_Tools.app/Contents/MacOS/Loki_Tools";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Loki_Tools_Fitness_Tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Loki_Tools_Fitness_Tests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Loki_Tools.app/Contents/MacOS/Loki_Tools";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		412931EA13AEE52F00860DDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Loki_Tools_Fitness_Tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Loki_Tools_Fitness_Tests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = "~/Loki_Tools/GPLV3.plist";
 				COPY_PHASE_STRIP = NO;
+				DOXYGEN_PATH = /opt/local/bin/doxygen;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -755,6 +897,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		412931EB13AEE53000860DDC /* Build configuration list for PBXNativeTarget "Loki_Tools_Fitness_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				412931E913AEE52F00860DDC /* Debug */,
+				412931EA13AEE52F00860DDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Loki_Tools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
