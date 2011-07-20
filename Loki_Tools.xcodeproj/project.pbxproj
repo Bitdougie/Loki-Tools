@@ -47,6 +47,7 @@
 		41BCC16313949C0200F296A3 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BCC16213949C0200F296A3 /* ProductViewController.m */; };
 		41BEA5F413A58B560075654A /* HostArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BEA5F313A58B560075654A /* HostArchiver.m */; };
 		41BEA5F713A58B720075654A /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BEA5F613A58B720075654A /* UserInfo.m */; };
+		41C0E9E813D63B9200CA0885 /* HostArchiverTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0E9E713D63B9200CA0885 /* HostArchiverTestCases.m */; };
 		41DF9076138C50270046BF50 /* FileBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DF9075138C50270046BF50 /* FileBrowser.m */; };
 		41E1A9FE13A5AC1B00F80A09 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E1A9FD13A5AC1B00F80A09 /* Login.m */; };
 		41E1AA0013A5AC3000F80A09 /* DatabaseLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E1A9FF13A5AC3000F80A09 /* DatabaseLogin.m */; };
@@ -143,6 +144,9 @@
 		41BEA5F313A58B560075654A /* HostArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HostArchiver.m; path = src/HostArchiver.m; sourceTree = "<group>"; };
 		41BEA5F513A58B720075654A /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = src/UserInfo.h; sourceTree = "<group>"; };
 		41BEA5F613A58B720075654A /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = src/UserInfo.m; sourceTree = "<group>"; };
+		41C0E9E513D63B6600CA0885 /* lokierr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lokierr.h; path = src/lokierr.h; sourceTree = "<group>"; };
+		41C0E9E613D63B8200CA0885 /* HostArchiverTestCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HostArchiverTestCases.h; path = src/HostArchiverTestCases.h; sourceTree = "<group>"; };
+		41C0E9E713D63B9200CA0885 /* HostArchiverTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HostArchiverTestCases.m; path = src/HostArchiverTestCases.m; sourceTree = "<group>"; };
 		41DF9074138C50270046BF50 /* FileBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileBrowser.h; path = src/FileBrowser.h; sourceTree = "<group>"; };
 		41DF9075138C50270046BF50 /* FileBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileBrowser.m; path = src/FileBrowser.m; sourceTree = "<group>"; };
 		41E1A9FC13A5AC0C00F80A09 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Login.h; path = src/Login.h; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 			children = (
 				41BEA5ED13A587430075654A /* Connection */,
 				41DF9075138C50270046BF50 /* FileBrowser.m */,
+				41C0E9E513D63B6600CA0885 /* lokierr.h */,
 				41DF9074138C50270046BF50 /* FileBrowser.h */,
 				41946530138B75EF00631183 /* xLokiProcedures.c */,
 				41946532138B75FB00631183 /* xLokiProcedures.h */,
@@ -442,6 +447,8 @@
 				4129329F13B05C1100860DDC /* HostTestCases.m */,
 				41BEA5EF13A58B0E0075654A /* Host.h */,
 				41BEA5F013A58B0E0075654A /* Host.m */,
+				41C0E9E613D63B8200CA0885 /* HostArchiverTestCases.h */,
+				41C0E9E713D63B9200CA0885 /* HostArchiverTestCases.m */,
 				41BEA5F213A58B560075654A /* HostArchiver.h */,
 				41BEA5F313A58B560075654A /* HostArchiver.m */,
 				41BEA5F513A58B720075654A /* UserInfo.h */,
@@ -698,6 +705,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				412932A013B05C1100860DDC /* HostTestCases.m in Sources */,
+				41C0E9E813D63B9200CA0885 /* HostArchiverTestCases.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

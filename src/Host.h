@@ -22,7 +22,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Host : NSObject {
+@interface Host : NSObject <NSCoding> {
 	NSString *hostName;
 	unsigned int portNumber;
 	NSString *socketName;

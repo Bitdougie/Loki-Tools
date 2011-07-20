@@ -21,8 +21,166 @@
  */
 
 #import "HostArchiver.h"
+#import "lokierr.h"
 
 
 @implementation HostArchiver
+
+-(HostArchiver *)init
+{
+	self = [super init];
+	
+	if (self) {
+		hosts = [[NSMutableArray alloc]init];
+		configFilePath = [[NSString alloc]initWithString:@"~/.Loki_Profile"];
+	}
+	
+	return self;
+}
+
+-(HostArchiver *)initWithProfile:(NSString *)filePath
+{
+	self = [super init];
+	if (self) {
+		hosts = [[NSMutableArray alloc]init];
+		configFilePath = [[NSString alloc]initWithString:filePath];
+	}
+	
+	return self;
+}
+
+-(void)dealloc
+{
+	[hosts release];
+	[configFilePath release];
+	[super dealloc];
+}
+
+-(NSArray *)getHosts:(NSError **)anError
+{
+	@try{
+	NSArray *hostsFromArchiveCopy;
+	NSMutableArray *hostsFromArchive;
+	
+	hostsFromArchive = [NSKeyedUnarchiver unarchiveObjectWithFile:configFilePath];
+	
+	[hostsFromArchive retain];
+	
+	if (hostsFromArchive == nil) {
+		[hostsFromArchive release];
+		
+		NSMutableArray *newProfile;
+		Host *firstHost;
+		firstHost = [[Host alloc]init];
+		newProfile = [[NSMutableArray alloc]init];
+		[newProfile addObject:firstHost];
+		
+		if (![NSKeyedArchiver archiveRootObject:newProfile toFile:configFilePath]) {
+			if (anError != NULL) {
+				NSString *description = nil;
+				int errCode;
+				
+				if (errno == EACCES) {
+					//permission denied
+					NSString *message;
+					
+					message = [[NSString alloc]initWithFormat:@"Permission to host file or directory denied: %@",configFilePath];
+					description = NSLocalizedString(message,@"");
+					errCode = LTPD;
+					[message release];
+				}
+				
+				// Make underlying error.
+				NSError *underlyingError = [[[NSError alloc] initWithDomain:NSPOSIXErrorDomain
+																	   code:errno userInfo:nil] autorelease];
+				// Make and return custom domain error.
+				NSArray *objArray = [NSArray arrayWithObjects:description, underlyingError, configFilePath, nil];
+				
+				NSArray *keyArray = [NSArray arrayWithObjects:NSLocalizedDescriptionKey,
+									 NSUnderlyingErrorKey, NSFilePathErrorKey, nil];
+				NSDictionary *eDict = [NSDictionary dictionaryWithObjects:objArray
+																  forKeys:keyArray];
+				
+				*anError = [[[NSError alloc] initWithDomain:LokiTools
+													   code:errCode userInfo:eDict] autorelease];
+			}
+			[newProfile release];
+			return nil;
+		}
+		
+		[newProfile release];
+		
+		hostsFromArchive = [NSKeyedUnarchiver unarchiveObjectWithFile:configFilePath];
+		
+		[hostsFromArchive retain];
+		
+		if (hostsFromArchive == nil) {
+			if (anError != NULL) {
+				NSString *description = nil;
+				int errCode;
+				
+				if (errno == ENOENT) {
+					//no such file or directory
+					NSString *message;
+					
+					message = [[NSString alloc]initWithFormat:@"No host file at requested location: %@",configFilePath];
+					description = NSLocalizedString(message,@"");
+					errCode = LTNSFOD;
+					[message release];
+				} 
+				else if(errno == EACCES)
+				{
+					//permission denied
+					description = NSLocalizedString(@"Permission to host file or directory denied",@"");
+					errCode = LTPD;
+				}
+				
+				// Make underlying error.
+				NSError *underlyingError = [[[NSError alloc] initWithDomain:NSPOSIXErrorDomain
+																	   code:errno userInfo:nil] autorelease];
+				// Make and return custom domain error.
+				NSArray *objArray = [NSArray arrayWithObjects:description, underlyingError, configFilePath, nil];
+				
+				NSArray *keyArray = [NSArray arrayWithObjects:NSLocalizedDescriptionKey,
+									 NSUnderlyingErrorKey, NSFilePathErrorKey, nil];
+				NSDictionary *eDict = [NSDictionary dictionaryWithObjects:objArray
+																  forKeys:keyArray];
+				
+				*anError = [[[NSError alloc] initWithDomain:LokiTools
+													   code:errCode userInfo:eDict] autorelease];
+			}
+			
+			[hostsFromArchive release];
+			return nil;
+		}
+		
+	}
+	
+	hostsFromArchiveCopy = [[NSArray alloc]initWithArray:hostsFromArchive];
+	
+	[hostsFromArchive release];	 
+	[hostsFromArchiveCopy autorelease];
+	
+	return hostsFromArchive;
+	}@catch (NSException *exception) {
+		NSLog(@"Exception occured in: %@", NSStringFromClass([self class]));
+		NSLog(@"Method: %@",[exception name]);
+		NSLog(@"Line: %s at Function: %s",__LINE__, __PRETTY_FUNCTION__);
+		NSLog(@"Reason: %@",[exception reason]);
+	}
+	@finally {
+		return nil;
+	}
+}
+
+-(void)addHost:(Host *)host
+{
+	
+}
+
+-(void)removeHostAtIndex:(NSUInteger)index
+{
+	
+}
 
 @end

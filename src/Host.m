@@ -52,6 +52,23 @@
 	return self;
 }
 
+-(Host *)initWithCoder:(NSCoder *)aDecoder
+{
+	hostName = [[aDecoder decodeObjectForKey:@"HostHostName"] retain];
+	socketName = [[aDecoder decodeObjectForKey:@"HostSocketName"]retain];
+	portNumber = [aDecoder decodeIntForKey:@"HostPortNumber"];
+	flags = [aDecoder decodeIntForKey:@"HostFlags"];
+	return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+	[aCoder encodeObject:hostName forKey: @"HostHostName"];
+	[aCoder encodeObject:socketName forKey: @"HostSocketName"];
+	[aCoder encodeInt:portNumber forKey:@"HostPortNumber"];
+	[aCoder encodeInt:flags forKey:@"HostFlags"];
+}
+
 -(void)dealloc
 {
 	[super dealloc];

@@ -21,10 +21,18 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "Host.h"
+
 
 
 @interface HostArchiver : NSObject {
-
+	NSMutableArray *hosts;
+	NSString *configFilePath;
 }
+
+-(HostArchiver *)initWithProfile:(NSString *)filePath;
+-(NSArray *)getHosts:(NSError **)anError;
+-(void)addHost:(Host *)host;
+-(void)removeHostAtIndex:(NSUInteger)index;
 
 @end
