@@ -31,7 +31,7 @@
                      
 @implementation Host
 
-@synthesize hostName, portNumber, socketName, flags;
+@synthesize hostName, portNumber, socketName, flags, title;
 
 /**
 	Initializes the host object with values
@@ -43,6 +43,7 @@
 	
 	if(self)
 	{
+		[self setTitle:@"localHost"];
 		[self setHostName:NULL];
 		[self setPortNumber:0];
 		[self setSocketName:NULL];
@@ -54,6 +55,7 @@
 
 -(Host *)initWithCoder:(NSCoder *)aDecoder
 {
+	title = [[aDecoder decodeObjectForKey:@"HostTitle"]retain];
 	hostName = [[aDecoder decodeObjectForKey:@"HostHostName"] retain];
 	socketName = [[aDecoder decodeObjectForKey:@"HostSocketName"]retain];
 	portNumber = [aDecoder decodeIntForKey:@"HostPortNumber"];
@@ -63,6 +65,7 @@
 
 -(void)encodeWithCoder:(NSCoder *)aCoder
 {
+	[aCoder encodeObject:title forKey: @"HostTitle"];
 	[aCoder encodeObject:hostName forKey: @"HostHostName"];
 	[aCoder encodeObject:socketName forKey: @"HostSocketName"];
 	[aCoder encodeInt:portNumber forKey:@"HostPortNumber"];

@@ -26,13 +26,12 @@
 
 
 @interface HostArchiver : NSObject {
-	NSMutableArray *hosts;
 	NSString *configFilePath;
 }
 
 -(HostArchiver *)initWithProfile:(NSString *)filePath;
 -(NSArray *)getHosts:(NSError **)anError;
--(void)addHost:(Host *)host;
--(void)removeHostAtIndex:(NSUInteger)index;
+-(BOOL)addHost:(Host *)host withError:(NSError **)anError;
+-(BOOL)removeHostAtIndex:(NSUInteger)index withError:(NSError **)anError;
 
 @end

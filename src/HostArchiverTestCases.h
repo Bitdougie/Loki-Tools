@@ -8,11 +8,12 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-
 @interface HostArchiverTestCases : SenTestCase {
 
 }
 
 -(void)testGetHosts;
+-(void)testAddHosts;
+-(void)testRemoveHosts;
 
 @end

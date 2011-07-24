@@ -28,6 +28,7 @@
 -(void)testInitialization
 {
 	Host *testHost;
+	NSString *titleResult = @"localHost";
 	NSString *hostNameResult = NULL;
 	unsigned int portNumResult = 0;
 	NSString *socketNameResult = NULL;
@@ -35,6 +36,8 @@
 	
 	testHost = [Host alloc];
 	[testHost init];
+	
+	STAssertTrue([[testHost title] isEqualToString: titleResult], @"title intialized incorrectly. Expected localHost");
 	
 	STAssertTrue([testHost hostName] == hostNameResult, @"hostName initialized incorrectly. Expected NULL");
 	

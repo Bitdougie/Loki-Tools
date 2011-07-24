@@ -23,12 +23,14 @@
 #import <Cocoa/Cocoa.h>
 
 @interface Host : NSObject <NSCoding> {
+	NSString *title;
 	NSString *hostName;
 	unsigned int portNumber;
 	NSString *socketName;
 	unsigned int flags;
 }
 
+@property(nonatomic, copy) NSString *title;
 @property(nonatomic, copy) NSString *hostName;
 @property(nonatomic) unsigned int portNumber;
 @property(nonatomic, copy)NSString *socketName;
