@@ -227,6 +227,7 @@
 			}
 			
 			[newHostList release];
+			[finalisedList release];
 			return FALSE;
 		}
 		
@@ -248,7 +249,65 @@
 -(BOOL)removeHostAtIndex:(NSUInteger)index withError:(NSError **)anError
 {
 	@try {
+		NSArray *oldHostList;
+		NSError *error;
+		NSMutableArray *newHostList;
+		NSArray *finalisedList;
 		
+		oldHostList = [[self getHosts:&error]retain];
+		
+		if (oldHostList == nil) {
+			NSAlert *theAlert = [NSAlert alertWithError:error];
+			[theAlert runModal];
+		}
+		
+		newHostList = [[NSMutableArray alloc]initWithArray:oldHostList];
+		[oldHostList release];
+		
+		[newHostList removeObjectAtIndex:index];
+		
+		finalisedList = [[NSArray alloc]initWithArray:newHostList];
+		
+		if (![NSKeyedArchiver archiveRootObject:finalisedList toFile:configFilePath]) {
+			if (anError != NULL) {
+				NSString *description = nil;
+				int errCode;
+				
+				if (errno == ENOENT) {
+					//no such file or directory
+					NSString *message;
+					
+					message = [[NSString alloc]initWithFormat:@"No host file at requested location: %@",configFilePath];
+					description = NSLocalizedString(message,@"");
+					errCode = LTNSFOD;
+					[message release];
+				} 
+				else if(errno == EACCES)
+				{
+					//permission denied
+					description = NSLocalizedString(@"Permission to host file or directory denied",@"");
+					errCode = LTPD;
+				}
+				
+				// Make underlying error.
+				NSError *underlyingError = [[[NSError alloc] initWithDomain:NSPOSIXErrorDomain
+																	   code:errno userInfo:nil] autorelease];
+				// Make and return custom domain error.
+				NSArray *objArray = [NSArray arrayWithObjects:description, underlyingError, configFilePath, nil];
+				
+				NSArray *keyArray = [NSArray arrayWithObjects:NSLocalizedDescriptionKey,
+									 NSUnderlyingErrorKey, NSFilePathErrorKey, nil];
+				NSDictionary *eDict = [NSDictionary dictionaryWithObjects:objArray
+																  forKeys:keyArray];
+				
+				*anError = [[[NSError alloc] initWithDomain:LokiTools
+													   code:errCode userInfo:eDict] autorelease];
+			}
+			
+			[newHostList release];
+			[finalisedList release];
+			return FALSE;
+		}
 	}
 	@catch (NSException * e) {
 		NSLog(@"Exception occured in: %@", NSStringFromClass([self class]));

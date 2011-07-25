@@ -130,8 +130,48 @@
 
 -(void)testRemoveHosts
 {
-	NSLog(@"Exception occured in: %@", NSStringFromClass([self class]));
-	NSLog(@"Line: %i at Function: %s",__LINE__, __PRETTY_FUNCTION__);
+	@try {
+		NSString *hostFilePath;
+		NSFileManager *fileSystem;
+		HostArchiver *archiver;
+		NSError *error, *error_2;
+		NSError *cleanUp;
+		
+		hostFilePath = [@"~/.LokiProfile" stringByExpandingTildeInPath];
+		
+		archiver = [[HostArchiver alloc]initWithProfile:hostFilePath];
+		
+		fileSystem = [[NSFileManager alloc]init];
+		
+		if ([archiver getHosts:&error] == nil) {
+			NSAlert *theAlert = [NSAlert alertWithError:error];
+			[theAlert runModal];
+		}
+		
+		if (![archiver removeHostAtIndex:0 withError:&error_2]) {
+			NSAlert *theAlert = [NSAlert alertWithError:error_2];
+			[theAlert runModal];
+		}
+		
+		STAssertTrue([[archiver getHosts:NULL] count] == 0, @"Array should have no hosts but has: %i", [[archiver getHosts:NULL] count]);
+		
+		if (![fileSystem removeItemAtPath:hostFilePath error:&cleanUp]) {
+			NSAlert *theAlert = [NSAlert alertWithError:cleanUp];
+			[theAlert runModal];
+		}
+		
+		[archiver release];
+		[fileSystem release];
+	}
+	@catch (NSException * e) {
+		NSLog(@"Exception occured in: %@", NSStringFromClass([self class]));
+		NSLog(@"Method: %@",[e name]);
+		NSLog(@"Line: %i at Function: %s",__LINE__, __PRETTY_FUNCTION__);
+		NSLog(@"Reason: %@",[e reason]);
+		exit(1);
+	}
+	@finally {
+	}
 }
 
 @end
