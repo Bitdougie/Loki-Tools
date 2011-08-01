@@ -50,6 +50,12 @@ xmalloc(size_t size)
 	return memoryBlock;
 }
 
-
+void 
+xfree(void *pointer)
+{
+	if (pointer != NULL) {
+		free(pointer);
+	}
+}
 
 

@@ -7,8 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <errmsg.h>
+#import <mysqld_error.h>
 
 #define LokiTools @"LokiTools" /* ERROR DOMAIN */
 
 #define LTNSFOD 1 /* NO SUCH FILE OR DIRECTORY */
 #define LTPD 2 /* PERMISSON DENIED */
+#define LTUKE 3 /* UNKOWN ERROR */

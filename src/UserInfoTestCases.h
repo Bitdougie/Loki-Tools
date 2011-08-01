@@ -1,5 +1,5 @@
 //
-//  UserInfo.h
+//  UserInfoTestCases.h
 //  Loki_Tools
 /*
  Loki Tools a Search engine, data preperation tool that does data mining
@@ -20,21 +20,14 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.//
  */
 
-#import <Cocoa/Cocoa.h>
-#import "Host.h"
-#import <my_global.h>
-#import <my_sys.h>
-#import <mysql.h>
+#import <SenTestingKit/SenTestingKit.h>
 
-@interface UserInfo : NSObject {
-	
+
+@interface UserInfoTestCases : SenTestCase {
+
 }
 
-+(BOOL)initWithHost:(Host *) host andUserName:(NSString *) user andPassword:(NSString *) passPhrase andError:(NSError **)anError;
-+(NSString *)userName;
-+(NSString *)title;
-+(MYSQL *)openConnection:(NSError **)anError;
-+(void)closeConnection:(MYSQL *)connection;
-+(int)numberOfConnections;
+-(void)testInitialisation;
+-(void)testConnection;
 
 @end

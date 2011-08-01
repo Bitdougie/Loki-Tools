@@ -43,7 +43,7 @@
 	
 	if(self)
 	{
-		[self setTitle:@"localHost"];
+		[self setTitle:@"localhost"];
 		[self setHostName:NULL];
 		[self setPortNumber:0];
 		[self setSocketName:NULL];

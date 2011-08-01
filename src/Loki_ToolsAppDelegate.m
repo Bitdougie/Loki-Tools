@@ -45,7 +45,6 @@
 
 -(void)menuAuthority;
 {
-	NSLog(@"menuAuthority");
 		[loginMenu setEnabled:YES];
 		[searchMenu setEnabled:YES];
 		[maintenaceMenu setEnabled:YES];

@@ -125,12 +125,12 @@
 {
 	NSArray *children;
 	NSArray *fileNameTemp;
-	char *charQuery;
+	//char *charQuery;
 	DatabaseSetupConnections *connection;
-	NSImage *productImage;
-	NSMutableData *imageArchiveData;
-	NSArchiver *imageArchiver;
-	NSString *imageAsString;
+	//NSImage *productImage;
+	//NSMutableData *imageArchiveData;
+	//NSArchiver *imageArchiver;
+	//NSString *imageAsString;
 	
 	children = [currentNode children];
 	[children retain];

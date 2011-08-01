@@ -276,7 +276,6 @@
 				if (errno == ENOENT) {
 					//no such file or directory
 					NSString *message;
-					
 					message = [[NSString alloc]initWithFormat:@"No host file at requested location: %@",configFilePath];
 					description = NSLocalizedString(message,@"");
 					errCode = LTNSFOD;

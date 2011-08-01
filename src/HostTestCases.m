@@ -28,7 +28,7 @@
 -(void)testInitialization
 {
 	Host *testHost;
-	NSString *titleResult = @"localHost";
+	NSString *titleResult = @"localhost";
 	NSString *hostNameResult = NULL;
 	unsigned int portNumResult = 0;
 	NSString *socketNameResult = NULL;
