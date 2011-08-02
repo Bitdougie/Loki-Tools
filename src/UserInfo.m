@@ -26,14 +26,13 @@
 #import <mysql.h>
 #import "xLokiProcedures.h"
 #import "lokierr.h"
+#import "DatabaseLogin.h"
 
 static NSString *userName;
 static NSString *password;
 static Host *currentHost;
 static BOOL validLogin = FALSE;
 static int numberOfConnections = 0;
-
-char * copyObjectString(NSString *object);
 
 @implementation UserInfo
 
@@ -89,7 +88,7 @@ char * copyObjectString(NSString *object);
 		hostNameChar = copyObjectString([currentHost hostName]);
 		socketNameChar = copyObjectString([currentHost socketName]);
 		
-		if (numberOfConnections == 0) {
+		if ([self TotalConnections] == 0) {
 			if (mysql_library_init(0,NULL,NULL)) {
 				if (anError != nil) {
 					NSString *description = nil; 
@@ -159,6 +158,10 @@ char * copyObjectString(NSString *object);
 			xfree(hostNameChar);
 			xfree(socketNameChar);
 			
+			if ([self TotalConnections] == 0) {
+				mysql_library_end();
+			}
+			
 			validLogin = FALSE;
 			return FALSE;
 		}
@@ -208,14 +211,19 @@ char * copyObjectString(NSString *object);
 			xfree(hostNameChar);
 			xfree(socketNameChar);
 			
+			if ([self TotalConnections] == 0) {
+				mysql_library_end();
+			}
+			
 			validLogin = FALSE;
 			return FALSE;
 		}
+		
 		numberOfConnections++;
 		mysql_close(conn);
 		numberOfConnections--;
 		
-		if (numberOfConnections == 0) {
+		if ([self TotalConnections] == 0) {
 			mysql_library_end();
 		}
 		
@@ -305,7 +313,7 @@ char * copyObjectString(NSString *object)
 	@try {
 		if (validLogin) {
 			
-			if (numberOfConnections == 0) {
+			if ([self TotalConnections] == 0) {
 				if (mysql_library_init(0,NULL,NULL)) {
 					if (anError != nil) {
 						NSString *description = nil; 
@@ -363,6 +371,11 @@ char * copyObjectString(NSString *object)
 					*anError = [[[NSError alloc] initWithDomain:LokiTools
 														   code:errCode userInfo:eDict] autorelease];
 				}
+				
+				if ([self TotalConnections] == 0) {
+					mysql_library_end();
+				}
+				
 				return NULL;
 			}
 			
@@ -421,6 +434,10 @@ char * copyObjectString(NSString *object)
 				xfree(hostNameChar);
 				xfree(socketNameChar);
 				
+				if ([self TotalConnections] == 0) {
+					mysql_library_end();
+				}
+				
 				validLogin = FALSE;
 				return FALSE;
 			}
@@ -452,7 +469,7 @@ char * copyObjectString(NSString *object)
 		numberOfConnections--;
 		mysql_close(connection);
 		
-		if (numberOfConnections == 0) {
+		if ([self TotalConnections] == 0) {
 			mysql_library_end();
 		}
 	}
@@ -480,6 +497,24 @@ char * copyObjectString(NSString *object)
 		NSLog(@"Reason: %@",[e reason]);
 	}
 	
+	return -1;
+}
+
++(int)TotalConnections
+{
+	@try {
+		int result;
+		
+		result = [self numberOfConnections] + [DatabaseLogin numberOfConnections];
+		
+		return result;
+	}
+	@catch (NSException * e) {
+		NSLog(@"Exception occured in: %@", NSStringFromClass([self class]));
+		NSLog(@"Method: %@",[e name]);
+		NSLog(@"Line: %i at Function: %s",__LINE__, __PRETTY_FUNCTION__);
+		NSLog(@"Reason: %@",[e reason]);
+	}
 	return -1;
 }
 

@@ -24,33 +24,26 @@
 #import "Host.h"
 #import "UserInfo.h"
 #import "lokierr.h"
+#import "testInformation.h"
 
 @implementation UserInfoTestCases
 
 -(void)testInitialisation
 {
 	@try {
-		/*
-		 Depending on the configuration of your MySQL server these hard coded
-		 testing perameters will need to be changed to suit your set up.
-		 */
 		
-		NSString *testTitle = @"Home Computer";
-		NSString *testHostName = NULL;
-		unsigned int testPortNumber = 0;
-		NSString *testSocketName = NULL;
-		unsigned int testFlags = 0;
-		NSString *testPassword = @"secret";
-		NSString *testUserName = @"doug";
+		NSString *testTitle = HOST_COMPUTER_TITLE;
+		NSString *testHostName = HOST_COMPUTER_NAME;
+		unsigned int testPortNumber = HOST_COMPUTER_PORT_NUMBER;
+		NSString *testSocketName = HOST_COMPUTER_SOCKET_NAME;
+		unsigned int testFlags = HOST_COMPUTER_FLAGS;
+		NSString *testPassword = HOST_COMPUTER_PASSWORD;
+		NSString *testUserName = HOST_COMPUTER_USER;
 		
-		/*
-		 Code set for error catching tests
-		 */
-		
-		NSString *dummyHostName = @"www.wrongserver.wrong";
-		NSString *dummyPassword = @"wrong password";
-		NSString *dummyUserName = @"wrong userName";
-		NSString *dummySocketName = @"wrong socket";
+		NSString *dummyHostName = HOST_FALSE_NAME;
+		NSString *dummyPassword = HOST_FALSE_PASSWORD;
+		NSString *dummyUserName = HOST_FALSE_USER;
+		NSString *dummySocketName = HOST_FALSE_SOCKET_NAME;
 		/* Test code that does not need configuration from here on */
 		
 		Host *testHost;
@@ -120,19 +113,13 @@
 {
 	@try {
 		
-		/*
-			These  parameters will need to me changed to produce a valid login
-		 */
-		
-		NSString *testTitle = @"Home Computer";
-		NSString *testHostName = NULL;
-		unsigned int testPortNumber = 0;
-		NSString *testSocketName = NULL;
-		unsigned int testFlags = 0;
-		NSString *testPassword = @"secret";
-		NSString *testUserName = @"doug";
-		
-		//***************************************
+		NSString *testTitle = HOST_COMPUTER_TITLE;
+		NSString *testHostName = HOST_COMPUTER_NAME;
+		unsigned int testPortNumber = HOST_COMPUTER_PORT_NUMBER;
+		NSString *testSocketName = HOST_COMPUTER_SOCKET_NAME;
+		unsigned int testFlags = HOST_COMPUTER_FLAGS;
+		NSString *testPassword = HOST_COMPUTER_PASSWORD;
+		NSString *testUserName = HOST_COMPUTER_USER;
 		
 		Host *testHost;
 		NSError *error, *error_2, *error_3;

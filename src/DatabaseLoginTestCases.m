@@ -1,5 +1,5 @@
 //
-//  Login.h
+//  DatabaseLoginTestCases.m
 //  Loki_Tools
 /*
  Loki Tools a Search engine, data preperation tool that does data mining
@@ -20,10 +20,15 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.//
  */
 
-#import <Cocoa/Cocoa.h>
+#import "DatabaseLoginTestCases.h"
+#import "DatabaseLogin.h"
 
-@interface Login : NSObject {
 
+@implementation DatabaseLoginTestCases
+
+-(void)testInitisation
+{
+	
 }
 
 @end

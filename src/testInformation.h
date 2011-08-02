@@ -1,7 +1,7 @@
-//
-//  Login.m
-//  Loki_Tools
 /*
+ *  testInformation.h
+ *  Loki_Tools
+ /*
  Loki Tools a Search engine, data preperation tool that does data mining
  and retail analysis.
  Copyright (C) 2011  Douglas Mason
@@ -20,9 +20,17 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.//
  */
 
-#import "Login.h"
+/*test script settings that need to be set by the user*/
 
+#define HOST_COMPUTER_TITLE @"Home Computer"
+#define HOST_COMPUTER_NAME NULL
+#define HOST_COMPUTER_PORT_NUMBER 0
+#define HOST_COMPUTER_SOCKET_NAME NULL
+#define HOST_COMPUTER_FLAGS 0
+#define HOST_COMPUTER_PASSWORD @"secret"
+#define HOST_COMPUTER_USER @"doug"
 
-@implementation Login
-
-@end
+#define HOST_FALSE_NAME @"www.wrongserver.wrong"
+#define HOST_FALSE_PASSWORD @"wrong password"
+#define HOST_FALSE_USER @"wrong userName"
+#define HOST_FALSE_SOCKET_NAME @"wrong socket"

@@ -21,10 +21,15 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "UserInfo.h"
 
 
-@interface DatabaseLogin : NSObject {
+@interface DatabaseLogin : UserInfo {
 
 }
+
++(BOOL)initWithHost:(Host *) host andUserName:(NSString *) user andPassword:(NSString *) passPhrase andDatabase:(NSString *) databaseName error:(NSError **)anError;
++(MYSQL *)openConnection:(NSError **) anError;
++(int)numberOfConnections;
 
 @end
