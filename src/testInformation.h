@@ -29,8 +29,10 @@
 #define HOST_COMPUTER_FLAGS 0
 #define HOST_COMPUTER_PASSWORD @"secret"
 #define HOST_COMPUTER_USER @"doug"
+#define HOST_COMPUTER_DATABASE @"Loki_Tools"
 
 #define HOST_FALSE_NAME @"www.wrongserver.wrong"
 #define HOST_FALSE_PASSWORD @"wrong password"
 #define HOST_FALSE_USER @"wrong userName"
 #define HOST_FALSE_SOCKET_NAME @"wrong socket"
+#define HOST_FALSE_DATABASE @"wrong database"

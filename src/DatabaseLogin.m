@@ -94,7 +94,7 @@ static int numberOfConnections = 0;
 		socketNameChar = copyObjectString([currentHost socketName]);
 		databaseChar = copyObjectString(database);
 		
-		if ([UserInfo initWithHost:host andUserName:user andPassword:passPhrase andError:anError])
+		if (![UserInfo initWithHost:host andUserName:user andPassword:passPhrase andError:anError])
 		{
 			xfree(userNameChar);
 			xfree(passwordChar);
@@ -271,6 +271,159 @@ static int numberOfConnections = 0;
 +(MYSQL *)openConnection:(NSError **) anError
 {
 	@try {
+		if (validDatabaseLogin) {
+			
+			char *userNameChar;
+			char *passwordChar;
+			char *hostNameChar;
+			char *socketNameChar;
+			char *databaseChar;
+			
+			userNameChar = copyObjectString(userName);
+			passwordChar = copyObjectString(password);
+			hostNameChar = copyObjectString([currentHost hostName]);
+			socketNameChar = copyObjectString([currentHost socketName]);
+			databaseChar = copyObjectString(database);
+			
+			if ([super TotalConnections] == 0) {
+				if (mysql_library_init(0,NULL,NULL)) {
+					if (anError != nil) {
+						NSString *description = nil; 
+						int errCode;
+						
+						NSString *message = [[NSString alloc]initWithFormat:@"An unknown error has occured in mysql_library_init() with errno: %i",errno];
+						description = NSLocalizedString(message,@"");
+						errCode = LTUKE;
+						[message release];
+						// Make underlying error.
+						NSError *underlyingError = [[[NSError alloc] initWithDomain:NSPOSIXErrorDomain
+																			   code:errno userInfo:nil] autorelease];
+						// Make and return custom domain error.
+						NSArray *objArray = [NSArray arrayWithObjects:description, underlyingError, @"", nil];
+						
+						NSArray *keyArray = [NSArray arrayWithObjects:NSLocalizedDescriptionKey,
+											 NSUnderlyingErrorKey, NSFilePathErrorKey, nil];
+						NSDictionary *eDict = [NSDictionary dictionaryWithObjects:objArray
+																		  forKeys:keyArray];
+						
+						*anError = [[[NSError alloc] initWithDomain:LokiTools
+															   code:errCode userInfo:eDict] autorelease];
+					}
+					
+					xfree(userNameChar);
+					xfree(passwordChar);
+					xfree(hostNameChar);
+					xfree(socketNameChar);
+					xfree(databaseChar);
+					
+					validDatabaseLogin = FALSE;
+					return NULL;
+				}
+			}
+			
+			MYSQL *conn;
+			
+			conn = mysql_init(NULL);
+			
+			if (conn == NULL) {
+				if (anError != nil) {
+					NSString *description = nil;
+					int errCode;
+					errCode = mysql_errno(conn);
+					
+					NSMutableString *message = [[NSMutableString alloc]initWithUTF8String:mysql_error(conn)];
+					[message appendFormat:@" \n ** ERROR NO: %i **",errCode];
+					description = NSLocalizedString(message,@"");
+					[message release];
+					
+					// Make underlying error.
+					NSError *underlyingError = [[[NSError alloc] initWithDomain:NSPOSIXErrorDomain
+																		   code:errno userInfo:nil] autorelease];
+					// Make and return custom domain error.
+					NSArray *objArray = [NSArray arrayWithObjects:description, underlyingError, @"", nil];
+					
+					NSArray *keyArray = [NSArray arrayWithObjects:NSLocalizedDescriptionKey,
+										 NSUnderlyingErrorKey, NSFilePathErrorKey, nil];
+					NSDictionary *eDict = [NSDictionary dictionaryWithObjects:objArray
+																	  forKeys:keyArray];
+					
+					*anError = [[[NSError alloc] initWithDomain:LokiTools
+														   code:errCode userInfo:eDict] autorelease];
+				}
+				
+				xfree(userNameChar);
+				xfree(passwordChar);
+				xfree(hostNameChar);
+				xfree(socketNameChar);
+				xfree(databaseChar);
+				
+				if ([super TotalConnections] == 0) {
+					mysql_library_end();
+				}
+				
+				validDatabaseLogin = FALSE;
+				return NULL;
+			}
+			
+			if (!mysql_real_connect(conn, hostNameChar, userNameChar, passwordChar, databaseChar, [currentHost portNumber], socketNameChar, [currentHost flags])) {
+				if (anError != nil) {
+					NSString *description = nil;
+					int errCode;
+					errCode = mysql_errno(conn);
+					
+					switch (errCode) {
+						case ER_ACCESS_DENIED_ERROR:
+							description = NSLocalizedString(@"UserName or Password is incorrect",@"");
+							break;
+						case CR_UNKNOWN_HOST:
+							description = NSLocalizedString(@"Unknown Host",@"");
+							break;
+						case CR_CONNECTION_ERROR:
+							description = NSLocalizedString(@"The socket specified does not exist",@"");
+							break;
+						default:;
+							NSMutableString *message = [[NSMutableString alloc]initWithUTF8String:mysql_error(conn)];
+							[message appendFormat:@" \n ** ERROR NO: %i **",errCode];
+							description = NSLocalizedString(message,@"");
+							[message release];
+							break;
+					}
+					
+					// Make underlying error.
+					NSError *underlyingError = [[[NSError alloc] initWithDomain:NSPOSIXErrorDomain
+																		   code:errno userInfo:nil] autorelease];
+					// Make and return custom domain error.
+					NSArray *objArray = [NSArray arrayWithObjects:description, underlyingError, @"", nil];
+					
+					NSArray *keyArray = [NSArray arrayWithObjects:NSLocalizedDescriptionKey,
+										 NSUnderlyingErrorKey, NSFilePathErrorKey, nil];
+					NSDictionary *eDict = [NSDictionary dictionaryWithObjects:objArray
+																	  forKeys:keyArray];
+					
+					*anError = [[[NSError alloc] initWithDomain:LokiTools
+														   code:errCode userInfo:eDict] autorelease];
+					
+				}
+				
+				xfree(userNameChar);
+				xfree(passwordChar);
+				xfree(hostNameChar);
+				xfree(socketNameChar);
+				xfree(databaseChar);
+				
+				if ([super TotalConnections] == 0) {
+					mysql_library_end();
+				}
+				
+				validDatabaseLogin = FALSE;
+				return FALSE;
+			}
+			
+			numberOfConnections++;
+			validDatabaseLogin = TRUE;
+			return conn;
+		}
+		validDatabaseLogin = FALSE;
 		return NULL;
 	}
 	@catch (NSException * e) {
@@ -280,6 +433,24 @@ static int numberOfConnections = 0;
 		NSLog(@"Reason: %@",[e reason]);
 	}
 	return NULL;
+}
+
++(void)closeConnection:(MYSQL *)connection
+{
+	@try {
+		numberOfConnections--;
+		mysql_close(connection);
+		
+		if ([self TotalConnections] == 0) {
+			mysql_library_end();
+		}
+	}
+	@catch (NSException * e) {
+		NSLog(@"Exception occured in: %@", NSStringFromClass([self class]));
+		NSLog(@"Method: %@",[e name]);
+		NSLog(@"Line: %i at Function: %s",__LINE__, __PRETTY_FUNCTION__);
+		NSLog(@"Reason: %@",[e reason]);
+	}
 }
 
 +(int)numberOfConnections

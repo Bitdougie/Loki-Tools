@@ -28,5 +28,6 @@
 }
 
 -(void)testInitisation;
+-(void)testOpenConnection;
 
 @end

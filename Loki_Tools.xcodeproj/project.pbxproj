@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		412436AE13E7577000EAD071 /* DatabaseLoginTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 412436AD13E7577000EAD071 /* DatabaseLoginTestCases.m */; };
 		412932A013B05C1100860DDC /* HostTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 4129329F13B05C1100860DDC /* HostTestCases.m */; };
 		419464C6138B6D0F00631183 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419464C5138B6D0F00631183 /* MainMenu.xib */; };
 		419464CC138B703D00631183 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 419464CB138B703D00631183 /* main.m */; };
@@ -49,9 +50,9 @@
 		41BEA5F713A58B720075654A /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BEA5F613A58B720075654A /* UserInfo.m */; };
 		41C0E9E813D63B9200CA0885 /* HostArchiverTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0E9E713D63B9200CA0885 /* HostArchiverTestCases.m */; };
 		41DF9076138C50270046BF50 /* FileBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DF9075138C50270046BF50 /* FileBrowser.m */; };
-		41E1A9FE13A5AC1B00F80A09 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E1A9FD13A5AC1B00F80A09 /* Login.m */; };
 		41E1AA0013A5AC3000F80A09 /* DatabaseLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E1A9FF13A5AC3000F80A09 /* DatabaseLogin.m */; };
 		41F0A6B413B2A95A00D071E0 /* Host.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BEA5F013A58B0E0075654A /* Host.m */; };
+		41F7871E13DF7B7700CC4D0D /* UserInfoTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F7871D13DF7B7700CC4D0D /* UserInfoTestCases.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9156115313676F6300F0D316 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9156115213676F6300F0D316 /* LICENSE */; };
@@ -75,6 +76,8 @@
 		256AC3F00F4B6AF500CF3369 /* Loki_Tools_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loki_Tools_Prefix.pch; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		412436AC13E7577000EAD071 /* DatabaseLoginTestCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseLoginTestCases.h; path = src/DatabaseLoginTestCases.h; sourceTree = "<group>"; };
+		412436AD13E7577000EAD071 /* DatabaseLoginTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseLoginTestCases.m; path = src/DatabaseLoginTestCases.m; sourceTree = "<group>"; };
 		412931E713AEE52F00860DDC /* Loki_Tools_Fitness_Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Loki_Tools_Fitness_Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		412931E813AEE52F00860DDC /* Loki_Tools_Fitness_Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Loki_Tools_Fitness_Tests-Info.plist"; sourceTree = "<group>"; };
 		4129329E13B05C0200860DDC /* HostTestCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HostTestCases.h; path = src/HostTestCases.h; sourceTree = "<group>"; };
@@ -144,15 +147,16 @@
 		41BEA5F313A58B560075654A /* HostArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HostArchiver.m; path = src/HostArchiver.m; sourceTree = "<group>"; };
 		41BEA5F513A58B720075654A /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = src/UserInfo.h; sourceTree = "<group>"; };
 		41BEA5F613A58B720075654A /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = src/UserInfo.m; sourceTree = "<group>"; };
+		41BEAD8A13E78FBF000DE847 /* testInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testInformation.h; path = src/testInformation.h; sourceTree = "<group>"; };
 		41C0E9E513D63B6600CA0885 /* lokierr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lokierr.h; path = src/lokierr.h; sourceTree = "<group>"; };
 		41C0E9E613D63B8200CA0885 /* HostArchiverTestCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HostArchiverTestCases.h; path = src/HostArchiverTestCases.h; sourceTree = "<group>"; };
 		41C0E9E713D63B9200CA0885 /* HostArchiverTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HostArchiverTestCases.m; path = src/HostArchiverTestCases.m; sourceTree = "<group>"; };
 		41DF9074138C50270046BF50 /* FileBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileBrowser.h; path = src/FileBrowser.h; sourceTree = "<group>"; };
 		41DF9075138C50270046BF50 /* FileBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileBrowser.m; path = src/FileBrowser.m; sourceTree = "<group>"; };
-		41E1A9FC13A5AC0C00F80A09 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Login.h; path = src/Login.h; sourceTree = "<group>"; };
-		41E1A9FD13A5AC1B00F80A09 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Login.m; path = src/Login.m; sourceTree = "<group>"; };
 		41E1A9FF13A5AC3000F80A09 /* DatabaseLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseLogin.m; path = src/DatabaseLogin.m; sourceTree = "<group>"; };
 		41E1AA0113A5AC4000F80A09 /* DatabaseLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseLogin.h; path = src/DatabaseLogin.h; sourceTree = "<group>"; };
+		41F7871C13DF7B7700CC4D0D /* UserInfoTestCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoTestCases.h; path = src/UserInfoTestCases.h; sourceTree = "<group>"; };
+		41F7871D13DF7B7700CC4D0D /* UserInfoTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoTestCases.m; path = src/UserInfoTestCases.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Loki_Tools-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Loki_Tools-Info.plist"; sourceTree = "<group>"; };
 		9156115213676F6300F0D316 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		91561156136770BE00F0D316 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				41BEA5ED13A587430075654A /* Connection */,
+				41BEAD8A13E78FBF000DE847 /* testInformation.h */,
 				41DF9075138C50270046BF50 /* FileBrowser.m */,
 				41C0E9E513D63B6600CA0885 /* lokierr.h */,
 				41DF9074138C50270046BF50 /* FileBrowser.h */,
@@ -451,10 +456,12 @@
 				41C0E9E713D63B9200CA0885 /* HostArchiverTestCases.m */,
 				41BEA5F213A58B560075654A /* HostArchiver.h */,
 				41BEA5F313A58B560075654A /* HostArchiver.m */,
+				41F7871C13DF7B7700CC4D0D /* UserInfoTestCases.h */,
+				41F7871D13DF7B7700CC4D0D /* UserInfoTestCases.m */,
 				41BEA5F513A58B720075654A /* UserInfo.h */,
 				41BEA5F613A58B720075654A /* UserInfo.m */,
-				41E1A9FC13A5AC0C00F80A09 /* Login.h */,
-				41E1A9FD13A5AC1B00F80A09 /* Login.m */,
+				412436AC13E7577000EAD071 /* DatabaseLoginTestCases.h */,
+				412436AD13E7577000EAD071 /* DatabaseLoginTestCases.m */,
 				41E1AA0113A5AC4000F80A09 /* DatabaseLogin.h */,
 				41E1A9FF13A5AC3000F80A09 /* DatabaseLogin.m */,
 			);
@@ -706,6 +713,8 @@
 			files = (
 				412932A013B05C1100860DDC /* HostTestCases.m in Sources */,
 				41C0E9E813D63B9200CA0885 /* HostArchiverTestCases.m in Sources */,
+				41F7871E13DF7B7700CC4D0D /* UserInfoTestCases.m in Sources */,
+				412436AE13E7577000EAD071 /* DatabaseLoginTestCases.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,7 +747,6 @@
 				41A5851E139CE64000FF870E /* PhotoPullInViewController.m in Sources */,
 				41BEA5F413A58B560075654A /* HostArchiver.m in Sources */,
 				41BEA5F713A58B720075654A /* UserInfo.m in Sources */,
-				41E1A9FE13A5AC1B00F80A09 /* Login.m in Sources */,
 				41E1AA0013A5AC3000F80A09 /* DatabaseLogin.m in Sources */,
 				41F0A6B413B2A95A00D071E0 /* Host.m in Sources */,
 			);

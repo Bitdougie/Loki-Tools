@@ -505,7 +505,7 @@ char * copyObjectString(NSString *object)
 	@try {
 		int result;
 		
-		result = [self numberOfConnections] + [DatabaseLogin numberOfConnections];
+		result = numberOfConnections + [DatabaseLogin numberOfConnections];
 		
 		return result;
 	}

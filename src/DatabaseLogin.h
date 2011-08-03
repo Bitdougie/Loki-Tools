@@ -31,5 +31,6 @@
 +(BOOL)initWithHost:(Host *) host andUserName:(NSString *) user andPassword:(NSString *) passPhrase andDatabase:(NSString *) databaseName error:(NSError **)anError;
 +(MYSQL *)openConnection:(NSError **) anError;
 +(int)numberOfConnections;
++(void)closeConnection:(MYSQL *)connection;
 
 @end
