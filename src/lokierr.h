@@ -15,3 +15,4 @@
 #define LTNSFOD 1 /* NO SUCH FILE OR DIRECTORY */
 #define LTPD 2 /* PERMISSON DENIED */
 #define LTUKE 3 /* UNKOWN ERROR */
+#define LTNA 4 /* NULL ARGUMENT */

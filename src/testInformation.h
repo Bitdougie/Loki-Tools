@@ -36,3 +36,7 @@
 #define HOST_FALSE_USER @"wrong userName"
 #define HOST_FALSE_SOCKET_NAME @"wrong socket"
 #define HOST_FALSE_DATABASE @"wrong database"
+
+#define STRING_TO_ESCAPE_CHANGELESS @"WARNING DOCTOR ROBINSON"
+#define STRING_TO_ESCAPE @"\"this should be % apple"
+#define ESCAPE_STRING_RESULT @"\\\"this should be \% apple"

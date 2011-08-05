@@ -48,6 +48,8 @@
 		41BCC16313949C0200F296A3 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BCC16213949C0200F296A3 /* ProductViewController.m */; };
 		41BEA5F413A58B560075654A /* HostArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BEA5F313A58B560075654A /* HostArchiver.m */; };
 		41BEA5F713A58B720075654A /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BEA5F613A58B720075654A /* UserInfo.m */; };
+		41BF182D13E9EC24007495BB /* MySQLProcedures.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BF182C13E9EC24007495BB /* MySQLProcedures.m */; };
+		41BF183D13EA1261007495BB /* MySQLProceduresTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BF183C13EA1261007495BB /* MySQLProceduresTestCases.m */; };
 		41C0E9E813D63B9200CA0885 /* HostArchiverTestCases.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C0E9E713D63B9200CA0885 /* HostArchiverTestCases.m */; };
 		41DF9076138C50270046BF50 /* FileBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DF9075138C50270046BF50 /* FileBrowser.m */; };
 		41E1AA0013A5AC3000F80A09 /* DatabaseLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E1A9FF13A5AC3000F80A09 /* DatabaseLogin.m */; };
@@ -148,6 +150,10 @@
 		41BEA5F513A58B720075654A /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = src/UserInfo.h; sourceTree = "<group>"; };
 		41BEA5F613A58B720075654A /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = src/UserInfo.m; sourceTree = "<group>"; };
 		41BEAD8A13E78FBF000DE847 /* testInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testInformation.h; path = src/testInformation.h; sourceTree = "<group>"; };
+		41BF182B13E9EC24007495BB /* MySQLProcedures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySQLProcedures.h; path = src/MySQLProcedures.h; sourceTree = "<group>"; };
+		41BF182C13E9EC24007495BB /* MySQLProcedures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySQLProcedures.m; path = src/MySQLProcedures.m; sourceTree = "<group>"; };
+		41BF183B13EA1261007495BB /* MySQLProceduresTestCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySQLProceduresTestCases.h; path = src/MySQLProceduresTestCases.h; sourceTree = "<group>"; };
+		41BF183C13EA1261007495BB /* MySQLProceduresTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySQLProceduresTestCases.m; path = src/MySQLProceduresTestCases.m; sourceTree = "<group>"; };
 		41C0E9E513D63B6600CA0885 /* lokierr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lokierr.h; path = src/lokierr.h; sourceTree = "<group>"; };
 		41C0E9E613D63B8200CA0885 /* HostArchiverTestCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HostArchiverTestCases.h; path = src/HostArchiverTestCases.h; sourceTree = "<group>"; };
 		41C0E9E713D63B9200CA0885 /* HostArchiverTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HostArchiverTestCases.m; path = src/HostArchiverTestCases.m; sourceTree = "<group>"; };
@@ -193,6 +199,10 @@
 				41946532138B75FB00631183 /* xLokiProcedures.h */,
 				4194652E138B75E400631183 /* BrowserList.m */,
 				4194652D138B75D900631183 /* BrowserList.h */,
+				41BF182B13E9EC24007495BB /* MySQLProcedures.h */,
+				41BF182C13E9EC24007495BB /* MySQLProcedures.m */,
+				41BF183B13EA1261007495BB /* MySQLProceduresTestCases.h */,
+				41BF183C13EA1261007495BB /* MySQLProceduresTestCases.m */,
 			);
 			name = "Objects & Procedures";
 			sourceTree = "<group>";
@@ -715,6 +725,7 @@
 				41C0E9E813D63B9200CA0885 /* HostArchiverTestCases.m in Sources */,
 				41F7871E13DF7B7700CC4D0D /* UserInfoTestCases.m in Sources */,
 				412436AE13E7577000EAD071 /* DatabaseLoginTestCases.m in Sources */,
+				41BF183D13EA1261007495BB /* MySQLProceduresTestCases.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +760,7 @@
 				41BEA5F713A58B720075654A /* UserInfo.m in Sources */,
 				41E1AA0013A5AC3000F80A09 /* DatabaseLogin.m in Sources */,
 				41F0A6B413B2A95A00D071E0 /* Host.m in Sources */,
+				41BF182D13E9EC24007495BB /* MySQLProcedures.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
