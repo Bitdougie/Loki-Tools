@@ -1,10 +1,24 @@
 //
 //  MySQLProcedures.m
 //  Loki_Tools
-//
-//  Created by Douglas Mason on 4/08/11.
-//  Copyright 2011 Farrand & Mason Ltd. All rights reserved.
-//
+/*
+ Loki Tools a Search engine, data preperation tool that does data mining
+ and retail analysis.
+ Copyright (C) 2011  Douglas Mason
+ 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.//
+ */
 
 #import "MySQLProcedures.h"
 #import "DatabaseLogin.h"
@@ -86,27 +100,42 @@
 	return NULL;
 }
 
-+(NSMutableArray *)searchSQLQuery:(NSString *) searchKey andError:(NSError **) anError
++(NSArray *)searchSQLQuery:(NSString *) searchKey andError:(NSError **) anError
 {	
 	@try {
-		NSMutableArray *sQLQuery;
-		NSMutableString *changingSearchKey;
-		NSRange nextSpace;
-		NSRange removalRange;
-		NSError *error;
-		
-		sQLQuery = [[NSMutableArray alloc] init];	
-		changingSearchKey = [[NSMutableString alloc] init];
-		
-		removalRange.location = 0;
-		removalRange.length = 0;
-		
-		[changingSearchKey setString: searchKey];
-		
-		while ([changingSearchKey rangeOfString:@" "].location != NSNotFound) {
-			nextSpace = [changingSearchKey rangeOfString:@" "];
+		if (searchKey != NULL) {
+			NSMutableArray *sQLQuery;
+			NSMutableString *changingSearchKey;
+			NSRange nextSpace;
+			NSRange removalRange;
+			NSError *error;
+			NSArray *results;
 			
-			[sQLQuery addObject:[self escapeSQLQuery:[changingSearchKey substringToIndex:nextSpace.location] andError:&error]];
+			sQLQuery = [[NSMutableArray alloc] init];	
+			changingSearchKey = [[NSMutableString alloc] init];
+			
+			removalRange.location = 0;
+			removalRange.length = 0;
+			
+			[changingSearchKey setString: searchKey];
+			
+			while ([changingSearchKey rangeOfString:@" "].location != NSNotFound) {
+				nextSpace = [changingSearchKey rangeOfString:@" "];
+				
+				[sQLQuery addObject:[self escapeSQLQuery:[changingSearchKey substringToIndex:nextSpace.location] andError:&error]];
+				
+				if ([sQLQuery lastObject] == NULL) {
+					[sQLQuery release];
+					[changingSearchKey release];
+					return NULL;
+				}
+				
+				removalRange.length = (nextSpace.location + 1);
+				
+				[changingSearchKey deleteCharactersInRange:removalRange];
+			}
+			
+			[sQLQuery addObject:[self escapeSQLQuery:changingSearchKey andError:&error]];
 			
 			if ([sQLQuery lastObject] == NULL) {
 				[sQLQuery release];
@@ -114,23 +143,37 @@
 				return NULL;
 			}
 			
-			removalRange.length = (nextSpace.location + 1);
+			results = [[[NSArray alloc]initWithArray:sQLQuery]autorelease];
+			[sQLQuery release];
+			[changingSearchKey release];
 			
-			[changingSearchKey deleteCharactersInRange:removalRange];
+			return results;
 		}
 		
-		[sQLQuery addObject:[self escapeSQLQuery:changingSearchKey andError:&error]];
+		if (anError != nil) {
+			NSString *description = nil;
+			int errCode;
+			errCode = LTNA;
+			
+			description = NSLocalizedString(@"The searchKey given was NULL",@"");
+			
+			// Make underlying error.
+			NSError *underlyingError = [[[NSError alloc] initWithDomain:LokiTools
+																   code:LTNA userInfo:nil] autorelease];
+			// Make and return custom domain error.
+			NSArray *objArray = [NSArray arrayWithObjects:description, underlyingError, @"", nil];
+			
+			NSArray *keyArray = [NSArray arrayWithObjects:NSLocalizedDescriptionKey,
+								 NSUnderlyingErrorKey, NSFilePathErrorKey, nil];
+			NSDictionary *eDict = [NSDictionary dictionaryWithObjects:objArray
+															  forKeys:keyArray];
+			
+			*anError = [[[NSError alloc] initWithDomain:LokiTools
+												   code:errCode userInfo:eDict] autorelease];
+		}
 		
-		 if ([sQLQuery lastObject] == NULL) {
-			 [sQLQuery release];
-			 [changingSearchKey release];
-			 return NULL;
-		 }
-		 
-		[sQLQuery autorelease];
-		[changingSearchKey release];
-		 
-		return sQLQuery;
+		return NULL;
+		
 	}
 	@catch (NSException * e) {
 		NSLog(@"Exception occured in: %@", NSStringFromClass([self class]));
@@ -139,6 +182,11 @@
 		NSLog(@"Reason: %@",[e reason]);
 	}
 	return NULL;
+}
+
++(BOOL)loadFileToDatabase:(NSURL *)path andError:(NSError **)anError
+{
+	return FALSE;
 }
 
 @end

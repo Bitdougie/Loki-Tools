@@ -78,6 +78,7 @@
 		256AC3F00F4B6AF500CF3369 /* Loki_Tools_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loki_Tools_Prefix.pch; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4115DF6013EE9C8A008FFB6B /* lokiStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lokiStructure.h; path = src/lokiStructure.h; sourceTree = "<group>"; };
 		412436AC13E7577000EAD071 /* DatabaseLoginTestCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseLoginTestCases.h; path = src/DatabaseLoginTestCases.h; sourceTree = "<group>"; };
 		412436AD13E7577000EAD071 /* DatabaseLoginTestCases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseLoginTestCases.m; path = src/DatabaseLoginTestCases.m; sourceTree = "<group>"; };
 		412931E713AEE52F00860DDC /* Loki_Tools_Fitness_Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Loki_Tools_Fitness_Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,11 +193,12 @@
 			children = (
 				41BEA5ED13A587430075654A /* Connection */,
 				41BEAD8A13E78FBF000DE847 /* testInformation.h */,
-				41DF9075138C50270046BF50 /* FileBrowser.m */,
+				4115DF6013EE9C8A008FFB6B /* lokiStructure.h */,
 				41C0E9E513D63B6600CA0885 /* lokierr.h */,
-				41DF9074138C50270046BF50 /* FileBrowser.h */,
-				41946530138B75EF00631183 /* xLokiProcedures.c */,
 				41946532138B75FB00631183 /* xLokiProcedures.h */,
+				41946530138B75EF00631183 /* xLokiProcedures.c */,
+				41DF9075138C50270046BF50 /* FileBrowser.m */,
+				41DF9074138C50270046BF50 /* FileBrowser.h */,
 				4194652E138B75E400631183 /* BrowserList.m */,
 				4194652D138B75D900631183 /* BrowserList.h */,
 				41BF182B13E9EC24007495BB /* MySQLProcedures.h */,

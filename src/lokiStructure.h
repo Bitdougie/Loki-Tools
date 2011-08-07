@@ -1,5 +1,5 @@
 //
-//  MySQLProceduresTestCases.h
+//  lokiStructure.h
 //  Loki_Tools
 /*
  Loki Tools a Search engine, data preperation tool that does data mining
@@ -20,14 +20,3 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.//
  */
 
-#import <SenTestingKit/SenTestingKit.h>
-
-
-@interface MySQLProceduresTestCases : SenTestCase {
-
-}
-
--(void)testEscapeString;
--(void)testSearchString;
-
-@end
