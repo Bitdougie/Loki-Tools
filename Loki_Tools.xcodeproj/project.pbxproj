@@ -805,6 +805,11 @@
 				INFOPLIST_FILE = "Loki_Tools_Fitness_Tests-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
+					"-L/usr/local/mysql-5.1.49-osx10.5-x86/lib",
+					"-lmysqlclient",
+					"-lz",
+					"-lm",
+					"-lmygcc",
 					"-framework",
 					Cocoa,
 					"-framework",

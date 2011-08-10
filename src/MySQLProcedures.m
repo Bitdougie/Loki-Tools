@@ -24,7 +24,7 @@
 #import "DatabaseLogin.h"
 #import "xLokiProcedures.h"
 #import "lokierr.h"
-
+#import <CommonCrypto/CommonDigest.h>
 
 @implementation MySQLProcedures
 
@@ -184,8 +184,55 @@
 	return NULL;
 }
 
-+(BOOL)loadFileToDatabase:(NSURL *)path andError:(NSError **)anError
++(BOOL)loadBlobToDatabase:(NSURL *)url intoTable:(NSString *)table atRow:(NSString *)row andError:(NSError **)anError
 {
+	@try {
+		char *rawCharImage, *charImage;
+		char *filePath;
+		MYSQL *connection;
+		NSMutableString *query;
+		
+		filePath = copyObjectString([url path]);
+		FILE *file = fopen(filePath, "r");
+		
+		unsigned int fileLength;
+		unsigned int queryImageLength;
+		
+		fseek(file,0,SEEK_END);
+		fileLength = ftell(file);
+		fseek(file,0,SEEK_SET);
+		
+		rawCharImage = (char *)xmalloc(sizeof(char[fileLength]));
+		
+		if (fread(rawCharImage, fileLength, 1, file) < 1) {
+			//error code here
+		}
+		
+		unsigned char hash[CC_SHA1_DIGEST_LENGTH];
+		CC_SHA1(rawCharImage,fileLength,hash);
+		
+		NSLog(@"the Hash is: %s",hash);
+		
+		charImage = (char *)xmalloc(sizeof(char[1 + 2*fileLength]));
+		
+		connection = [DatabaseLogin openConnection:anError];
+		
+		queryImageLength = mysql_real_escape_string(connection, charImage, rawCharImage, fileLength);
+		
+		[DatabaseLogin closeConnection:connection];
+		
+		
+		fclose(file);
+		xfree(filePath);
+		xfree(rawCharImage);
+		
+	}
+	@catch (NSException * e) {
+		NSLog(@"Exception occured in: %@", NSStringFromClass([self class]));
+		NSLog(@"Method: %@",[e name]);
+		NSLog(@"Line: %i at Function: %s",__LINE__, __PRETTY_FUNCTION__);
+		NSLog(@"Reason: %@",[e reason]);
+	}
 	return FALSE;
 }
 

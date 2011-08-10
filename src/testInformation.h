@@ -22,6 +22,8 @@
 
 /*test script settings that need to be set by the user*/
 
+#define SOURCE_PATH @"~/Programming/Objective-C/Loki-Tools"
+
 #define HOST_COMPUTER_TITLE @"Home Computer"
 #define HOST_COMPUTER_NAME NULL
 #define HOST_COMPUTER_PORT_NUMBER 0
@@ -48,3 +50,11 @@
 
 #define SEARCH_STRING_SINGLE @"\"RATCHET"
 #define SEARCH_STRING_SINGLE_RESULT @"\\\"RATCHET"
+
+#define BLOB_FILE_NAME @"Lokistone.jpg"
+//DATABASE NAME
+#define BLOB_TEST_DATABASE @"BLOB_TEST"
+//DATABASE STRUCTURE
+#define BLOB_TEST_TABLE @"BLOB_TABLE"
+#define BLOB_TEST_TABLE_ID @"BLOB_ID"
+#define BLOB_TEST_TABLE_DATA @"BLOB_DATA"

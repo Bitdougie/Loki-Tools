@@ -29,5 +29,6 @@
 
 -(void)testEscapeString;
 -(void)testSearchString;
+-(void)testLoadBlobToDatabase;
 
 @end

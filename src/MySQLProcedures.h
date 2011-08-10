@@ -22,13 +22,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @interface MySQLProcedures : NSObject {
 
 }
 
 +(NSString *)escapeSQLQuery:(NSString *) rawQuery andError:(NSError **)anError;
 +(NSArray *)searchSQLQuery:(NSString *) searchKey andError:(NSError **)anError;
-+(BOOL)loadFileToDatabase:(NSURL *)path andError:(NSError **)anError;
++(BOOL)loadBlobToDatabase:(NSURL *)url intoTable:(NSString *)table atRow:(NSString *)row andError:(NSError **)anError;
 
 @end

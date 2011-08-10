@@ -26,7 +26,12 @@
 #import "Host.h"
 #import "DatabaseLogin.h"
 #import "lokierr.h"
-
+#import "lokiStructure.h"
+#import "xLokiProcedures.h"
+#import <my_global.h>
+#import <my_sys.h>
+#import <mysql.h>
+#import <CommonCrypto/CommonDigest.h>
 
 @implementation MySQLProceduresTestCases
 
@@ -146,6 +151,82 @@
 		NSLog(@"Reason: %@",[e reason]);
 	}
 
+}
+
+-(void)testLoadBlobToDatabase
+{
+	@try {
+		NSError *error,*error_2,*error_3,*error_4;
+		NSURL *URL;
+		
+		Host *testHost;
+		
+		testHost = [[Host alloc]init];
+		
+		[testHost setTitle:HOST_COMPUTER_TITLE];
+		[testHost setHostName:HOST_COMPUTER_NAME];
+		[testHost setSocketName:HOST_COMPUTER_SOCKET_NAME];
+		[testHost setPortNumber:HOST_COMPUTER_PORT_NUMBER];
+		[testHost setFlags:HOST_COMPUTER_FLAGS];
+		
+		if (![UserInfo initWithHost:testHost andUserName:HOST_COMPUTER_USER andPassword:HOST_COMPUTER_PASSWORD andError:&error]) {
+			NSAlert *theAlert = [NSAlert alertWithError:error];
+			[theAlert runModal];
+		}
+		
+		MYSQL *connection;
+		NSString *query;
+		char *charQuery;
+		
+		connection = [UserInfo openConnection:&error_2];
+		
+		if (connection == NULL) {
+			NSAlert *theAlert = [NSAlert alertWithError:error_2];
+			[theAlert runModal];
+		}
+		
+		query = [[NSMutableString alloc]initWithFormat:@"CREATE DATABASE %@;",BLOB_TEST_DATABASE];
+		charQuery = copyObjectString(query);		
+		mysql_real_query(connection, charQuery, [query length]);
+		
+		[query release];
+		xfree(charQuery);
+		
+		query = [[NSMutableString alloc]initWithFormat:@"CREATE TABLE %@(%@ INT NOT NULL PRIMARY KEY,%@ LONGBLOB);",BLOB_TEST_TABLE,BLOB_TEST_TABLE_ID,BLOB_TEST_TABLE_DATA];
+		charQuery = copyObjectString(query);
+		
+		if (![DatabaseLogin initWithHost:testHost andUserName:HOST_COMPUTER_USER andPassword:HOST_COMPUTER_PASSWORD andDatabase:BLOB_TEST_DATABASE error:&error_3]) {
+			NSAlert *theAlert = [NSAlert alertWithError:error_3];
+			[theAlert runModal];
+		}
+		
+		[testHost release];
+		
+		NSMutableString *pathToPic;
+		
+		pathToPic = [[NSMutableString alloc]initWithFormat:@"%@/%@",SOURCE_PATH,BLOB_FILE_NAME];
+		
+		URL = [[NSURL alloc]initFileURLWithPath:[pathToPic stringByExpandingTildeInPath]];
+		
+		if (![MySQLProcedures loadBlobToDatabase:URL intoTable: BLOB_TEST_TABLE atRow:BLOB_TEST_TABLE_DATA andError:&error_4]) {
+			//NSAlert *theAlert = [NSAlert alertWithError:error_4];
+			//[theAlert runModal];
+		}
+		
+		
+		
+		[UserInfo closeConnection:connection];
+		xfree(charQuery);
+		[query release];
+		[pathToPic release];
+		
+	}
+	@catch (NSException * e) {
+		NSLog(@"Exception occured in: %@", NSStringFromClass([self class]));
+		NSLog(@"Method: %@",[e name]);
+		NSLog(@"Line: %i at Function: %s",__LINE__, __PRETTY_FUNCTION__);
+		NSLog(@"Reason: %@",[e reason]);
+	}
 }
 
 @end
